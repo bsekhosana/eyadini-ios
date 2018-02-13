@@ -1,0 +1,16 @@
+//
+//  MaxiDebug.xcconfig
+//  Placid
+//
+//  Created by Bruno Sekhosana on 2018/02/13.
+//  Copyright © 2018 StrapBlaque. All rights reserved.
+//
+
+// Application Settings //
+
+PL_APP_NAME = Max's Debug
+PL_APP_VERSION = 0.1
+PL_APP_BUNDLE_ID = com.strapblaque.maxi.debug
+PL_APP_ICON = MaxiAppIconDebug
+
+// Custom Settings //

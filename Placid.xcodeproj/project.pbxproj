@@ -15,6 +15,10 @@
 		3EE3CCAC20328E50005FD2A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CCAB20328E50005FD2A5 /* main.m */; };
 		3EE3CCB620328E50005FD2A5 /* PlacidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CCB520328E50005FD2A5 /* PlacidTests.m */; };
 		3EE3CCC120328E50005FD2A5 /* PlacidUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CCC020328E50005FD2A5 /* PlacidUITests.m */; };
+		3EE3CCDB2032922F005FD2A5 /* EyadiniDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDA2032922F005FD2A5 /* EyadiniDebug.xcconfig */; };
+		3EE3CCDF20329268005FD2A5 /* MaxiRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDE20329263005FD2A5 /* MaxiRelease.xcconfig */; };
+		3EE3CCE02032926B005FD2A5 /* MaxiDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */; };
+		3EE3CCE12032926E005FD2A5 /* EyadiniRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		3EE3CCBC20328E50005FD2A5 /* PlacidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE3CCC020328E50005FD2A5 /* PlacidUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacidUITests.m; sourceTree = "<group>"; };
 		3EE3CCC220328E50005FD2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EE3CCDA2032922F005FD2A5 /* EyadiniDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = EyadiniDebug.xcconfig; sourceTree = "<group>"; };
+		3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = EyadiniRelease.xcconfig; sourceTree = "<group>"; };
+		3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MaxiDebug.xcconfig; sourceTree = "<group>"; };
+		3EE3CCDE20329263005FD2A5 /* MaxiRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MaxiRelease.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,10 @@
 		3EE3CC9020328E50005FD2A5 = {
 			isa = PBXGroup;
 			children = (
+				3EE3CCDE20329263005FD2A5 /* MaxiRelease.xcconfig */,
+				3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */,
+				3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */,
+				3EE3CCDA2032922F005FD2A5 /* EyadiniDebug.xcconfig */,
 				3EE3CC9B20328E50005FD2A5 /* Placid */,
 				3EE3CCB420328E50005FD2A5 /* PlacidTests */,
 				3EE3CCBF20328E50005FD2A5 /* PlacidUITests */,
@@ -238,9 +250,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE3CCDF20329268005FD2A5 /* MaxiRelease.xcconfig in Resources */,
 				3EE3CCA920328E50005FD2A5 /* LaunchScreen.storyboard in Resources */,
+				3EE3CCE12032926E005FD2A5 /* EyadiniRelease.xcconfig in Resources */,
 				3EE3CCA620328E50005FD2A5 /* Assets.xcassets in Resources */,
+				3EE3CCDB2032922F005FD2A5 /* EyadiniDebug.xcconfig in Resources */,
 				3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */,
+				3EE3CCE02032926B005FD2A5 /* MaxiDebug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,8 +338,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3EE3CCC320328E50005FD2A5 /* Debug */ = {
+		3EE3CCC320328E50005FD2A5 /* EyadiniDebug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE3CCDA2032922F005FD2A5 /* EyadiniDebug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -375,10 +392,11 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
-			name = Debug;
+			name = EyadiniDebug;
 		};
-		3EE3CCC420328E50005FD2A5 /* Release */ = {
+		3EE3CCC420328E50005FD2A5 /* EyadiniRelease */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -424,37 +442,39 @@
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = EyadiniRelease;
 		};
-		3EE3CCC620328E50005FD2A5 /* Debug */ = {
+		3EE3CCC620328E50005FD2A5 /* EyadiniDebug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE3CCDA2032922F005FD2A5 /* EyadiniDebug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2V87XH9WP9;
+				DEVELOPMENT_TEAM = HVGWN44W78;
 				INFOPLIST_FILE = Placid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.Placid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = EyadiniDebug;
 		};
-		3EE3CCC720328E50005FD2A5 /* Release */ = {
+		3EE3CCC720328E50005FD2A5 /* EyadiniRelease */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2V87XH9WP9;
+				DEVELOPMENT_TEAM = HVGWN44W78;
 				INFOPLIST_FILE = Placid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.Placid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = EyadiniRelease;
 		};
-		3EE3CCC920328E50005FD2A5 /* Debug */ = {
+		3EE3CCC920328E50005FD2A5 /* EyadiniDebug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -467,9 +487,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Placid.app/Placid";
 			};
-			name = Debug;
+			name = EyadiniDebug;
 		};
-		3EE3CCCA20328E50005FD2A5 /* Release */ = {
+		3EE3CCCA20328E50005FD2A5 /* EyadiniRelease */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,9 +502,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Placid.app/Placid";
 			};
-			name = Release;
+			name = EyadiniRelease;
 		};
-		3EE3CCCC20328E50005FD2A5 /* Debug */ = {
+		3EE3CCCC20328E50005FD2A5 /* EyadiniDebug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -496,9 +516,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Placid;
 			};
-			name = Debug;
+			name = EyadiniDebug;
 		};
-		3EE3CCCD20328E50005FD2A5 /* Release */ = {
+		3EE3CCCD20328E50005FD2A5 /* EyadiniRelease */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -510,7 +530,195 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Placid;
 			};
-			name = Release;
+			name = EyadiniRelease;
+		};
+		3EE3CCD2203291BD005FD2A5 /* MaxiDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = MaxiDebug;
+		};
+		3EE3CCD3203291BD005FD2A5 /* MaxiDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HVGWN44W78;
+				INFOPLIST_FILE = Placid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.Placid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = MaxiDebug;
+		};
+		3EE3CCD4203291BD005FD2A5 /* MaxiDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2V87XH9WP9;
+				INFOPLIST_FILE = PlacidTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.PlacidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Placid.app/Placid";
+			};
+			name = MaxiDebug;
+		};
+		3EE3CCD5203291BD005FD2A5 /* MaxiDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2V87XH9WP9;
+				INFOPLIST_FILE = PlacidUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.PlacidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Placid;
+			};
+			name = MaxiDebug;
+		};
+		3EE3CCD6203291CC005FD2A5 /* MaxiRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE3CCDE20329263005FD2A5 /* MaxiRelease.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = MaxiRelease;
+		};
+		3EE3CCD7203291CC005FD2A5 /* MaxiRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HVGWN44W78;
+				INFOPLIST_FILE = Placid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.Placid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = MaxiRelease;
+		};
+		3EE3CCD8203291CC005FD2A5 /* MaxiRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2V87XH9WP9;
+				INFOPLIST_FILE = PlacidTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.PlacidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Placid.app/Placid";
+			};
+			name = MaxiRelease;
+		};
+		3EE3CCD9203291CC005FD2A5 /* MaxiRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2V87XH9WP9;
+				INFOPLIST_FILE = PlacidUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.PlacidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Placid;
+			};
+			name = MaxiRelease;
 		};
 /* End XCBuildConfiguration section */
 
@@ -518,38 +726,46 @@
 		3EE3CC9420328E50005FD2A5 /* Build configuration list for PBXProject "Placid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EE3CCC320328E50005FD2A5 /* Debug */,
-				3EE3CCC420328E50005FD2A5 /* Release */,
+				3EE3CCC320328E50005FD2A5 /* EyadiniDebug */,
+				3EE3CCC420328E50005FD2A5 /* EyadiniRelease */,
+				3EE3CCD2203291BD005FD2A5 /* MaxiDebug */,
+				3EE3CCD6203291CC005FD2A5 /* MaxiRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = EyadiniRelease;
 		};
 		3EE3CCC520328E50005FD2A5 /* Build configuration list for PBXNativeTarget "Placid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EE3CCC620328E50005FD2A5 /* Debug */,
-				3EE3CCC720328E50005FD2A5 /* Release */,
+				3EE3CCC620328E50005FD2A5 /* EyadiniDebug */,
+				3EE3CCC720328E50005FD2A5 /* EyadiniRelease */,
+				3EE3CCD3203291BD005FD2A5 /* MaxiDebug */,
+				3EE3CCD7203291CC005FD2A5 /* MaxiRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = EyadiniRelease;
 		};
 		3EE3CCC820328E50005FD2A5 /* Build configuration list for PBXNativeTarget "PlacidTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EE3CCC920328E50005FD2A5 /* Debug */,
-				3EE3CCCA20328E50005FD2A5 /* Release */,
+				3EE3CCC920328E50005FD2A5 /* EyadiniDebug */,
+				3EE3CCCA20328E50005FD2A5 /* EyadiniRelease */,
+				3EE3CCD4203291BD005FD2A5 /* MaxiDebug */,
+				3EE3CCD8203291CC005FD2A5 /* MaxiRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = EyadiniRelease;
 		};
 		3EE3CCCB20328E50005FD2A5 /* Build configuration list for PBXNativeTarget "PlacidUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EE3CCCC20328E50005FD2A5 /* Debug */,
-				3EE3CCCD20328E50005FD2A5 /* Release */,
+				3EE3CCCC20328E50005FD2A5 /* EyadiniDebug */,
+				3EE3CCCD20328E50005FD2A5 /* EyadiniRelease */,
+				3EE3CCD5203291BD005FD2A5 /* MaxiDebug */,
+				3EE3CCD9203291CC005FD2A5 /* MaxiRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = EyadiniRelease;
 		};
 /* End XCConfigurationList section */
 	};
