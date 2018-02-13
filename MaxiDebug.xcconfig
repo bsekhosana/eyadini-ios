@@ -14,3 +14,5 @@ PL_APP_BUNDLE_ID = com.strapblaque.maxi.debug
 PL_APP_ICON = MaxiAppIconDebug
 
 // Custom Settings //
+
+PL_API_KEY = "https://jsonplaceholder.typicode.com/posts/1"

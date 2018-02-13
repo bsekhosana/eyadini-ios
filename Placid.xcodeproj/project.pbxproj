@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
+		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
+		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
 		3EE3CC9E20328E50005FD2A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */; };
 		3EE3CCA120328E50005FD2A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA020328E50005FD2A5 /* ViewController.m */; };
 		3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA220328E50005FD2A5 /* Main.storyboard */; };
@@ -41,6 +44,11 @@
 
 /* Begin PBXFileReference section */
 		3D6B71264106057E6E08E212 /* Pods-Placid.eyadinidebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.eyadinidebug.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.eyadinidebug.xcconfig"; sourceTree = "<group>"; };
+		3EAAD4B82032DEE600F26053 /* PLAPICLient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAPICLient.h; sourceTree = "<group>"; };
+		3EAAD4B92032DEE600F26053 /* PLAPICLient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAPICLient.m; sourceTree = "<group>"; };
+		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
+		3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyadiniPLConstants.m; sourceTree = "<group>"; };
+		3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxiPLConstants.m; sourceTree = "<group>"; };
 		3EE3CC9920328E50005FD2A5 /* Placid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Placid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE3CC9C20328E50005FD2A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +103,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EAAD4B42032CF8D00F26053 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3EAAD4B82032DEE600F26053 /* PLAPICLient.h */,
+				3EAAD4B92032DEE600F26053 /* PLAPICLient.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3EAAD4BB2032DF5300F26053 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3EAAD4BC2032DF7D00F26053 /* PLConstants.h */,
+				3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */,
+				3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		3EE3CC9020328E50005FD2A5 = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +151,9 @@
 		3EE3CC9B20328E50005FD2A5 /* Placid */ = {
 			isa = PBXGroup;
 			children = (
+				3EAAD4B42032CF8D00F26053 /* API */,
+				3EAAD4BB2032DF5300F26053 /* Constants */,
 				3EE3CCE42032C2AA005FD2A5 /* Delegates */,
-				3EE3CCE22032C1E0005FD2A5 /* PlAPIClient */,
 				3EE3CCE32032C1E0005FD2A5 /* ViewControllers */,
 				3EE3CCA220328E50005FD2A5 /* Main.storyboard */,
 				3EE3CCA520328E50005FD2A5 /* Assets.xcassets */,
@@ -152,13 +180,6 @@
 				3EE3CCC220328E50005FD2A5 /* Info.plist */,
 			);
 			path = PlacidUITests;
-			sourceTree = "<group>";
-		};
-		3EE3CCE22032C1E0005FD2A5 /* PlAPIClient */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PlAPIClient;
 			sourceTree = "<group>";
 		};
 		3EE3CCE32032C1E0005FD2A5 /* ViewControllers */ = {
@@ -357,9 +378,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Placid/Pods-Placid-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -391,7 +419,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */,
+				3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */,
 				3EE3CCA120328E50005FD2A5 /* ViewController.m in Sources */,
+				3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */,
 				3EE3CCAC20328E50005FD2A5 /* main.m in Sources */,
 				3EE3CC9E20328E50005FD2A5 /* AppDelegate.m in Sources */,
 			);
