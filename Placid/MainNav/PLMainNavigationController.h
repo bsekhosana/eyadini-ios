@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ECSlidingViewController.h"
 
-
-@interface PLMainNavigationController :  UIViewController <UITableViewDataSource>
+@interface PLMainNavigationController :  UIViewController <UITableViewDataSource, UITableViewDelegate>
   @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end

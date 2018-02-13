@@ -25,19 +25,20 @@
   // It is initially set as a User Defined Runtime Attributes in storyboards.
   // We keep a reference to this instance so that we can go back to it without losing its state.
   self.transitionsNavigationController = (UINavigationController *)self.slidingViewController.topViewController;
+  
 }
   
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
   [self.view endEditing:YES];
 }
-  
+   
 #pragma mark - Properties
   
 - (NSArray *)menuItems {
   if (_menuItems) return _menuItems;
   
-  _menuItems = @[@"Transitions", @"Settings"];
+  _menuItems = @[@"Home", @"Events", @"Gallery",@"Cuisine", @"Blog", @"About Us", @"Contact Us"];
   
   return _menuItems;
 }
@@ -63,19 +64,22 @@
 #pragma mark - UITableViewDelegate
   
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  NSString *menuItem = self.menuItems[indexPath.row];
+  NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
   
+  NSString *menuItem = self.menuItems[selectedIndexPath.row];
+  NSLog(@"%@", menuItem);
   // This undoes the Zoom Transition's scale because it affects the other transitions.
   // You normally wouldn't need to do anything like this, but we're changing transitions
   // dynamically so everything needs to start in a consistent state.
   self.slidingViewController.topViewController.view.layer.transform = CATransform3DMakeScale(1, 1, 1);
   
-  if ([menuItem isEqualToString:@"Transitions"]) {
+
+  if ([menuItem isEqualToString:@"Home"]) {
     self.slidingViewController.topViewController = self.transitionsNavigationController;
-  } else if ([menuItem isEqualToString:@"Settings"]) {
-    self.slidingViewController.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MESettingsNavigationController"];
+  }else{
+      self.slidingViewController.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:[[NSString stringWithFormat:@"PL%@NavigationViewController", menuItem] stringByReplacingOccurrencesOfString:@" " withString:@""]];
+
   }
-  
   
   [self.slidingViewController resetTopViewAnimated:YES];
 }

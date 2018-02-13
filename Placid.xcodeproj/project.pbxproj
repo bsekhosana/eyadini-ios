@@ -17,6 +17,12 @@
 		3EAAD4D62033001800F26053 /* PLFoldAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4D52033001800F26053 /* PLFoldAnimationController.m */; };
 		3EAAD4D92033002C00F26053 /* PLZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4D82033002C00F26053 /* PLZoomAnimationController.m */; };
 		3EAAD4DC2033003F00F26053 /* PLDynamicTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4DB2033003F00F26053 /* PLDynamicTransition.m */; };
+		3EAAD4DF203322D200F26053 /* PLEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4DE203322D200F26053 /* PLEventsViewController.m */; };
+		3EAAD4E2203322E800F26053 /* PLGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4E1203322E800F26053 /* PLGalleryViewController.m */; };
+		3EAAD4E52033230700F26053 /* PLCuisineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4E42033230700F26053 /* PLCuisineViewController.m */; };
+		3EAAD4E82033231900F26053 /* PLBlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4E72033231900F26053 /* PLBlogViewController.m */; };
+		3EAAD4EB2033232700F26053 /* PLAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4EA2033232700F26053 /* PLAboutUsViewController.m */; };
+		3EAAD4EE2033233200F26053 /* PLContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4ED2033233200F26053 /* PLContactUsViewController.m */; };
 		3EE3CC9E20328E50005FD2A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */; };
 		3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA220328E50005FD2A5 /* Main.storyboard */; };
 		3EE3CCA620328E50005FD2A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA520328E50005FD2A5 /* Assets.xcassets */; };
@@ -69,6 +75,18 @@
 		3EAAD4D82033002C00F26053 /* PLZoomAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLZoomAnimationController.m; sourceTree = "<group>"; };
 		3EAAD4DA2033003F00F26053 /* PLDynamicTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLDynamicTransition.h; sourceTree = "<group>"; };
 		3EAAD4DB2033003F00F26053 /* PLDynamicTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLDynamicTransition.m; sourceTree = "<group>"; };
+		3EAAD4DD203322D200F26053 /* PLEventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLEventsViewController.h; sourceTree = "<group>"; };
+		3EAAD4DE203322D200F26053 /* PLEventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLEventsViewController.m; sourceTree = "<group>"; };
+		3EAAD4E0203322E800F26053 /* PLGalleryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLGalleryViewController.h; sourceTree = "<group>"; };
+		3EAAD4E1203322E800F26053 /* PLGalleryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLGalleryViewController.m; sourceTree = "<group>"; };
+		3EAAD4E32033230700F26053 /* PLCuisineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLCuisineViewController.h; sourceTree = "<group>"; };
+		3EAAD4E42033230700F26053 /* PLCuisineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLCuisineViewController.m; sourceTree = "<group>"; };
+		3EAAD4E62033231900F26053 /* PLBlogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLBlogViewController.h; sourceTree = "<group>"; };
+		3EAAD4E72033231900F26053 /* PLBlogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLBlogViewController.m; sourceTree = "<group>"; };
+		3EAAD4E92033232700F26053 /* PLAboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAboutUsViewController.h; sourceTree = "<group>"; };
+		3EAAD4EA2033232700F26053 /* PLAboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAboutUsViewController.m; sourceTree = "<group>"; };
+		3EAAD4EC2033233200F26053 /* PLContactUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLContactUsViewController.h; sourceTree = "<group>"; };
+		3EAAD4ED2033233200F26053 /* PLContactUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLContactUsViewController.m; sourceTree = "<group>"; };
 		3EE3CC9920328E50005FD2A5 /* Placid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Placid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE3CC9C20328E50005FD2A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -233,6 +251,18 @@
 				3EAAD4C42032EB3B00F26053 /* PLBaseViewController.m */,
 				3EAAD4CB2032F31600F26053 /* PLHomeViewController.h */,
 				3EAAD4CC2032F31600F26053 /* PLHomeViewController.m */,
+				3EAAD4DD203322D200F26053 /* PLEventsViewController.h */,
+				3EAAD4DE203322D200F26053 /* PLEventsViewController.m */,
+				3EAAD4E0203322E800F26053 /* PLGalleryViewController.h */,
+				3EAAD4E1203322E800F26053 /* PLGalleryViewController.m */,
+				3EAAD4E32033230700F26053 /* PLCuisineViewController.h */,
+				3EAAD4E42033230700F26053 /* PLCuisineViewController.m */,
+				3EAAD4E62033231900F26053 /* PLBlogViewController.h */,
+				3EAAD4E72033231900F26053 /* PLBlogViewController.m */,
+				3EAAD4E92033232700F26053 /* PLAboutUsViewController.h */,
+				3EAAD4EA2033232700F26053 /* PLAboutUsViewController.m */,
+				3EAAD4EC2033233200F26053 /* PLContactUsViewController.h */,
+				3EAAD4ED2033233200F26053 /* PLContactUsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -470,17 +500,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EAAD4E82033231900F26053 /* PLBlogViewController.m in Sources */,
+				3EAAD4E52033230700F26053 /* PLCuisineViewController.m in Sources */,
 				3EAAD4C52032EB3B00F26053 /* PLBaseViewController.m in Sources */,
 				3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */,
 				3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */,
 				3EAAD4D22032FF6900F26053 /* PLTransitions.m in Sources */,
 				3EAAD4DC2033003F00F26053 /* PLDynamicTransition.m in Sources */,
+				3EAAD4EE2033233200F26053 /* PLContactUsViewController.m in Sources */,
 				3EAAD4CA2032ED0000F26053 /* PLMainNavigationController.m in Sources */,
 				3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */,
+				3EAAD4E2203322E800F26053 /* PLGalleryViewController.m in Sources */,
 				3EAAD4CE2032F31600F26053 /* PLHomeViewController.m in Sources */,
+				3EAAD4DF203322D200F26053 /* PLEventsViewController.m in Sources */,
 				3EAAD4D62033001800F26053 /* PLFoldAnimationController.m in Sources */,
 				3EE3CCAC20328E50005FD2A5 /* main.m in Sources */,
 				3EE3CC9E20328E50005FD2A5 /* AppDelegate.m in Sources */,
+				3EAAD4EB2033232700F26053 /* PLAboutUsViewController.m in Sources */,
 				3EAAD4D92033002C00F26053 /* PLZoomAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

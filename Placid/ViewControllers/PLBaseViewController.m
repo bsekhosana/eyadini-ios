@@ -27,7 +27,6 @@
   
   // configure top view controller
   UIBarButtonItem *anchorRightButton = [[UIBarButtonItem alloc] initWithTitle:@"Left" style:UIBarButtonItemStylePlain target:self action:@selector(menuButtonTapped:)];
-  self.navigationItem.title = @"";
   self.navigationItem.leftBarButtonItem  = anchorRightButton;
   
   
