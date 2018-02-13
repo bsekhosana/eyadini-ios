@@ -10,8 +10,14 @@
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
+		3EAAD4C52032EB3B00F26053 /* PLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C42032EB3B00F26053 /* PLBaseViewController.m */; };
+		3EAAD4CA2032ED0000F26053 /* PLMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C92032ED0000F26053 /* PLMainNavigationController.m */; };
+		3EAAD4CE2032F31600F26053 /* PLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4CC2032F31600F26053 /* PLHomeViewController.m */; };
+		3EAAD4D22032FF6900F26053 /* PLTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4D12032FF6900F26053 /* PLTransitions.m */; };
+		3EAAD4D62033001800F26053 /* PLFoldAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4D52033001800F26053 /* PLFoldAnimationController.m */; };
+		3EAAD4D92033002C00F26053 /* PLZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4D82033002C00F26053 /* PLZoomAnimationController.m */; };
+		3EAAD4DC2033003F00F26053 /* PLDynamicTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4DB2033003F00F26053 /* PLDynamicTransition.m */; };
 		3EE3CC9E20328E50005FD2A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */; };
-		3EE3CCA120328E50005FD2A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA020328E50005FD2A5 /* ViewController.m */; };
 		3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA220328E50005FD2A5 /* Main.storyboard */; };
 		3EE3CCA620328E50005FD2A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA520328E50005FD2A5 /* Assets.xcassets */; };
 		3EE3CCA920328E50005FD2A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA720328E50005FD2A5 /* LaunchScreen.storyboard */; };
@@ -22,7 +28,7 @@
 		3EE3CCDF20329268005FD2A5 /* MaxiRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDE20329263005FD2A5 /* MaxiRelease.xcconfig */; };
 		3EE3CCE02032926B005FD2A5 /* MaxiDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */; };
 		3EE3CCE12032926E005FD2A5 /* EyadiniRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */; };
-		EDA53AA9E9A835456D57B1FC /* Pods_Placid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2955A0E8FB9BE92F8324A47 /* Pods_Placid.framework */; };
+		9AC83352EBE4AE06667CE809 /* libPods-Placid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1918432611AA1E7EF20490 /* libPods-Placid.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +55,23 @@
 		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
 		3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyadiniPLConstants.m; sourceTree = "<group>"; };
 		3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxiPLConstants.m; sourceTree = "<group>"; };
+		3EAAD4C32032EB3A00F26053 /* PLBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLBaseViewController.h; sourceTree = "<group>"; };
+		3EAAD4C42032EB3B00F26053 /* PLBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLBaseViewController.m; sourceTree = "<group>"; };
+		3EAAD4C82032ED0000F26053 /* PLMainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLMainNavigationController.h; sourceTree = "<group>"; };
+		3EAAD4C92032ED0000F26053 /* PLMainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLMainNavigationController.m; sourceTree = "<group>"; };
+		3EAAD4CB2032F31600F26053 /* PLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLHomeViewController.h; sourceTree = "<group>"; };
+		3EAAD4CC2032F31600F26053 /* PLHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLHomeViewController.m; sourceTree = "<group>"; };
+		3EAAD4D02032FF6900F26053 /* PLTransitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLTransitions.h; sourceTree = "<group>"; };
+		3EAAD4D12032FF6900F26053 /* PLTransitions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLTransitions.m; sourceTree = "<group>"; };
+		3EAAD4D42033001800F26053 /* PLFoldAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLFoldAnimationController.h; sourceTree = "<group>"; };
+		3EAAD4D52033001800F26053 /* PLFoldAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLFoldAnimationController.m; sourceTree = "<group>"; };
+		3EAAD4D72033002C00F26053 /* PLZoomAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLZoomAnimationController.h; sourceTree = "<group>"; };
+		3EAAD4D82033002C00F26053 /* PLZoomAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLZoomAnimationController.m; sourceTree = "<group>"; };
+		3EAAD4DA2033003F00F26053 /* PLDynamicTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLDynamicTransition.h; sourceTree = "<group>"; };
+		3EAAD4DB2033003F00F26053 /* PLDynamicTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLDynamicTransition.m; sourceTree = "<group>"; };
 		3EE3CC9920328E50005FD2A5 /* Placid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Placid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE3CC9C20328E50005FD2A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3EE3CC9F20328E50005FD2A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3EE3CCA020328E50005FD2A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3EE3CCA320328E50005FD2A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EE3CCA520328E50005FD2A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EE3CCA820328E50005FD2A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,9 +88,9 @@
 		3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MaxiDebug.xcconfig; sourceTree = "<group>"; };
 		3EE3CCDE20329263005FD2A5 /* MaxiRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MaxiRelease.xcconfig; sourceTree = "<group>"; };
 		4BA78189AB41A201EE38451B /* Pods_PlacidUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacidUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1918432611AA1E7EF20490 /* libPods-Placid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Placid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A678BB36701F146BCE93A567 /* Pods-Placid.eyadinirelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.eyadinirelease.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.eyadinirelease.xcconfig"; sourceTree = "<group>"; };
 		BF72E720719BB874265BC411 /* Pods-Placid.maxidebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.maxidebug.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.maxidebug.xcconfig"; sourceTree = "<group>"; };
-		F2955A0E8FB9BE92F8324A47 /* Pods_Placid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Placid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62586C03B1689C15393EBD6 /* Pods-Placid.maxirelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.maxirelease.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.maxirelease.xcconfig"; sourceTree = "<group>"; };
 		F85A327F602D2BCC8E7B2A89 /* Pods_PlacidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA53AA9E9A835456D57B1FC /* Pods_Placid.framework in Frameworks */,
+				9AC83352EBE4AE06667CE809 /* libPods-Placid.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +140,30 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		3EAAD4C72032ECDC00F26053 /* MainNav */ = {
+			isa = PBXGroup;
+			children = (
+				3EAAD4C82032ED0000F26053 /* PLMainNavigationController.h */,
+				3EAAD4C92032ED0000F26053 /* PLMainNavigationController.m */,
+				3EAAD4D02032FF6900F26053 /* PLTransitions.h */,
+				3EAAD4D12032FF6900F26053 /* PLTransitions.m */,
+			);
+			path = MainNav;
+			sourceTree = "<group>";
+		};
+		3EAAD4D32032FFE500F26053 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				3EAAD4D42033001800F26053 /* PLFoldAnimationController.h */,
+				3EAAD4D52033001800F26053 /* PLFoldAnimationController.m */,
+				3EAAD4D72033002C00F26053 /* PLZoomAnimationController.h */,
+				3EAAD4D82033002C00F26053 /* PLZoomAnimationController.m */,
+				3EAAD4DA2033003F00F26053 /* PLDynamicTransition.h */,
+				3EAAD4DB2033003F00F26053 /* PLDynamicTransition.m */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		3EE3CC9020328E50005FD2A5 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +196,8 @@
 				3EAAD4B42032CF8D00F26053 /* API */,
 				3EAAD4BB2032DF5300F26053 /* Constants */,
 				3EE3CCE42032C2AA005FD2A5 /* Delegates */,
+				3EAAD4C72032ECDC00F26053 /* MainNav */,
+				3EAAD4D32032FFE500F26053 /* Transitions */,
 				3EE3CCE32032C1E0005FD2A5 /* ViewControllers */,
 				3EE3CCA220328E50005FD2A5 /* Main.storyboard */,
 				3EE3CCA520328E50005FD2A5 /* Assets.xcassets */,
@@ -185,8 +229,10 @@
 		3EE3CCE32032C1E0005FD2A5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3EE3CC9F20328E50005FD2A5 /* ViewController.h */,
-				3EE3CCA020328E50005FD2A5 /* ViewController.m */,
+				3EAAD4C32032EB3A00F26053 /* PLBaseViewController.h */,
+				3EAAD4C42032EB3B00F26053 /* PLBaseViewController.m */,
+				3EAAD4CB2032F31600F26053 /* PLHomeViewController.h */,
+				3EAAD4CC2032F31600F26053 /* PLHomeViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -203,9 +249,9 @@
 		53F3AF4D3D639116E84D5398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F2955A0E8FB9BE92F8324A47 /* Pods_Placid.framework */,
 				F85A327F602D2BCC8E7B2A89 /* Pods_PlacidTests.framework */,
 				4BA78189AB41A201EE38451B /* Pods_PlacidUITests.framework */,
+				8C1918432611AA1E7EF20490 /* libPods-Placid.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -363,9 +409,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Placid/Pods-Placid-resources.sh",
+				"${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -380,12 +429,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Placid/Pods-Placid-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/ECSlidingViewController/ECSlidingViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ECSlidingViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 			);
@@ -419,12 +470,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EAAD4C52032EB3B00F26053 /* PLBaseViewController.m in Sources */,
 				3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */,
 				3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */,
-				3EE3CCA120328E50005FD2A5 /* ViewController.m in Sources */,
+				3EAAD4D22032FF6900F26053 /* PLTransitions.m in Sources */,
+				3EAAD4DC2033003F00F26053 /* PLDynamicTransition.m in Sources */,
+				3EAAD4CA2032ED0000F26053 /* PLMainNavigationController.m in Sources */,
 				3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */,
+				3EAAD4CE2032F31600F26053 /* PLHomeViewController.m in Sources */,
+				3EAAD4D62033001800F26053 /* PLFoldAnimationController.m in Sources */,
 				3EE3CCAC20328E50005FD2A5 /* main.m in Sources */,
 				3EE3CC9E20328E50005FD2A5 /* AppDelegate.m in Sources */,
+				3EAAD4D92033002C00F26053 /* PLZoomAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

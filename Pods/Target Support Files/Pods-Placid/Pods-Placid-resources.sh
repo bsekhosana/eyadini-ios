@@ -83,6 +83,18 @@ EOM
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "EyadiniDebug" ]]; then
+  install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
+fi
+if [[ "$CONFIGURATION" == "EyadiniRelease" ]]; then
+  install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
+fi
+if [[ "$CONFIGURATION" == "MaxiDebug" ]]; then
+  install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
+fi
+if [[ "$CONFIGURATION" == "MaxiRelease" ]]; then
+  install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
+fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

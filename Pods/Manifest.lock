@@ -14,19 +14,25 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - ECSlidingViewController (2.0.3)
+  - FontAwesome (4.5.0)
   - JSONModel (1.7.0)
   - PureLayout (3.0.2)
 
 DEPENDENCIES:
   - AFNetworking
+  - ECSlidingViewController
+  - FontAwesome
   - JSONModel
   - PureLayout
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
+  FontAwesome: dd8c48bf965e771309d8af17c4d8579217b3e756
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
-PODFILE CHECKSUM: aca5ce34bec7230896c8c2d1ca980d85ba8fda2f
+PODFILE CHECKSUM: a5163e4913a26dc1a98b4a2f546636d4b69459c9
 
 COCOAPODS: 1.4.0

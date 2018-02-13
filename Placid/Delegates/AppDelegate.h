@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PLConstants.h"
+#import <AFNetworking/AFNetworking.h>
+#import <ECSlidingViewController/ECSlidingViewController.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
