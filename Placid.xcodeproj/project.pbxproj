@@ -19,6 +19,7 @@
 		3EE3CCDF20329268005FD2A5 /* MaxiRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDE20329263005FD2A5 /* MaxiRelease.xcconfig */; };
 		3EE3CCE02032926B005FD2A5 /* MaxiDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */; };
 		3EE3CCE12032926E005FD2A5 /* EyadiniRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */; };
+		EDA53AA9E9A835456D57B1FC /* Pods_Placid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2955A0E8FB9BE92F8324A47 /* Pods_Placid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D6B71264106057E6E08E212 /* Pods-Placid.eyadinidebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.eyadinidebug.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.eyadinidebug.xcconfig"; sourceTree = "<group>"; };
 		3EE3CC9920328E50005FD2A5 /* Placid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Placid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE3CC9C20328E50005FD2A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +61,12 @@
 		3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = EyadiniRelease.xcconfig; sourceTree = "<group>"; };
 		3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MaxiDebug.xcconfig; sourceTree = "<group>"; };
 		3EE3CCDE20329263005FD2A5 /* MaxiRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MaxiRelease.xcconfig; sourceTree = "<group>"; };
+		4BA78189AB41A201EE38451B /* Pods_PlacidUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacidUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A678BB36701F146BCE93A567 /* Pods-Placid.eyadinirelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.eyadinirelease.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.eyadinirelease.xcconfig"; sourceTree = "<group>"; };
+		BF72E720719BB874265BC411 /* Pods-Placid.maxidebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.maxidebug.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.maxidebug.xcconfig"; sourceTree = "<group>"; };
+		F2955A0E8FB9BE92F8324A47 /* Pods_Placid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Placid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F62586C03B1689C15393EBD6 /* Pods-Placid.maxirelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.maxirelease.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.maxirelease.xcconfig"; sourceTree = "<group>"; };
+		F85A327F602D2BCC8E7B2A89 /* Pods_PlacidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA53AA9E9A835456D57B1FC /* Pods_Placid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +106,8 @@
 				3EE3CCB420328E50005FD2A5 /* PlacidTests */,
 				3EE3CCBF20328E50005FD2A5 /* PlacidUITests */,
 				3EE3CC9A20328E50005FD2A5 /* Products */,
+				9C39D0602E83EF10791DDCE0 /* Pods */,
+				53F3AF4D3D639116E84D5398 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,10 +124,9 @@
 		3EE3CC9B20328E50005FD2A5 /* Placid */ = {
 			isa = PBXGroup;
 			children = (
-				3EE3CC9C20328E50005FD2A5 /* AppDelegate.h */,
-				3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */,
-				3EE3CC9F20328E50005FD2A5 /* ViewController.h */,
-				3EE3CCA020328E50005FD2A5 /* ViewController.m */,
+				3EE3CCE42032C2AA005FD2A5 /* Delegates */,
+				3EE3CCE22032C1E0005FD2A5 /* PlAPIClient */,
+				3EE3CCE32032C1E0005FD2A5 /* ViewControllers */,
 				3EE3CCA220328E50005FD2A5 /* Main.storyboard */,
 				3EE3CCA520328E50005FD2A5 /* Assets.xcassets */,
 				3EE3CCA720328E50005FD2A5 /* LaunchScreen.storyboard */,
@@ -144,6 +154,52 @@
 			path = PlacidUITests;
 			sourceTree = "<group>";
 		};
+		3EE3CCE22032C1E0005FD2A5 /* PlAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlAPIClient;
+			sourceTree = "<group>";
+		};
+		3EE3CCE32032C1E0005FD2A5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3EE3CC9F20328E50005FD2A5 /* ViewController.h */,
+				3EE3CCA020328E50005FD2A5 /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3EE3CCE42032C2AA005FD2A5 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				3EE3CC9C20328E50005FD2A5 /* AppDelegate.h */,
+				3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		53F3AF4D3D639116E84D5398 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2955A0E8FB9BE92F8324A47 /* Pods_Placid.framework */,
+				F85A327F602D2BCC8E7B2A89 /* Pods_PlacidTests.framework */,
+				4BA78189AB41A201EE38451B /* Pods_PlacidUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C39D0602E83EF10791DDCE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D6B71264106057E6E08E212 /* Pods-Placid.eyadinidebug.xcconfig */,
+				A678BB36701F146BCE93A567 /* Pods-Placid.eyadinirelease.xcconfig */,
+				BF72E720719BB874265BC411 /* Pods-Placid.maxidebug.xcconfig */,
+				F62586C03B1689C15393EBD6 /* Pods-Placid.maxirelease.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EE3CCC520328E50005FD2A5 /* Build configuration list for PBXNativeTarget "Placid" */;
 			buildPhases = (
+				671F95053B456BCA868DBAE6 /* [CP] Check Pods Manifest.lock */,
 				3EE3CC9520328E50005FD2A5 /* Sources */,
 				3EE3CC9620328E50005FD2A5 /* Frameworks */,
 				3EE3CC9720328E50005FD2A5 /* Resources */,
+				235A20C1808F208B8212357E /* [CP] Embed Pods Frameworks */,
+				206CE949737237116906F8D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,6 +334,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		206CE949737237116906F8D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Placid/Pods-Placid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		235A20C1808F208B8212357E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Placid/Pods-Placid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		671F95053B456BCA868DBAE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Placid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3EE3CC9520328E50005FD2A5 /* Sources */ = {
@@ -435,6 +545,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"PROD=1",
 					"EYADINI=1",
+					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -451,7 +562,7 @@
 		};
 		3EE3CCC620328E50005FD2A5 /* EyadiniDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EE3CCDA2032922F005FD2A5 /* EyadiniDebug.xcconfig */;
+			baseConfigurationReference = 3D6B71264106057E6E08E212 /* Pods-Placid.eyadinidebug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
 				CODE_SIGN_STYLE = Automatic;
@@ -459,6 +570,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"EYADINI=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				INFOPLIST_FILE = Placid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -470,7 +582,7 @@
 		};
 		3EE3CCC720328E50005FD2A5 /* EyadiniRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */;
+			baseConfigurationReference = A678BB36701F146BCE93A567 /* Pods-Placid.eyadinirelease.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
 				CODE_SIGN_STYLE = Automatic;
@@ -478,6 +590,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"EYADINI=1",
 					"PROD=1",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = Placid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -585,6 +698,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"MAXI=1",
+					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -601,7 +715,7 @@
 		};
 		3EE3CCD3203291BD005FD2A5 /* MaxiDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */;
+			baseConfigurationReference = BF72E720719BB874265BC411 /* Pods-Placid.maxidebug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
 				CODE_SIGN_STYLE = Automatic;
@@ -609,6 +723,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"MAXI=1",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = Placid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -703,7 +818,7 @@
 		};
 		3EE3CCD7203291CC005FD2A5 /* MaxiRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */;
+			baseConfigurationReference = F62586C03B1689C15393EBD6 /* Pods-Placid.maxirelease.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
 				CODE_SIGN_STYLE = Automatic;
@@ -711,6 +826,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"PROD=1",
 					"MAXI=1",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = Placid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
