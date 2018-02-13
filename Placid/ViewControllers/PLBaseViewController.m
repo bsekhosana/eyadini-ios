@@ -83,9 +83,8 @@
   
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
 }
-  
+
 #pragma mark - Properties
   
 - (PLTransitions *)transitions {

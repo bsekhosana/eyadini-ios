@@ -12,5 +12,5 @@
 @interface PLMainNavigationController :  UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *navLogoImageView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet FBShimmeringView *shimmerView;
+@property (nonatomic, strong) IBOutlet UIImageView *reflectionView;
 @end

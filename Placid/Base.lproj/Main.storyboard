@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +23,12 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="133"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="133" id="q0u-wy-pla"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DcX-7o-WJL">
+                                <rect key="frame" x="122" y="153" width="131.5" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="xSM-qm-z1U"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-v4-38X">
@@ -56,18 +63,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="DcX-7o-WJL" firstAttribute="centerX" secondItem="2M5-di-WK9" secondAttribute="centerX" id="9zJ-jC-fpu"/>
                             <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="2M5-di-WK9" secondAttribute="trailing" id="BLN-XW-X9N"/>
                             <constraint firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="top" constant="-20" id="DIz-rI-iRp"/>
+                            <constraint firstItem="DcX-7o-WJL" firstAttribute="width" secondItem="2M5-di-WK9" secondAttribute="width" multiplier="0.35" id="K2W-dX-ba3"/>
                             <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="f9W-v4-38X" secondAttribute="trailing" id="Vqx-qJ-dQG"/>
                             <constraint firstItem="f9W-v4-38X" firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="bottom" constant="30" id="dXz-rt-xDw"/>
                             <constraint firstItem="Vem-Ex-fKt" firstAttribute="bottom" secondItem="f9W-v4-38X" secondAttribute="bottom" id="fRe-SK-mVb"/>
                             <constraint firstItem="2M5-di-WK9" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" id="xVO-J0-v1e"/>
+                            <constraint firstItem="DcX-7o-WJL" firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="bottom" id="zIJ-1j-y1r"/>
                             <constraint firstItem="f9W-v4-38X" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" id="zPp-dD-Cap"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vem-Ex-fKt"/>
                     </view>
                     <connections>
                         <outlet property="navLogoImageView" destination="2M5-di-WK9" id="Dj1-cB-bsS"/>
+                        <outlet property="reflectionView" destination="DcX-7o-WJL" id="29n-N6-RV3"/>
                         <outlet property="tableView" destination="f9W-v4-38X" id="P3v-Zn-5nr"/>
                     </connections>
                 </viewController>
