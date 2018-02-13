@@ -4,6 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>font.otf</string>
+		<string>MyriadCondBold.otf</string>
+		<string>MyriadPro-Cond.otf</string>
 		<string>FontAwesome.ttf</string>
 	</array>
 	<key>PL_API_KEY</key>

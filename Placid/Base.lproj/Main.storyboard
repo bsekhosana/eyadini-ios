@@ -18,20 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-v4-38X">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2M5-di-WK9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="q0u-wy-pla"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-v4-38X">
+                                <rect key="frame" x="0.0" y="173" width="375" height="494"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PLMenuCell" textLabel="2dx-6z-DMu" style="IBUITableViewCellStyleDefault" id="tND-No-Jfg">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tND-No-Jfg" id="j3Y-6E-pJ1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2dx-6z-DMu">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -49,9 +55,19 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="2M5-di-WK9" secondAttribute="trailing" id="BLN-XW-X9N"/>
+                            <constraint firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="top" id="DIz-rI-iRp"/>
+                            <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="f9W-v4-38X" secondAttribute="trailing" id="Vqx-qJ-dQG"/>
+                            <constraint firstItem="f9W-v4-38X" firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="bottom" constant="40" id="dXz-rt-xDw"/>
+                            <constraint firstItem="Vem-Ex-fKt" firstAttribute="bottom" secondItem="f9W-v4-38X" secondAttribute="bottom" id="fRe-SK-mVb"/>
+                            <constraint firstItem="2M5-di-WK9" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" id="xVO-J0-v1e"/>
+                            <constraint firstItem="f9W-v4-38X" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" id="zPp-dD-Cap"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vem-Ex-fKt"/>
                     </view>
                     <connections>
+                        <outlet property="navLogoImageView" destination="2M5-di-WK9" id="Dj1-cB-bsS"/>
                         <outlet property="tableView" destination="f9W-v4-38X" id="P3v-Zn-5nr"/>
                     </connections>
                 </viewController>
@@ -66,7 +82,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.77086867199999998" blue="0.22508233890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <userDefinedRuntimeAttributes>

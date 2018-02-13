@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3E4DAEE0203336A200587BF8 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEDF203336A200587BF8 /* FontAwesome.ttf */; };
+		3E4DAEE520333E1D00587BF8 /* PLMainNavTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEE320333E1D00587BF8 /* PLMainNavTableViewCell.m */; };
+		3E4DAEE620333E1D00587BF8 /* PLMainNavTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEE420333E1D00587BF8 /* PLMainNavTableViewCell.xib */; };
+		3E4DAEED20334B6000587BF8 /* UIImage+PLShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEEC20334B6000587BF8 /* UIImage+PLShadow.m */; };
+		3E4DAEF1203373EE00587BF8 /* MyriadPro-Cond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEEE203373ED00587BF8 /* MyriadPro-Cond.otf */; };
+		3E4DAEF2203373EE00587BF8 /* font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEEF203373EE00587BF8 /* font.otf */; };
+		3E4DAEF3203373EE00587BF8 /* MyriadCondBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEF0203373EE00587BF8 /* MyriadCondBold.otf */; };
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
@@ -58,6 +64,14 @@
 /* Begin PBXFileReference section */
 		3D6B71264106057E6E08E212 /* Pods-Placid.eyadinidebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.eyadinidebug.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.eyadinidebug.xcconfig"; sourceTree = "<group>"; };
 		3E4DAEDF203336A200587BF8 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		3E4DAEE220333E1D00587BF8 /* PLMainNavTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLMainNavTableViewCell.h; sourceTree = "<group>"; };
+		3E4DAEE320333E1D00587BF8 /* PLMainNavTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLMainNavTableViewCell.m; sourceTree = "<group>"; };
+		3E4DAEE420333E1D00587BF8 /* PLMainNavTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLMainNavTableViewCell.xib; sourceTree = "<group>"; };
+		3E4DAEEB20334B6000587BF8 /* UIImage+PLShadow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+PLShadow.h"; sourceTree = "<group>"; };
+		3E4DAEEC20334B6000587BF8 /* UIImage+PLShadow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PLShadow.m"; sourceTree = "<group>"; };
+		3E4DAEEE203373ED00587BF8 /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Cond.otf"; sourceTree = "<group>"; };
+		3E4DAEEF203373EE00587BF8 /* font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font.otf; sourceTree = "<group>"; };
+		3E4DAEF0203373EE00587BF8 /* MyriadCondBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyriadCondBold.otf; sourceTree = "<group>"; };
 		3EAAD4B82032DEE600F26053 /* PLAPICLient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAPICLient.h; sourceTree = "<group>"; };
 		3EAAD4B92032DEE600F26053 /* PLAPICLient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAPICLient.m; sourceTree = "<group>"; };
 		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
@@ -152,9 +166,31 @@
 		3E4DAEDE203336A200587BF8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				3E4DAEEF203373EE00587BF8 /* font.otf */,
+				3E4DAEF0203373EE00587BF8 /* MyriadCondBold.otf */,
+				3E4DAEEE203373ED00587BF8 /* MyriadPro-Cond.otf */,
 				3E4DAEDF203336A200587BF8 /* FontAwesome.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3E4DAEE120333DF600587BF8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3E4DAEE220333E1D00587BF8 /* PLMainNavTableViewCell.h */,
+				3E4DAEE320333E1D00587BF8 /* PLMainNavTableViewCell.m */,
+				3E4DAEE420333E1D00587BF8 /* PLMainNavTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3E4DAEE720334ABA00587BF8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3E4DAEEB20334B6000587BF8 /* UIImage+PLShadow.h */,
+				3E4DAEEC20334B6000587BF8 /* UIImage+PLShadow.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		3EAAD4B42032CF8D00F26053 /* API */ = {
@@ -230,6 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				3EAAD4B42032CF8D00F26053 /* API */,
+				3E4DAEE720334ABA00587BF8 /* Categories */,
+				3E4DAEE120333DF600587BF8 /* Cells */,
 				3EAAD4BB2032DF5300F26053 /* Constants */,
 				3EE3CCE42032C2AA005FD2A5 /* Delegates */,
 				3EAAD4C72032ECDC00F26053 /* MainNav */,
@@ -427,9 +465,13 @@
 			files = (
 				3EE3CCDF20329268005FD2A5 /* MaxiRelease.xcconfig in Resources */,
 				3EE3CCA920328E50005FD2A5 /* LaunchScreen.storyboard in Resources */,
+				3E4DAEE620333E1D00587BF8 /* PLMainNavTableViewCell.xib in Resources */,
 				3EE3CCE12032926E005FD2A5 /* EyadiniRelease.xcconfig in Resources */,
+				3E4DAEF2203373EE00587BF8 /* font.otf in Resources */,
 				3E4DAEE0203336A200587BF8 /* FontAwesome.ttf in Resources */,
+				3E4DAEF1203373EE00587BF8 /* MyriadPro-Cond.otf in Resources */,
 				3EE3CCA620328E50005FD2A5 /* Assets.xcassets in Resources */,
+				3E4DAEF3203373EE00587BF8 /* MyriadCondBold.otf in Resources */,
 				3EE3CCDB2032922F005FD2A5 /* EyadiniDebug.xcconfig in Resources */,
 				3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */,
 				3EE3CCE02032926B005FD2A5 /* MaxiDebug.xcconfig in Resources */,
@@ -520,12 +562,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4DAEE520333E1D00587BF8 /* PLMainNavTableViewCell.m in Sources */,
 				3EAAD4E82033231900F26053 /* PLBlogViewController.m in Sources */,
 				3EAAD4E52033230700F26053 /* PLCuisineViewController.m in Sources */,
 				3EAAD4C52032EB3B00F26053 /* PLBaseViewController.m in Sources */,
 				3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */,
 				3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */,
 				3EAAD4D22032FF6900F26053 /* PLTransitions.m in Sources */,
+				3E4DAEED20334B6000587BF8 /* UIImage+PLShadow.m in Sources */,
 				3EAAD4DC2033003F00F26053 /* PLDynamicTransition.m in Sources */,
 				3EAAD4EE2033233200F26053 /* PLContactUsViewController.m in Sources */,
 				3EAAD4CA2032ED0000F26053 /* PLMainNavigationController.m in Sources */,

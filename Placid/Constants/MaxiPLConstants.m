@@ -49,7 +49,12 @@
 + (UIFont *) LOOKUP_FONT5 { return [UIFont italicSystemFontOfSize:1.0];}
 + (UIFont *) LOOKUP_ICON_FONT {  return [UIFont fontWithName:@"FontAwesome" size:1.f];}
 + (UIFont *) LOOKUP_ICON_FONT:(float)size{ return [UIFont fontWithName:@"FontAwesome" size:size];}
-    
+
+
++(NSString *)navLogoImageName{
+  return @"";
+}
+
 +(NSString *)PLApiKey{
     return [[NSBundle mainBundle] infoDictionary][@"PL_API_KEY"];
 }

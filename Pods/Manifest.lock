@@ -18,6 +18,7 @@ PODS:
   - FontAwesome (4.5.0)
   - JSONModel (1.7.0)
   - PureLayout (3.0.2)
+  - Shimmer (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - FontAwesome
   - JSONModel
   - PureLayout
+  - Shimmer
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -32,7 +34,8 @@ SPEC CHECKSUMS:
   FontAwesome: dd8c48bf965e771309d8af17c4d8579217b3e756
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
 
-PODFILE CHECKSUM: a5163e4913a26dc1a98b4a2f546636d4b69459c9
+PODFILE CHECKSUM: 1f80958b0760c41dc48e41b505c7a04b097f06d0
 
 COCOAPODS: 1.4.0

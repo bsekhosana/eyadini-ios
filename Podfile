@@ -9,4 +9,5 @@ target 'Placid' do
   pod 'JSONModel'
   pod 'ECSlidingViewController'
   pod 'FontAwesome'
+  pod 'Shimmer'
 end

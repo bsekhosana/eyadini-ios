@@ -8,14 +8,16 @@
 
 #import "PLMainNavigationController.h"
 #import "UIViewController+ECSlidingViewController.h"
+#import "PLMainNavTableViewCell.h"
+#import "PLConstants.h"
+#import "UIImage+PLShadow.h"
 
 @interface PLMainNavigationController ()
   @property (nonatomic, strong) NSArray *menuItems;
   @property (nonatomic, strong) UINavigationController *transitionsNavigationController;
 @end
 
-
-
+static NSString *CellIdentifier = @"PLMainNavTableViewCell";
 @implementation PLMainNavigationController
   
 - (void)viewDidLoad {
@@ -25,6 +27,12 @@
   // It is initially set as a User Defined Runtime Attributes in storyboards.
   // We keep a reference to this instance so that we can go back to it without losing its state.
   self.transitionsNavigationController = (UINavigationController *)self.slidingViewController.topViewController;
+  
+  [self.tableView registerClass:[PLMainNavTableViewCell class] forCellReuseIdentifier:CellIdentifier];
+  
+  [self.view setBackgroundColor:[PLConstants LOOKUP_COLOUR2]];
+  [self.navLogoImageView setImage:[UIImage imageNamed:[PLConstants navLogoImageName]]];
+  [self.navLogoImageView setContentMode:UIViewContentModeScaleAspectFit];
   
 }
   
@@ -50,22 +58,25 @@
 }
   
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  static NSString *CellIdentifier = @"PLMenuCell";
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  PLMainNavTableViewCell *cell = [[PLMainNavTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
   
   NSString *menuItem = self.menuItems[indexPath.row];
   
-  cell.textLabel.text = menuItem;
+  cell.navTitleLabel.text = menuItem;
   [cell setBackgroundColor:[UIColor clearColor]];
   
   return cell;
 }
   
 #pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  return 60;
+}
   
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-  
   NSString *menuItem = self.menuItems[selectedIndexPath.row];
   NSLog(@"%@", menuItem);
   // This undoes the Zoom Transition's scale because it affects the other transitions.

@@ -27,6 +27,14 @@
   self.transitions.dynamicTransition.slidingViewController = self.slidingViewController;
   
   // configure top view controller
+  self.navigationController.navigationBar.barTintColor = [PLConstants COLOUR_BG_NAV_PRIMARY];
+  self.navigationController.navigationBar.translucent = NO;
+  self.navigationController.navigationBar.shadowImage = nil;
+  
+  [self.navigationController.navigationBar setTitleTextAttributes:@{
+                                                                    NSFontAttributeName: [PLConstants FONT_NAV_HEADING],
+                                                                    NSForegroundColorAttributeName : [PLConstants COLOUR_LBL_NAV_HEADING]}];
+  
   UIBarButtonItem *anchorRightButton = [[UIBarButtonItem alloc] initWithTitle:FA_ICON_BARS style:UIBarButtonItemStylePlain target:self action:@selector(menuButtonTapped:)];
   anchorRightButton.width = 44.0;
   [anchorRightButton setTitleTextAttributes:@{

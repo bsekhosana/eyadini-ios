@@ -74,6 +74,12 @@ static float fontScaleFactor = 0.5f;
 + (UIFont *) FONT_NAV_ACTION_SMALL;
 + (UIFont *) FONT_NAV_NOTIFICATION;
 
+#pragma mark fonts - headers
+
++ (UIFont *) FONT_NORMAL_HEADER;
+
++(NSString *)navLogoImageName;
+
 +(NSString *)PLApiKey;
 
 
