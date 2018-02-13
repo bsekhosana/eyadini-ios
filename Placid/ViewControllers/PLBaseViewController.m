@@ -11,6 +11,7 @@
 #import "UIViewController+ECSlidingViewController.h"
 #import "PLDynamicTransition.h"
 #import "PLTransitions.h"
+#import "PLConstants.h"
 
 @interface PLBaseViewController ()
   @property (nonatomic, strong) PLTransitions *transitions;
@@ -26,7 +27,17 @@
   self.transitions.dynamicTransition.slidingViewController = self.slidingViewController;
   
   // configure top view controller
-  UIBarButtonItem *anchorRightButton = [[UIBarButtonItem alloc] initWithTitle:@"Left" style:UIBarButtonItemStylePlain target:self action:@selector(menuButtonTapped:)];
+  UIBarButtonItem *anchorRightButton = [[UIBarButtonItem alloc] initWithTitle:FA_ICON_BARS style:UIBarButtonItemStylePlain target:self action:@selector(menuButtonTapped:)];
+  anchorRightButton.width = 44.0;
+  [anchorRightButton setTitleTextAttributes:@{
+                                          NSFontAttributeName: [PLConstants FONT_NAV_ICON],
+                                          NSForegroundColorAttributeName: [PLConstants COLOUR_LBL_NAV_ACTION]
+                                          } forState:UIControlStateNormal];
+  [anchorRightButton setTitleTextAttributes:@{
+                                              NSFontAttributeName: [PLConstants FONT_NAV_ICON],
+                                              NSForegroundColorAttributeName: [PLConstants COLOUR_LBL_NAV_ACTION]
+                                              } forState:UIControlStateSelected];
+  [anchorRightButton setTintColor: [PLConstants COLOUR_BG_NAV_PRIMARY]];
   self.navigationItem.leftBarButtonItem  = anchorRightButton;
   
   

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E4DAEE0203336A200587BF8 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEDF203336A200587BF8 /* FontAwesome.ttf */; };
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		3D6B71264106057E6E08E212 /* Pods-Placid.eyadinidebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.eyadinidebug.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.eyadinidebug.xcconfig"; sourceTree = "<group>"; };
+		3E4DAEDF203336A200587BF8 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		3EAAD4B82032DEE600F26053 /* PLAPICLient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAPICLient.h; sourceTree = "<group>"; };
 		3EAAD4B92032DEE600F26053 /* PLAPICLient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAPICLient.m; sourceTree = "<group>"; };
 		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
@@ -139,6 +141,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E4DAEDD203336A200587BF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E4DAEDE203336A200587BF8 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3E4DAEDE203336A200587BF8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3E4DAEDF203336A200587BF8 /* FontAwesome.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		3EAAD4B42032CF8D00F26053 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +233,7 @@
 				3EAAD4BB2032DF5300F26053 /* Constants */,
 				3EE3CCE42032C2AA005FD2A5 /* Delegates */,
 				3EAAD4C72032ECDC00F26053 /* MainNav */,
+				3E4DAEDD203336A200587BF8 /* Resources */,
 				3EAAD4D32032FFE500F26053 /* Transitions */,
 				3EE3CCE32032C1E0005FD2A5 /* ViewControllers */,
 				3EE3CCA220328E50005FD2A5 /* Main.storyboard */,
@@ -409,6 +428,7 @@
 				3EE3CCDF20329268005FD2A5 /* MaxiRelease.xcconfig in Resources */,
 				3EE3CCA920328E50005FD2A5 /* LaunchScreen.storyboard in Resources */,
 				3EE3CCE12032926E005FD2A5 /* EyadiniRelease.xcconfig in Resources */,
+				3E4DAEE0203336A200587BF8 /* FontAwesome.ttf in Resources */,
 				3EE3CCA620328E50005FD2A5 /* Assets.xcassets in Resources */,
 				3EE3CCDB2032922F005FD2A5 /* EyadiniDebug.xcconfig in Resources */,
 				3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */,
