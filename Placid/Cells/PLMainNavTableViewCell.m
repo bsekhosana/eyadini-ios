@@ -28,6 +28,7 @@
   [self.bottomDivider setBackgroundColor:[PLConstants LOOKUP_COLOUR1]];
   [self.navTitleLabel setFont:[PLConstants FONT_NAV_HEADING]];
   [self.navTitleLabel setTextColor:[PLConstants LOOKUP_COLOUR1]];
+  [self setSelectionStyle:UITableViewCellSelectionStyleNone];
   
 }
 

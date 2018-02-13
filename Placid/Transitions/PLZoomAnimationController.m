@@ -8,7 +8,7 @@
 
 #import "PLZoomAnimationController.h"
 
-static CGFloat const MEZoomAnimationScaleFactor = 0.75;
+static CGFloat const MEZoomAnimationScaleFactor = 0.60;
 
 @interface PLZoomAnimationController ()
   @property (nonatomic, assign) ECSlidingViewControllerOperation operation;
