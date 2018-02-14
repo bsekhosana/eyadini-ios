@@ -257,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmj-5s-xtE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="3612"/>
+            <point key="canvasLocation" x="-2138" y="4325"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2xE-e7-F8W">
@@ -275,7 +275,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2v-eY-uis" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-964" y="3611"/>
+            <point key="canvasLocation" x="-3655" y="4393"/>
         </scene>
         <!--About Us-->
         <scene sceneID="3iR-hG-OsX">
@@ -378,6 +378,107 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eu4-vs-4bZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1026" y="2836"/>
+        </scene>
+        <!--Social  Networks-->
+        <scene sceneID="vQY-jc-qby">
+            <objects>
+                <viewController storyboardIdentifier="Social Networks" id="PRn-eS-s56" customClass="PLSocialNetworksViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xgm-3z-p9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqN-Pn-eFj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="53"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5s-GM-3eB">
+                                        <rect key="frame" x="0.0" y="50" width="124" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="tHt-zT-0hQ"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEv-8Y-97m">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="53"/>
+                                        <state key="normal" title="Facebook"/>
+                                        <connections>
+                                            <action selector="didSelectTopNavButton:" destination="PRn-eS-s56" eventType="touchUpInside" id="eD4-nG-FYq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3s-gQ-GkP">
+                                        <rect key="frame" x="248" y="0.0" width="124" height="53"/>
+                                        <state key="normal" title="Twitter"/>
+                                        <connections>
+                                            <action selector="didSelectTopNavButton:" destination="PRn-eS-s56" eventType="touchUpInside" id="0ES-Lt-3pq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5h-3b-2v1">
+                                        <rect key="frame" x="124" y="0.0" width="124" height="53"/>
+                                        <state key="normal" title="Instagram"/>
+                                        <connections>
+                                            <action selector="didSelectTopNavButton:" destination="PRn-eS-s56" eventType="touchUpInside" id="jW9-CE-8vU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="F5s-GM-3eB" secondAttribute="bottom" constant="1" id="21g-la-gxG"/>
+                                    <constraint firstItem="V5h-3b-2v1" firstAttribute="top" secondItem="kEv-8Y-97m" secondAttribute="top" id="4am-I9-FKG"/>
+                                    <constraint firstItem="V5h-3b-2v1" firstAttribute="leading" secondItem="kEv-8Y-97m" secondAttribute="trailing" id="8Uz-OI-BGw"/>
+                                    <constraint firstItem="kEv-8Y-97m" firstAttribute="height" secondItem="pqN-Pn-eFj" secondAttribute="height" id="9Gm-K0-SY0"/>
+                                    <constraint firstItem="F5s-GM-3eB" firstAttribute="leading" secondItem="pqN-Pn-eFj" secondAttribute="leading" id="CcV-gh-hgk"/>
+                                    <constraint firstItem="kEv-8Y-97m" firstAttribute="leading" secondItem="pqN-Pn-eFj" secondAttribute="leading" id="IJd-1V-Sl6"/>
+                                    <constraint firstItem="V5h-3b-2v1" firstAttribute="width" secondItem="kEv-8Y-97m" secondAttribute="width" id="IXJ-ux-Jl8"/>
+                                    <constraint firstItem="F5s-GM-3eB" firstAttribute="width" secondItem="kEv-8Y-97m" secondAttribute="width" id="JIY-i3-jIM"/>
+                                    <constraint firstAttribute="height" constant="53" id="N4L-ON-YOW"/>
+                                    <constraint firstItem="V5h-3b-2v1" firstAttribute="height" secondItem="kEv-8Y-97m" secondAttribute="height" id="OqM-Yk-Z6q"/>
+                                    <constraint firstItem="kEv-8Y-97m" firstAttribute="top" secondItem="pqN-Pn-eFj" secondAttribute="top" id="RE0-ei-i9t"/>
+                                    <constraint firstItem="kEv-8Y-97m" firstAttribute="width" secondItem="pqN-Pn-eFj" secondAttribute="width" multiplier="0.33" id="RFT-PW-Dqb"/>
+                                    <constraint firstItem="F3s-gQ-GkP" firstAttribute="height" secondItem="V5h-3b-2v1" secondAttribute="height" id="XR1-EK-myh"/>
+                                    <constraint firstItem="F3s-gQ-GkP" firstAttribute="width" secondItem="V5h-3b-2v1" secondAttribute="width" id="XjR-85-ggn"/>
+                                    <constraint firstItem="F3s-gQ-GkP" firstAttribute="leading" secondItem="V5h-3b-2v1" secondAttribute="trailing" id="f3w-1e-xfa"/>
+                                    <constraint firstItem="F3s-gQ-GkP" firstAttribute="top" secondItem="V5h-3b-2v1" secondAttribute="top" id="teV-Ww-0G8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pqN-Pn-eFj" firstAttribute="leading" secondItem="D8s-Hr-Z6l" secondAttribute="leading" id="PDH-Fs-nmA"/>
+                            <constraint firstItem="D8s-Hr-Z6l" firstAttribute="trailing" secondItem="pqN-Pn-eFj" secondAttribute="trailing" id="cz4-1E-cG2"/>
+                            <constraint firstItem="pqN-Pn-eFj" firstAttribute="top" secondItem="D8s-Hr-Z6l" secondAttribute="top" id="kv1-5h-Aj3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D8s-Hr-Z6l"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Social  Networks" id="EYJ-n8-4Av"/>
+                    <connections>
+                        <outlet property="bottomDividerLeadingConstraint" destination="CcV-gh-hgk" id="j4g-P3-v5V"/>
+                        <outlet property="bottomDividerView" destination="F5s-GM-3eB" id="iQP-XG-Ly8"/>
+                        <outlet property="facebookButton" destination="kEv-8Y-97m" id="6pC-K7-Vc1"/>
+                        <outlet property="instagramButton" destination="V5h-3b-2v1" id="j9C-vd-sfk"/>
+                        <outlet property="topViewNav" destination="pqN-Pn-eFj" id="KHC-1r-bI5"/>
+                        <outlet property="twitterButton" destination="F3s-gQ-GkP" id="jyh-Pk-GVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRZ-jZ-yde" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.60000000000002" y="3584.257871064468"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KgX-z3-faQ">
+            <objects>
+                <navigationController storyboardIdentifier="PLSocialNetworksNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="51E-aw-JNH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aEC-vZ-QCB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PRn-eS-s56" kind="relationship" relationship="rootViewController" id="Evj-lJ-cr8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Tm-Sf-8cT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1026" y="3585"/>
         </scene>
     </scenes>
 </document>

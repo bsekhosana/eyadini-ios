@@ -76,7 +76,7 @@
 
 #pragma mark fonts - headers
 
-+ (UIFont *) FONT_NORMAL_HEADER { return [[PLConstants LOOKUP_FONT1] fontWithSize:36*fontScaleFactor];}
++ (UIFont *) FONT_NORMAL_HEADER { return [[PLConstants LOOKUP_FONT1] fontWithSize:40*fontScaleFactor];}
 
 +(NSString *)navLogoImageName{
   return @"eyadini_nav_logo";

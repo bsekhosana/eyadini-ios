@@ -10,4 +10,7 @@ target 'Placid' do
   pod 'ECSlidingViewController'
   pod 'FontAwesome'
   pod 'Shimmer'
+  pod'FBSDKCoreKit'
+  pod'FBSDKLoginKit'
+  pod'FBSDKShareKit'
 end

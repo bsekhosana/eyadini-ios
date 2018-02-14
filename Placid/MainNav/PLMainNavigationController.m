@@ -57,7 +57,7 @@ static NSString *CellIdentifier = @"PLMainNavTableViewCell";
 - (NSArray *)menuItems {
   if (_menuItems) return _menuItems;
   
-  _menuItems = @[@"Home", @"Events", @"Gallery",@"My Profile", @"Blog", @"About Us", @"Contact Us"];
+  _menuItems = @[@"Home", @"Events", @"Gallery",@"My Profile", @"Social Networks", @"About Us", @"Contact Us"];
   
   return _menuItems;
 }

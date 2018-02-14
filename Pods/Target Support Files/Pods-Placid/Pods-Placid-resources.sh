@@ -84,15 +84,19 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "EyadiniDebug" ]]; then
+  install_resource "${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle"
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
 fi
 if [[ "$CONFIGURATION" == "EyadiniRelease" ]]; then
+  install_resource "${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle"
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
 fi
 if [[ "$CONFIGURATION" == "MaxiDebug" ]]; then
+  install_resource "${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle"
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
 fi
 if [[ "$CONFIGURATION" == "MaxiRelease" ]]; then
+  install_resource "${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle"
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
 fi
 

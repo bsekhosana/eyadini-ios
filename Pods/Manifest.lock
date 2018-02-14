@@ -14,7 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
   - ECSlidingViewController (2.0.3)
+  - FBSDKCoreKit (4.19.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.19.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.19.0):
+    - FBSDKCoreKit
   - FontAwesome (4.5.0)
   - JSONModel (1.7.0)
   - PureLayout (3.0.2)
@@ -23,6 +35,9 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - ECSlidingViewController
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
   - FontAwesome
   - JSONModel
   - PureLayout
@@ -30,12 +45,16 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
+  FBSDKCoreKit: 894b2b6eda6a4c8c4204e92e59cc355709ef045c
+  FBSDKLoginKit: 83ca4d8f12a2022570af9fd6aacf27f6b425b99f
+  FBSDKShareKit: 5953758366278430dc322d5cdc906db361ed7f81
   FontAwesome: dd8c48bf965e771309d8af17c4d8579217b3e756
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
 
-PODFILE CHECKSUM: 1f80958b0760c41dc48e41b505c7a04b097f06d0
+PODFILE CHECKSUM: 262ddecc34b3dbb568b4c6294275375e8269e53f
 
 COCOAPODS: 1.4.0
