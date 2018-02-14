@@ -14,6 +14,7 @@
 		3E4DAEF1203373EE00587BF8 /* MyriadPro-Cond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEEE203373ED00587BF8 /* MyriadPro-Cond.otf */; };
 		3E4DAEF2203373EE00587BF8 /* font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEEF203373EE00587BF8 /* font.otf */; };
 		3E4DAEF3203373EE00587BF8 /* MyriadCondBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEF0203373EE00587BF8 /* MyriadCondBold.otf */; };
+		3E4DAEF62034119900587BF8 /* PLMyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEF52034119900587BF8 /* PLMyProfileViewController.m */; };
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
@@ -72,6 +73,8 @@
 		3E4DAEEE203373ED00587BF8 /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Cond.otf"; sourceTree = "<group>"; };
 		3E4DAEEF203373EE00587BF8 /* font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font.otf; sourceTree = "<group>"; };
 		3E4DAEF0203373EE00587BF8 /* MyriadCondBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyriadCondBold.otf; sourceTree = "<group>"; };
+		3E4DAEF42034119900587BF8 /* PLMyProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLMyProfileViewController.h; sourceTree = "<group>"; };
+		3E4DAEF52034119900587BF8 /* PLMyProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLMyProfileViewController.m; sourceTree = "<group>"; };
 		3EAAD4B82032DEE600F26053 /* PLAPICLient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAPICLient.h; sourceTree = "<group>"; };
 		3EAAD4B92032DEE600F26053 /* PLAPICLient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAPICLient.m; sourceTree = "<group>"; };
 		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
@@ -320,6 +323,8 @@
 				3EAAD4EA2033232700F26053 /* PLAboutUsViewController.m */,
 				3EAAD4EC2033233200F26053 /* PLContactUsViewController.h */,
 				3EAAD4ED2033233200F26053 /* PLContactUsViewController.m */,
+				3E4DAEF42034119900587BF8 /* PLMyProfileViewController.h */,
+				3E4DAEF52034119900587BF8 /* PLMyProfileViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -562,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4DAEF62034119900587BF8 /* PLMyProfileViewController.m in Sources */,
 				3E4DAEE520333E1D00587BF8 /* PLMainNavTableViewCell.m in Sources */,
 				3EAAD4E82033231900F26053 /* PLBlogViewController.m in Sources */,
 				3EAAD4E52033230700F26053 /* PLCuisineViewController.m in Sources */,
