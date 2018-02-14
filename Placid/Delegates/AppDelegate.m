@@ -24,6 +24,8 @@
   // Shows iOS global spinner in OS toolbar
   [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
   
+  [NSThread sleepForTimeInterval:3];
+  
   // Push Notification settings
   
   /*if ([YUMCustomerSession instance].customerCopy != nil) {
