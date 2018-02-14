@@ -16,6 +16,9 @@
 		3E4DAEF3203373EE00587BF8 /* MyriadCondBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEF0203373EE00587BF8 /* MyriadCondBold.otf */; };
 		3E4DAEF62034119900587BF8 /* PLMyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEF52034119900587BF8 /* PLMyProfileViewController.m */; };
 		3E4DAEF9203444DF00587BF8 /* PLSocialNetworksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEF8203444DF00587BF8 /* PLSocialNetworksViewController.m */; };
+		3E4DAEFD2034EF4200587BF8 /* PLFacebookFeedPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEFC2034EF4200587BF8 /* PLFacebookFeedPost.m */; };
+		3E4DAF012034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEFF2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m */; };
+		3E4DAF022034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAF002034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib */; };
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
@@ -78,6 +81,11 @@
 		3E4DAEF52034119900587BF8 /* PLMyProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLMyProfileViewController.m; sourceTree = "<group>"; };
 		3E4DAEF7203444DF00587BF8 /* PLSocialNetworksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLSocialNetworksViewController.h; sourceTree = "<group>"; };
 		3E4DAEF8203444DF00587BF8 /* PLSocialNetworksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLSocialNetworksViewController.m; sourceTree = "<group>"; };
+		3E4DAEFB2034EF4200587BF8 /* PLFacebookFeedPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLFacebookFeedPost.h; sourceTree = "<group>"; };
+		3E4DAEFC2034EF4200587BF8 /* PLFacebookFeedPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLFacebookFeedPost.m; sourceTree = "<group>"; };
+		3E4DAEFE2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLFacebookFeedTableViewCell.h; sourceTree = "<group>"; };
+		3E4DAEFF2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLFacebookFeedTableViewCell.m; sourceTree = "<group>"; };
+		3E4DAF002034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLFacebookFeedTableViewCell.xib; sourceTree = "<group>"; };
 		3EAAD4B82032DEE600F26053 /* PLAPICLient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAPICLient.h; sourceTree = "<group>"; };
 		3EAAD4B92032DEE600F26053 /* PLAPICLient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAPICLient.m; sourceTree = "<group>"; };
 		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
@@ -186,6 +194,9 @@
 				3E4DAEE220333E1D00587BF8 /* PLMainNavTableViewCell.h */,
 				3E4DAEE320333E1D00587BF8 /* PLMainNavTableViewCell.m */,
 				3E4DAEE420333E1D00587BF8 /* PLMainNavTableViewCell.xib */,
+				3E4DAEFE2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.h */,
+				3E4DAEFF2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m */,
+				3E4DAF002034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -199,11 +210,21 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		3E4DAEFA2034EF0400587BF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3E4DAEFB2034EF4200587BF8 /* PLFacebookFeedPost.h */,
+				3E4DAEFC2034EF4200587BF8 /* PLFacebookFeedPost.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3EAAD4B42032CF8D00F26053 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				3EAAD4B82032DEE600F26053 /* PLAPICLient.h */,
 				3EAAD4B92032DEE600F26053 /* PLAPICLient.m */,
+				3E4DAEFA2034EF0400587BF8 /* Models */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -476,6 +497,7 @@
 				3EE3CCDF20329268005FD2A5 /* MaxiRelease.xcconfig in Resources */,
 				3EE3CCA920328E50005FD2A5 /* LaunchScreen.storyboard in Resources */,
 				3E4DAEE620333E1D00587BF8 /* PLMainNavTableViewCell.xib in Resources */,
+				3E4DAF022034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib in Resources */,
 				3EE3CCE12032926E005FD2A5 /* EyadiniRelease.xcconfig in Resources */,
 				3E4DAEF2203373EE00587BF8 /* font.otf in Resources */,
 				3E4DAEE0203336A200587BF8 /* FontAwesome.ttf in Resources */,
@@ -579,12 +601,14 @@
 				3EAAD4E82033231900F26053 /* PLBlogViewController.m in Sources */,
 				3EAAD4E52033230700F26053 /* PLCuisineViewController.m in Sources */,
 				3EAAD4C52032EB3B00F26053 /* PLBaseViewController.m in Sources */,
+				3E4DAF012034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m in Sources */,
 				3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */,
 				3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */,
 				3EAAD4D22032FF6900F26053 /* PLTransitions.m in Sources */,
 				3E4DAEF9203444DF00587BF8 /* PLSocialNetworksViewController.m in Sources */,
 				3E4DAEED20334B6000587BF8 /* UIImage+PLShadow.m in Sources */,
 				3EAAD4DC2033003F00F26053 /* PLDynamicTransition.m in Sources */,
+				3E4DAEFD2034EF4200587BF8 /* PLFacebookFeedPost.m in Sources */,
 				3EAAD4EE2033233200F26053 /* PLContactUsViewController.m in Sources */,
 				3EAAD4CA2032ED0000F26053 /* PLMainNavigationController.m in Sources */,
 				3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import "PLBaseViewController.h"
 
-@interface PLSocialNetworksViewController : PLBaseViewController
+@interface PLSocialNetworksViewController : PLBaseViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *topViewNav;
 @property (weak, nonatomic) IBOutlet UIButton *facebookButton;
 @property (weak, nonatomic) IBOutlet UIButton *instagramButton;
@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIView *instagramContainer;
 @property (weak, nonatomic) IBOutlet UIView *facebookContainer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *facebookCOntainerLeadingConstraint;
+@property (weak, nonatomic) IBOutlet UITableView *facebookTableView;
 
 @end

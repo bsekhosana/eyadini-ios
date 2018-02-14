@@ -441,7 +441,23 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoe-1h-yJR">
                                 <rect key="frame" x="0.0" y="117" width="375" height="550"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jr2-vd-sVD">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="PRn-eS-s56" id="F3g-wf-shP"/>
+                                            <outlet property="delegate" destination="PRn-eS-s56" id="ci3-0j-vqK"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Jr2-vd-sVD" firstAttribute="top" secondItem="Hoe-1h-yJR" secondAttribute="top" id="2ta-mC-5Hw"/>
+                                    <constraint firstItem="Jr2-vd-sVD" firstAttribute="leading" secondItem="Hoe-1h-yJR" secondAttribute="leading" id="45w-F8-lp0"/>
+                                    <constraint firstItem="Jr2-vd-sVD" firstAttribute="height" secondItem="Hoe-1h-yJR" secondAttribute="height" id="P79-7n-7TY"/>
+                                    <constraint firstItem="Jr2-vd-sVD" firstAttribute="width" secondItem="Hoe-1h-yJR" secondAttribute="width" id="ufK-MB-hTf"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsC-dD-yRE">
                                 <rect key="frame" x="375" y="117" width="375" height="550"/>
@@ -479,6 +495,7 @@
                         <outlet property="facebookButton" destination="kEv-8Y-97m" id="6pC-K7-Vc1"/>
                         <outlet property="facebookCOntainerLeadingConstraint" destination="5w6-Kr-2Vu" id="hwE-8k-3yP"/>
                         <outlet property="facebookContainer" destination="Hoe-1h-yJR" id="sft-sv-7B7"/>
+                        <outlet property="facebookTableView" destination="Jr2-vd-sVD" id="11b-WQ-cyD"/>
                         <outlet property="instagramButton" destination="V5h-3b-2v1" id="j9C-vd-sfk"/>
                         <outlet property="instagramContainer" destination="GsC-dD-yRE" id="fhz-LZ-aCy"/>
                         <outlet property="topViewNav" destination="pqN-Pn-eFj" id="KHC-1r-bI5"/>

@@ -8,10 +8,16 @@
 
 #import "PLSocialNetworksViewController.h"
 #import "PLConstants.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "PLFacebookFeedPost.h"
+#import "PLFacebookFeedTableViewCell.h"
 
 @interface PLSocialNetworksViewController ()
-
+@property (strong, nonatomic) NSMutableArray *facebookPosts;
 @end
+
+static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
 
 @implementation PLSocialNetworksViewController
 
@@ -19,6 +25,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   [self setupTopNavControls];
+  
+  [self facebookSetup];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,5 +87,74 @@
                    }];
 }
 
+
+-(void)facebookSetup{
+  [self.facebookTableView registerClass:[PLFacebookFeedTableViewCell class] forCellReuseIdentifier:facebookIdentifier];
+  [self.facebookTableView registerNib:[UINib nibWithNibName:facebookIdentifier bundle:[NSBundle mainBundle]] forCellReuseIdentifier:facebookIdentifier];
+  if ([FBSDKAccessToken currentAccessToken]) {
+    NSLog(@"Token : %@", [FBSDKAccessToken currentAccessToken]);
+    
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                  initWithGraphPath:@"/eyadini/feed"
+                                  parameters:@{@"fields": @"created_time, message, story, id"}
+                                  HTTPMethod:@"GET"];
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+      if (!error) {
+        NSError *error;
+        self.facebookPosts = [NSMutableArray new];
+        for (NSDictionary *dic in result[@"data"]) {
+          PLFacebookFeedPost *post = [[PLFacebookFeedPost alloc]initWithDictionary:dic error:&error];
+          [self.facebookPosts addObject:post];
+        }
+      }
+      
+    }];
+  }else{
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    // Optional: Place the button in the center of your view.
+    
+    [self.view addSubview:loginButton];
+    loginButton.center = self.view.center;
+  }
+  
+  
+  
+//  if ([[FBSDKAccessToken currentAccessToken] hasGranted:@"publish_actions"]) {
+//    [[[FBSDKGraphRequest alloc]
+//      initWithGraphPath:@"eyadini/feed"
+//      parameters: nil
+//      HTTPMethod:@"GET"]
+//     startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+//       if (!error) {
+//         NSLog(@"Posts :%@", result);
+//       }
+//     }];
+//  }
+  
+}
+
+
+#pragma mark - Facebook Datasource & Delagate
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+  PLFacebookFeedTableViewCell *cell = (PLFacebookFeedTableViewCell *)[tableView dequeueReusableCellWithIdentifier:facebookIdentifier forIndexPath:indexPath];
+  
+  if (cell) {
+    PLFacebookFeedPost * post = [self.facebookPosts objectAtIndex:indexPath.row];
+  }
+  
+  [cell.facebookPlaceholderImageView setHidden:self.facebookPosts.count > 0];
+  
+  return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return self.facebookPosts.count > 0 ? self.facebookPosts.count : 15;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  return 110;
+}
 
 @end
