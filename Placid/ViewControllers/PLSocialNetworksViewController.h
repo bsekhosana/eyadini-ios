@@ -15,5 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 @property (weak, nonatomic) IBOutlet UIView *bottomDividerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomDividerLeadingConstraint;
+@property (weak, nonatomic) IBOutlet UIView *twitterContainer;
+@property (weak, nonatomic) IBOutlet UIView *instagramContainer;
+@property (weak, nonatomic) IBOutlet UIView *facebookContainer;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *facebookCOntainerLeadingConstraint;
 
 @end

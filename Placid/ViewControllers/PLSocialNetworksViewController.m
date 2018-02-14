@@ -51,6 +51,7 @@
 }
 - (IBAction)didSelectTopNavButton:(UIButton *)sender {
   int bottomDividerConstant = 0;
+  int faceBookLeadingConstant = 0;
   switch (sender.tag) {
     case 0:
       NSLog(@"Facebook");
@@ -58,10 +59,12 @@
     case 1:
       NSLog(@"Instagram");
       bottomDividerConstant = CGRectGetMinX(self.instagramButton.frame);
+      faceBookLeadingConstant = -CGRectGetWidth(self.facebookContainer.frame);
       break;
     case 2:
       NSLog(@"Twitter");
       bottomDividerConstant = CGRectGetMinX(self.twitterButton.frame)+8;
+      faceBookLeadingConstant = -(CGRectGetWidth(self.facebookContainer.frame)*2);
       break;
     default:
       break;
@@ -69,6 +72,7 @@
   
   [self.view layoutIfNeeded];
   self.bottomDividerLeadingConstraint.constant = bottomDividerConstant;
+  self.facebookCOntainerLeadingConstraint.constant = faceBookLeadingConstant;
   [UIView animateWithDuration:0.2
                    animations:^{
                      [self.view layoutIfNeeded]; // Called on parent view
