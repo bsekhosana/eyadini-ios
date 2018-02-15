@@ -10,5 +10,11 @@
 
 @interface PLFacebookFeedTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *facebookPlaceholderImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *feedImageView;
+@property (weak, nonatomic) IBOutlet UILabel *createdTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *storyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+
+-(void)clearLabels;
 
 @end

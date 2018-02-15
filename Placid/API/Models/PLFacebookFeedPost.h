@@ -9,5 +9,5 @@
 #import "JSONModel.h"
 
 @interface PLFacebookFeedPost : JSONModel
-@property (strong, nonatomic) NSString *id, *story, *message, *created_time;
+@property (strong, nonatomic) NSString *id, *story, *message, *created_time, *imageSource;
 @end

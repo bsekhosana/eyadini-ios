@@ -12,6 +12,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "PLFacebookFeedPost.h"
 #import "PLFacebookFeedTableViewCell.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface PLSocialNetworksViewController ()
 @property (strong, nonatomic) NSMutableArray *facebookPosts;
@@ -91,20 +92,26 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
 -(void)facebookSetup{
   [self.facebookTableView registerClass:[PLFacebookFeedTableViewCell class] forCellReuseIdentifier:facebookIdentifier];
   [self.facebookTableView registerNib:[UINib nibWithNibName:facebookIdentifier bundle:[NSBundle mainBundle]] forCellReuseIdentifier:facebookIdentifier];
+  self.facebookTableView.estimatedRowHeight = 180;
+  self.facebookTableView.rowHeight = UITableViewAutomaticDimension;
+  self.facebookTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   if ([FBSDKAccessToken currentAccessToken]) {
     NSLog(@"Token : %@", [FBSDKAccessToken currentAccessToken]);
     
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
                                   initWithGraphPath:@"/eyadini/feed"
-                                  parameters:@{@"fields": @"created_time, message, story, id"}
+                                  parameters:@{@"fields": @"created_time, message, story, id, attachments{media}"}
                                   HTTPMethod:@"GET"];
+    __weak typeof(self) weakSelf = self;
     [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
       if (!error) {
         NSError *error;
         self.facebookPosts = [NSMutableArray new];
         for (NSDictionary *dic in result[@"data"]) {
           PLFacebookFeedPost *post = [[PLFacebookFeedPost alloc]initWithDictionary:dic error:&error];
-          [self.facebookPosts addObject:post];
+          post.imageSource = dic[@"attachments"][@"data"][0][@"media"][@"image"][@"src"];
+          [weakSelf.facebookPosts addObject:post];
+          [weakSelf.facebookTableView reloadData];
         }
       }
       
@@ -141,6 +148,13 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
   
   if (cell) {
     PLFacebookFeedPost * post = [self.facebookPosts objectAtIndex:indexPath.row];
+    [cell clearLabels];
+    [cell.createdTimeLabel setText:post.created_time];
+    [cell.storyLabel setText:post.story];
+    [cell.messageLabel setText:post.message];
+    if (post.imageSource) {
+      [cell.feedImageView setImageWithURL:[NSURL URLWithString:post.imageSource]];
+    }
   }
   
   [cell.facebookPlaceholderImageView setHidden:self.facebookPosts.count > 0];
@@ -154,7 +168,7 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  return 110;
+  return UITableViewAutomaticDimension;
 }
 
 @end

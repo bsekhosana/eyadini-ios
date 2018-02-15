@@ -21,4 +21,10 @@
     // Configure the view for the selected state
 }
 
+-(void)clearLabels{
+  [self.createdTimeLabel setBackgroundColor:[UIColor clearColor]];
+  [self.messageLabel setBackgroundColor:[UIColor clearColor]];
+  [self.storyLabel setBackgroundColor:[UIColor clearColor]];
+}
+
 @end

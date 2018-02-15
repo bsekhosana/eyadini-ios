@@ -12,32 +12,68 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PLFacebookFeedTableViewCell" rowHeight="87" id="KGk-i7-Jjw" customClass="PLFacebookFeedTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PLFacebookFeedTableViewCell" rowHeight="393" id="KGk-i7-Jjw" customClass="PLFacebookFeedTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="393"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="86.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="382" height="392.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bWz-Wp-osI">
-                        <rect key="frame" x="-30" y="0.0" width="350" height="91.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QHL-2G-Rcb">
+                        <rect key="frame" x="24" y="16" width="334" height="263"/>
+                        <color key="backgroundColor" white="0.78773329000000003" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="263" id="8ri-qX-jVV"/>
+                        </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date / Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fea-eg-fUv">
+                        <rect key="frame" x="24" y="295" width="100" height="21"/>
+                        <color key="backgroundColor" white="0.78773328996388892" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="brc-C3-0pe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdt-ta-DyG">
+                        <rect key="frame" x="24" y="353" width="334" height="21"/>
+                        <color key="backgroundColor" white="0.78773329000000003" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KG0-JR-iUW">
+                        <rect key="frame" x="24" y="324" width="334" height="21"/>
+                        <color key="backgroundColor" white="0.78773329000000003" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="bWz-Wp-osI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4vh-oO-uW9"/>
-                    <constraint firstAttribute="trailing" secondItem="bWz-Wp-osI" secondAttribute="trailing" id="iBn-bO-Bif"/>
-                    <constraint firstItem="bWz-Wp-osI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-30" id="mJt-we-qKY"/>
-                    <constraint firstAttribute="bottom" secondItem="bWz-Wp-osI" secondAttribute="bottom" constant="-5" id="zyq-Th-m5Y"/>
+                    <constraint firstItem="Mdt-ta-DyG" firstAttribute="leading" secondItem="KG0-JR-iUW" secondAttribute="leading" id="1gn-ZQ-WZ9"/>
+                    <constraint firstItem="Mdt-ta-DyG" firstAttribute="top" secondItem="KG0-JR-iUW" secondAttribute="bottom" constant="8" id="5Ah-RA-018"/>
+                    <constraint firstItem="KG0-JR-iUW" firstAttribute="top" secondItem="fea-eg-fUv" secondAttribute="bottom" constant="8" id="Egn-GS-Q2I"/>
+                    <constraint firstItem="KG0-JR-iUW" firstAttribute="width" secondItem="QHL-2G-Rcb" secondAttribute="width" id="GJg-rh-zbt"/>
+                    <constraint firstItem="QHL-2G-Rcb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="JsM-53-Kgj"/>
+                    <constraint firstItem="fea-eg-fUv" firstAttribute="top" secondItem="QHL-2G-Rcb" secondAttribute="bottom" constant="16" id="OZF-4Z-uMX"/>
+                    <constraint firstItem="Mdt-ta-DyG" firstAttribute="width" secondItem="KG0-JR-iUW" secondAttribute="width" id="UR1-pF-CYR"/>
+                    <constraint firstAttribute="trailing" secondItem="QHL-2G-Rcb" secondAttribute="trailing" constant="24" id="Wij-hj-d9T"/>
+                    <constraint firstItem="fea-eg-fUv" firstAttribute="leading" secondItem="QHL-2G-Rcb" secondAttribute="leading" id="YIT-CS-Wd1"/>
+                    <constraint firstAttribute="bottom" secondItem="Mdt-ta-DyG" secondAttribute="bottom" constant="18.5" id="dq8-YQ-bKj"/>
+                    <constraint firstItem="QHL-2G-Rcb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="ftc-8D-qak"/>
+                    <constraint firstItem="KG0-JR-iUW" firstAttribute="leading" secondItem="fea-eg-fUv" secondAttribute="leading" id="uDT-wA-vwS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
-                <outlet property="facebookPlaceholderImageView" destination="bWz-Wp-osI" id="brK-HE-A16"/>
+                <outlet property="createdTimeLabel" destination="fea-eg-fUv" id="oBk-Ss-QQY"/>
+                <outlet property="feedImageView" destination="QHL-2G-Rcb" id="dgu-3t-biS"/>
+                <outlet property="messageLabel" destination="Mdt-ta-DyG" id="T9w-bM-YFH"/>
+                <outlet property="storyLabel" destination="KG0-JR-iUW" id="ZR3-la-PRE"/>
             </connections>
-            <point key="canvasLocation" x="34" y="32.5"/>
+            <point key="canvasLocation" x="-53" y="16.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="facebook_placeholder" width="904" height="286"/>
-    </resources>
 </document>
