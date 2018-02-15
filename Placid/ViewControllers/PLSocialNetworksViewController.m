@@ -119,25 +119,9 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
   }else{
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
     // Optional: Place the button in the center of your view.
-    
     [self.view addSubview:loginButton];
     loginButton.center = self.view.center;
   }
-  
-  
-  
-//  if ([[FBSDKAccessToken currentAccessToken] hasGranted:@"publish_actions"]) {
-//    [[[FBSDKGraphRequest alloc]
-//      initWithGraphPath:@"eyadini/feed"
-//      parameters: nil
-//      HTTPMethod:@"GET"]
-//     startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-//       if (!error) {
-//         NSLog(@"Posts :%@", result);
-//       }
-//     }];
-//  }
-  
 }
 
 

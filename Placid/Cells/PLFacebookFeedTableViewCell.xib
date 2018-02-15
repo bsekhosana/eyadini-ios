@@ -21,7 +21,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QHL-2G-Rcb">
                         <rect key="frame" x="24" y="16" width="334" height="263"/>
-                        <color key="backgroundColor" white="0.78773329000000003" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="263" id="8ri-qX-jVV"/>
                         </constraints>
@@ -51,6 +51,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="Mdt-ta-DyG" firstAttribute="leading" secondItem="KG0-JR-iUW" secondAttribute="leading" id="1gn-ZQ-WZ9"/>
                     <constraint firstItem="Mdt-ta-DyG" firstAttribute="top" secondItem="KG0-JR-iUW" secondAttribute="bottom" constant="8" id="5Ah-RA-018"/>
@@ -66,6 +67,7 @@
                     <constraint firstItem="KG0-JR-iUW" firstAttribute="leading" secondItem="fea-eg-fUv" secondAttribute="leading" id="uDT-wA-vwS"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="createdTimeLabel" destination="fea-eg-fUv" id="oBk-Ss-QQY"/>

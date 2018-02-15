@@ -387,6 +387,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_nav_logo" translatesAutoresizingMaskIntoConstraints="NO" id="puC-b5-RV3">
+                                <rect key="frame" x="40" y="64" width="295" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqN-Pn-eFj">
                                 <rect key="frame" x="0.0" y="64" width="375" height="53"/>
                                 <subviews>
@@ -444,7 +448,7 @@
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jr2-vd-sVD">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="dataSource" destination="PRn-eS-s56" id="F3g-wf-shP"/>
                                             <outlet property="delegate" destination="PRn-eS-s56" id="ci3-0j-vqK"/>
@@ -461,11 +465,33 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsC-dD-yRE">
                                 <rect key="frame" x="375" y="117" width="375" height="550"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram-app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="td4-EN-sRk">
+                                        <rect key="frame" x="40" y="0.0" width="295" height="550"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="td4-EN-sRk" firstAttribute="top" secondItem="GsC-dD-yRE" secondAttribute="top" id="7z5-7m-kzD"/>
+                                    <constraint firstAttribute="bottom" secondItem="td4-EN-sRk" secondAttribute="bottom" id="W1R-DW-xBg"/>
+                                    <constraint firstItem="td4-EN-sRk" firstAttribute="leading" secondItem="GsC-dD-yRE" secondAttribute="leading" constant="40" id="Ygm-QU-hVR"/>
+                                    <constraint firstAttribute="trailing" secondItem="td4-EN-sRk" secondAttribute="trailing" constant="40" id="oKS-eB-JE5"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtR-Ok-vnz">
                                 <rect key="frame" x="749" y="117" width="375" height="550"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.97016815649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter_logo_bird_transparent_png" translatesAutoresizingMaskIntoConstraints="NO" id="5XK-NF-Ja0">
+                                        <rect key="frame" x="100" y="0.0" width="175" height="550"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5XK-NF-Ja0" secondAttribute="bottom" id="0HW-Qg-FSD"/>
+                                    <constraint firstAttribute="trailing" secondItem="5XK-NF-Ja0" secondAttribute="trailing" constant="100" id="7th-25-w4e"/>
+                                    <constraint firstItem="5XK-NF-Ja0" firstAttribute="top" secondItem="JtR-Ok-vnz" secondAttribute="top" id="U7A-2J-Nc5"/>
+                                    <constraint firstItem="5XK-NF-Ja0" firstAttribute="leading" secondItem="JtR-Ok-vnz" secondAttribute="leading" constant="100" id="jKH-d8-hti"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -475,15 +501,19 @@
                             <constraint firstItem="GsC-dD-yRE" firstAttribute="leading" secondItem="Hoe-1h-yJR" secondAttribute="trailing" id="F6W-D1-DOb"/>
                             <constraint firstItem="JtR-Ok-vnz" firstAttribute="width" secondItem="GsC-dD-yRE" secondAttribute="width" id="Iz2-tx-AFA"/>
                             <constraint firstItem="JtR-Ok-vnz" firstAttribute="top" secondItem="GsC-dD-yRE" secondAttribute="top" id="Kmw-L1-6pY"/>
+                            <constraint firstAttribute="trailing" secondItem="puC-b5-RV3" secondAttribute="trailing" constant="40" id="Ovc-TJ-fCN"/>
                             <constraint firstItem="pqN-Pn-eFj" firstAttribute="leading" secondItem="D8s-Hr-Z6l" secondAttribute="leading" id="PDH-Fs-nmA"/>
                             <constraint firstItem="JtR-Ok-vnz" firstAttribute="leading" secondItem="GsC-dD-yRE" secondAttribute="trailing" constant="-1" id="SXW-PU-XDg"/>
                             <constraint firstItem="Hoe-1h-yJR" firstAttribute="top" secondItem="pqN-Pn-eFj" secondAttribute="bottom" id="csR-fX-2qQ"/>
                             <constraint firstItem="D8s-Hr-Z6l" firstAttribute="trailing" secondItem="pqN-Pn-eFj" secondAttribute="trailing" id="cz4-1E-cG2"/>
+                            <constraint firstAttribute="bottom" secondItem="puC-b5-RV3" secondAttribute="bottom" id="gNe-Bd-z49"/>
                             <constraint firstItem="GsC-dD-yRE" firstAttribute="top" secondItem="Hoe-1h-yJR" secondAttribute="top" id="il1-EJ-saN"/>
                             <constraint firstItem="Hoe-1h-yJR" firstAttribute="width" secondItem="Xgm-3z-p9Z" secondAttribute="width" id="k5C-n2-ic7"/>
                             <constraint firstItem="pqN-Pn-eFj" firstAttribute="top" secondItem="D8s-Hr-Z6l" secondAttribute="top" id="kv1-5h-Aj3"/>
                             <constraint firstItem="GsC-dD-yRE" firstAttribute="width" secondItem="Hoe-1h-yJR" secondAttribute="width" id="lfA-kQ-D1B"/>
+                            <constraint firstItem="puC-b5-RV3" firstAttribute="top" secondItem="Xgm-3z-p9Z" secondAttribute="top" constant="64" id="o1X-xm-fYO"/>
                             <constraint firstItem="GsC-dD-yRE" firstAttribute="height" secondItem="Hoe-1h-yJR" secondAttribute="height" id="pM7-SY-TjY"/>
+                            <constraint firstItem="puC-b5-RV3" firstAttribute="leading" secondItem="Xgm-3z-p9Z" secondAttribute="leading" constant="40" id="xwn-WB-293"/>
                             <constraint firstItem="JtR-Ok-vnz" firstAttribute="height" secondItem="GsC-dD-yRE" secondAttribute="height" id="zQu-4q-ekn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D8s-Hr-Z6l"/>
@@ -526,4 +556,9 @@
             <point key="canvasLocation" x="-1026" y="3585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Twitter_logo_bird_transparent_png" width="2000" height="1624"/>
+        <image name="eyadini_nav_logo" width="115" height="113"/>
+        <image name="instagram-app-logo" width="714" height="540"/>
+    </resources>
 </document>
