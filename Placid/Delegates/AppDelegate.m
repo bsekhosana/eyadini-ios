@@ -25,7 +25,7 @@
   // Shows iOS global spinner in OS toolbar
   [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
   
-  [NSThread sleepForTimeInterval:3];
+  [NSThread sleepForTimeInterval:2];
   
   // Push Notification settings
   

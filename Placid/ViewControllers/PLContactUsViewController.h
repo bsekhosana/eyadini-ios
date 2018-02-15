@@ -7,7 +7,9 @@
 //
 
 #import "PLBaseViewController.h"
+#import "AAShareBubbles.h"
 
-@interface PLContactUsViewController : PLBaseViewController
+@interface PLContactUsViewController : PLBaseViewController<AAShareBubblesDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *centerContactUsImageView;
 
 @end

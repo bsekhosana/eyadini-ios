@@ -84,6 +84,8 @@ static float fontScaleFactor = 0.5f;
 + (UIFont *) FONT_LARGE_NORMAL_TEXT;
 + (UIFont *) FONT_XLARGE_NORMAL_TEXT;
 
++ (float) OS_VERSION;
+
 +(NSString *)navLogoImageName;
 
 +(NSString *)PLApiKey;
