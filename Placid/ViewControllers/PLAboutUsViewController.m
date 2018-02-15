@@ -7,6 +7,7 @@
 //
 
 #import "PLAboutUsViewController.h"
+#import "PLConstants.h"
 
 @interface PLAboutUsViewController ()
 
@@ -18,6 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   self.navigationItem.title = @"About Us";
+  
+  [self.blobTextView setFont:[PLConstants FONT_MEDIUM_NORMAL_TEXT]];
+  [self.blobTextView setTextColor:[PLConstants LOOKUP_COLOUR1]];
+  
 }
 
 - (void)didReceiveMemoryWarning {

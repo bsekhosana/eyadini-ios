@@ -9,5 +9,7 @@
 #import "PLBaseViewController.h"
 
 @interface PLAboutUsViewController : PLBaseViewController
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+@property (weak, nonatomic) IBOutlet UITextView *blobTextView;
 
 @end

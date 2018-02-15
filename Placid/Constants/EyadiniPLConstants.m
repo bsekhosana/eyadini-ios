@@ -78,10 +78,15 @@
 
 + (UIFont *) FONT_NORMAL_HEADER { return [[PLConstants LOOKUP_FONT1] fontWithSize:40*fontScaleFactor];}
 
+// MISC
++ (UIFont *) FONT_NORMAL_TEXT { return [[PLConstants LOOKUP_FONT1] fontWithSize:30*fontScaleFactor];}
++ (UIFont *) FONT_MEDIUM_NORMAL_TEXT { return [[PLConstants LOOKUP_FONT1] fontWithSize:40*fontScaleFactor];}
++ (UIFont *) FONT_LARGE_NORMAL_TEXT { return [[PLConstants LOOKUP_FONT1] fontWithSize:50*fontScaleFactor];}
++ (UIFont *) FONT_XLARGE_NORMAL_TEXT { return [[PLConstants LOOKUP_FONT1] fontWithSize:60*fontScaleFactor];}
+
 +(NSString *)navLogoImageName{
   return @"eyadini_nav_logo";
 }
-
 
 +(NSString *)PLApiKey{
     return [[NSBundle mainBundle] infoDictionary][@"PL_API_KEY"];
