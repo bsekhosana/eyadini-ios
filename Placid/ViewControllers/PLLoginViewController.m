@@ -8,6 +8,7 @@
 
 #import "PLLoginViewController.h"
 #import "PLConstants.h"
+#import "PLUser.h"
 
 @interface PLLoginViewController ()
 
@@ -59,12 +60,24 @@
 -(void)checkLogIn{
   NSLog(@"Facebook Token Shyt: %@", [FBSDKAccessToken currentAccessToken]);
   if ([FBSDKAccessToken currentAccessToken]) {
+    
+    
     [self userLoggedIn];
   }
 }
 
 
 - (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+  
+  PLUser *currentUser = [PLUser new];
+  currentUser.id = user.userID;
+  currentUser.username = user.profile.givenName;
+  currentUser.name = user.profile.name;
+  currentUser.email = user.profile.email;
+//  currentUser.contactNumber = user.c
+  NSError *errorJson;
+  PLUser *newUser = [[PLUser alloc]initWithDictionary:[currentUser toDictionary] error:&errorJson];
+  NSLog(@"Current User : %@", newUser);
   [self userLoggedIn];
 }
 

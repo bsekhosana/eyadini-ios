@@ -21,6 +21,7 @@
 		3E4DAF022034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAF002034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib */; };
 		3E4DAF0C203BF80300587BF8 /* PLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF0B203BF80300587BF8 /* PLLoginViewController.m */; };
 		3E4DAF0E203C1B4200587BF8 /* PLMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF0D203C1B4200587BF8 /* PLMainNavigationController.m */; };
+		3E4DAF11203C3D0800587BF8 /* PLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF10203C3D0800587BF8 /* PLUser.m */; };
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
@@ -90,6 +91,8 @@
 		3E4DAF0A203BF80300587BF8 /* PLLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLLoginViewController.h; sourceTree = "<group>"; };
 		3E4DAF0B203BF80300587BF8 /* PLLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLLoginViewController.m; sourceTree = "<group>"; };
 		3E4DAF0D203C1B4200587BF8 /* PLMainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainNavigationController.m; sourceTree = "<group>"; };
+		3E4DAF0F203C3D0800587BF8 /* PLUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLUser.h; sourceTree = "<group>"; };
+		3E4DAF10203C3D0800587BF8 /* PLUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLUser.m; sourceTree = "<group>"; };
 		3EAAD4B82032DEE600F26053 /* PLAPICLient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAPICLient.h; sourceTree = "<group>"; };
 		3EAAD4B92032DEE600F26053 /* PLAPICLient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAPICLient.m; sourceTree = "<group>"; };
 		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 			children = (
 				3E4DAEFB2034EF4200587BF8 /* PLFacebookFeedPost.h */,
 				3E4DAEFC2034EF4200587BF8 /* PLFacebookFeedPost.m */,
+				3E4DAF0F203C3D0800587BF8 /* PLUser.h */,
+				3E4DAF10203C3D0800587BF8 /* PLUser.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -607,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4DAF11203C3D0800587BF8 /* PLUser.m in Sources */,
 				3E4DAEF62034119900587BF8 /* PLMyProfileViewController.m in Sources */,
 				3E4DAEE520333E1D00587BF8 /* PLMainNavTableViewCell.m in Sources */,
 				3EAAD4E82033231900F26053 /* PLBlogViewController.m in Sources */,
