@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *navLogoImageView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UIImageView *reflectionView;
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @end

@@ -16,6 +16,7 @@
 
 @interface PLSocialNetworksViewController ()
 @property (strong, nonatomic) NSMutableArray *facebookPosts;
+@property (strong, nonatomic) FBSDKLoginButton *loginButton;
 @end
 
 static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
@@ -51,9 +52,9 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
   [self.instagramButton setTitleColor:[PLConstants LOOKUP_COLOUR1] forState:UIControlStateNormal];
   [self.twitterButton setTitleColor:[PLConstants LOOKUP_COLOUR1] forState:UIControlStateNormal];
   
-  [self.facebookButton.titleLabel setFont:[PLConstants FONT_NORMAL_HEADER]];
-  [self.instagramButton.titleLabel setFont:[PLConstants FONT_NORMAL_HEADER]];
-  [self.twitterButton.titleLabel setFont:[PLConstants FONT_NORMAL_HEADER]];
+  [self.facebookButton.titleLabel setFont:[PLConstants FONT_LARGE_NORMAL_TEXT]];
+  [self.instagramButton.titleLabel setFont:[PLConstants FONT_LARGE_NORMAL_TEXT]];
+  [self.twitterButton.titleLabel setFont:[PLConstants FONT_LARGE_NORMAL_TEXT]];
   
   [self.bottomDividerView setBackgroundColor:[PLConstants LOOKUP_COLOUR1]];
   
@@ -64,6 +65,7 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
   switch (sender.tag) {
     case 0:
       NSLog(@"Facebook");
+      
       break;
     case 1:
       NSLog(@"Instagram");
@@ -111,16 +113,17 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
           PLFacebookFeedPost *post = [[PLFacebookFeedPost alloc]initWithDictionary:dic error:&error];
           post.imageSource = dic[@"attachments"][@"data"][0][@"media"][@"image"][@"src"];
           [weakSelf.facebookPosts addObject:post];
-          [weakSelf.facebookTableView reloadData];
         }
+        
+        [weakSelf.facebookTableView reloadData];
       }
       
     }];
   }else{
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    self.loginButton = [[FBSDKLoginButton alloc] init];
     // Optional: Place the button in the center of your view.
-    [self.view addSubview:loginButton];
-    loginButton.center = self.view.center;
+    [self.facebookContainer addSubview:self.loginButton];
+    self.loginButton.center =  CGPointMake(self.view.center.x, CGRectGetHeight(self.view.frame) * 0.15f);
   }
 }
 

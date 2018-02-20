@@ -33,7 +33,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-v4-38X">
-                                <rect key="frame" x="0.0" y="183" width="375" height="484"/>
+                                <rect key="frame" x="0.0" y="183" width="375" height="434"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -61,23 +61,35 @@
                                     <outlet property="delegate" destination="GtO-ba-nFx" id="tBa-7W-reU"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utt-1f-SM7">
+                                <rect key="frame" x="164" y="617" width="46" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="didTapLogoutButton:" destination="GtO-ba-nFx" eventType="touchUpInside" id="Z2K-6V-eIT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="utt-1f-SM7" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" constant="164" id="8Mx-I0-Qa7"/>
                             <constraint firstItem="DcX-7o-WJL" firstAttribute="centerX" secondItem="2M5-di-WK9" secondAttribute="centerX" id="9zJ-jC-fpu"/>
                             <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="2M5-di-WK9" secondAttribute="trailing" id="BLN-XW-X9N"/>
                             <constraint firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="top" constant="-20" id="DIz-rI-iRp"/>
                             <constraint firstItem="DcX-7o-WJL" firstAttribute="width" secondItem="2M5-di-WK9" secondAttribute="width" multiplier="0.35" id="K2W-dX-ba3"/>
+                            <constraint firstItem="utt-1f-SM7" firstAttribute="top" secondItem="f9W-v4-38X" secondAttribute="bottom" id="U0b-bl-QWq"/>
                             <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="f9W-v4-38X" secondAttribute="trailing" id="Vqx-qJ-dQG"/>
+                            <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="utt-1f-SM7" secondAttribute="trailing" constant="165" id="bQx-ZR-mQq"/>
                             <constraint firstItem="f9W-v4-38X" firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="bottom" constant="30" id="dXz-rt-xDw"/>
-                            <constraint firstItem="Vem-Ex-fKt" firstAttribute="bottom" secondItem="f9W-v4-38X" secondAttribute="bottom" id="fRe-SK-mVb"/>
                             <constraint firstItem="2M5-di-WK9" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" id="xVO-J0-v1e"/>
+                            <constraint firstItem="Vem-Ex-fKt" firstAttribute="bottom" secondItem="utt-1f-SM7" secondAttribute="bottom" constant="16" id="xbC-Qi-Kn4"/>
                             <constraint firstItem="DcX-7o-WJL" firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="bottom" id="zIJ-1j-y1r"/>
                             <constraint firstItem="f9W-v4-38X" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" id="zPp-dD-Cap"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vem-Ex-fKt"/>
                     </view>
                     <connections>
+                        <outlet property="logoutButton" destination="utt-1f-SM7" id="Fk3-vV-CCO"/>
                         <outlet property="navLogoImageView" destination="2M5-di-WK9" id="Dj1-cB-bsS"/>
                         <outlet property="reflectionView" destination="DcX-7o-WJL" id="29n-N6-RV3"/>
                         <outlet property="tableView" destination="f9W-v4-38X" id="P3v-Zn-5nr"/>
@@ -415,6 +427,57 @@ Not only do we have the best meat in town but we also host the craziest out of t
             </objects>
             <point key="canvasLocation" x="622" y="2836"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="hzu-1p-Udx">
+            <objects>
+                <viewController storyboardIdentifier="PLLoginViewController" id="ivQ-Mp-ZWI" customClass="PLLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EYz-Fk-aYq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89890902" translatesAutoresizingMaskIntoConstraints="NO" id="Xx0-ou-fzb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vj-f8-Zm1" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="164.5" y="494" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeu-cp-zZe">
+                                <rect key="frame" x="103" y="557" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Jk-bZ-BR8">
+                                <rect key="frame" x="67" y="72" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="VgP-a5-tFQ"/>
+                                    <constraint firstAttribute="width" secondItem="2Jk-bZ-BR8" secondAttribute="height" multiplier="15:8" id="x4o-sA-lvJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xx0-ou-fzb" firstAttribute="top" secondItem="2Jk-bZ-BR8" secondAttribute="bottom" constant="-200" id="4Rn-Mk-kSL"/>
+                            <constraint firstAttribute="bottom" secondItem="Xx0-ou-fzb" secondAttribute="bottom" id="EjI-Tn-MhU"/>
+                            <constraint firstItem="2Jk-bZ-BR8" firstAttribute="centerX" secondItem="Xx0-ou-fzb" secondAttribute="centerX" id="Epe-nH-UJf"/>
+                            <constraint firstAttribute="top" secondItem="Xx0-ou-fzb" secondAttribute="top" id="JlV-xT-Qyz"/>
+                            <constraint firstItem="1Vj-f8-Zm1" firstAttribute="centerX" secondItem="Xx0-ou-fzb" secondAttribute="centerX" id="Mei-3g-VId"/>
+                            <constraint firstItem="1Vj-f8-Zm1" firstAttribute="top" secondItem="2Jk-bZ-BR8" secondAttribute="bottom" constant="294" id="gPl-Qh-tmR"/>
+                            <constraint firstItem="Xx0-ou-fzb" firstAttribute="leading" secondItem="EYz-Fk-aYq" secondAttribute="leading" id="us3-ml-0Bm"/>
+                            <constraint firstAttribute="trailing" secondItem="Xx0-ou-fzb" secondAttribute="trailing" id="ynb-P2-lFz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ahu-hj-TZS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6KT-2l-goo"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Xx0-ou-fzb" id="MOK-5A-smq"/>
+                        <outlet property="facebookLoginButton" destination="1Vj-f8-Zm1" id="t7f-BX-MNI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hpq-1B-7WM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2885.5999999999999" y="2959.9700149925038"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="TMN-fM-9Wf">
             <objects>
@@ -611,6 +674,7 @@ Not only do we have the best meat in town but we also host the craziest out of t
         </scene>
     </scenes>
     <resources>
+        <image name="89890902" width="600" height="400"/>
         <image name="Twitter_logo_bird_transparent_png" width="2000" height="1624"/>
         <image name="eyadini_nav_logo" width="115" height="113"/>
         <image name="eyadini_night_view" width="1024" height="682"/>

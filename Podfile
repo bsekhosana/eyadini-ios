@@ -14,4 +14,6 @@ target 'Placid' do
   pod'FBSDKLoginKit'
   pod'FBSDKShareKit'
   pod 'AAShareBubbles'
+  pod 'Google-Mobile-Ads-SDK'
+  pod 'Firebase/AdMob'
 end

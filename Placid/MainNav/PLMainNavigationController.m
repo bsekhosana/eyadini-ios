@@ -11,6 +11,8 @@
 #import "PLMainNavTableViewCell.h"
 #import "PLConstants.h"
 #import "UIImage+PLShadow.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface PLMainNavigationController ()
   @property (nonatomic, strong) NSArray *menuItems;
@@ -45,6 +47,9 @@ static NSString *CellIdentifier = @"PLMainNavTableViewCell";
   self.reflectionView.image = [self reflectedImage:self.navLogoImageView withHeight:reflectionHeight];
   self.reflectionView.alpha = kDefaultReflectionOpacity;
   
+  [self.logoutButton.titleLabel setFont:[PLConstants FONT_NAV_HEADING]];
+  [self.logoutButton setTitleColor:[PLConstants LOOKUP_COLOUR1] forState:UIControlStateNormal];
+  
 }
   
 - (void)viewWillDisappear:(BOOL)animated {
@@ -52,12 +57,33 @@ static NSString *CellIdentifier = @"PLMainNavTableViewCell";
   [self.view endEditing:YES];
 }
    
+- (IBAction)didTapLogoutButton:(id)sender {
+   __weak typeof(self) weakSelf = self;
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Logout" message:@"Are you sure?" preferredStyle:UIAlertControllerStyleAlert];
+  UIAlertAction *yes = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [FBSDKAccessToken setCurrentAccessToken:nil];
+    NSString *domainName = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:domainName];
+    weakSelf.slidingViewController.topViewController = weakSelf.transitionsNavigationController;
+    [weakSelf.slidingViewController resetTopViewAnimated:YES];
+  }];
+ 
+  UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"CANCEL" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    [weakSelf dismissViewControllerAnimated:alertController completion:nil];
+  }];
+  [alertController addAction:cancel];
+  [alertController addAction:yes];
+  [self presentViewController:alertController animated:YES completion:^{
+    
+  }];
+  
+}
 #pragma mark - Properties
   
 - (NSArray *)menuItems {
   if (_menuItems) return _menuItems;
   
-  _menuItems = @[@"Home", @"Events", @"Gallery",@"My Profile", @"Social Networks", @"About Us", @"Contact Us"];
+  _menuItems = @[@"Home", @"About Us", @"Events", @"Gallery",@"My Profile", @"Social Networks", @"Contact Us"];
   
   return _menuItems;
 }

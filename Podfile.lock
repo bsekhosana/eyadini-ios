@@ -28,7 +28,24 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.19.0):
     - FBSDKCoreKit
+  - Firebase/AdMob (3.14.0):
+    - Firebase/Core
+    - Google-Mobile-Ads-SDK (= 7.18.0)
+  - Firebase/Core (3.14.0):
+    - FirebaseAnalytics (= 3.7.0)
+    - FirebaseCore (= 3.5.1)
+  - FirebaseAnalytics (3.7.0):
+    - FirebaseCore (~> 3.5)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.5.1):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (1.0.9)
   - FontAwesome (4.5.0)
+  - Google-Mobile-Ads-SDK (7.18.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
   - JSONModel (1.7.0)
   - PureLayout (3.0.2)
   - Shimmer (1.0.2)
@@ -40,7 +57,9 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - Firebase/AdMob
   - FontAwesome
+  - Google-Mobile-Ads-SDK
   - JSONModel
   - PureLayout
   - Shimmer
@@ -53,11 +72,17 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 894b2b6eda6a4c8c4204e92e59cc355709ef045c
   FBSDKLoginKit: 83ca4d8f12a2022570af9fd6aacf27f6b425b99f
   FBSDKShareKit: 5953758366278430dc322d5cdc906db361ed7f81
+  Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
+  FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
+  FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
+  FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   FontAwesome: dd8c48bf965e771309d8af17c4d8579217b3e756
+  Google-Mobile-Ads-SDK: 658065b4cb5a299bea254c4d24bf7786b6d3e75d
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
 
-PODFILE CHECKSUM: 5ae872ee1e9228a13e0f626abcb18be7dd0efc70
+PODFILE CHECKSUM: 1ac86f859d68965de9433f7544c654fc1ec93375
 
 COCOAPODS: 1.4.0

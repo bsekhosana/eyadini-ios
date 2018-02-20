@@ -12,7 +12,7 @@
 #import "PLHomeViewController.h"
 #import "PLMainNavigationController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-
+#import <Firebase/Firebase.h>
 @interface AppDelegate ()
 @end
 
@@ -54,11 +54,11 @@
   }*/
   
   // Facebook
-  [[FBSDKApplicationDelegate sharedInstance] application:application
-                           didFinishLaunchingWithOptions:launchOptions];
+  [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
   // Add any custom logic here.
   
-  return YES;
+  return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                  didFinishLaunchingWithOptions:launchOptions];
 }
 
 - (BOOL)application:(UIApplication *)application

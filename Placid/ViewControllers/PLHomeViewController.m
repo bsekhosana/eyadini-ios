@@ -12,9 +12,10 @@
 #import "UIViewController+ECSlidingViewController.h"
 #import "PLDynamicTransition.h"
 #import "PLTransitions.h"
+#import "PLLoginViewController.h"
 
 @interface PLHomeViewController()
-
+@property (strong, nonatomic) PLLoginViewController *loginController;
 @end
 
 
@@ -22,7 +23,6 @@
   
 - (void)viewDidLoad {
   [super viewDidLoad];
-
 }
   
 - (void)didReceiveMemoryWarning {
@@ -43,7 +43,13 @@
   
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
+  BOOL isLoggedIn = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedIn"];
   
+  if (!isLoggedIn) {
+    self.loginController = [self.storyboard instantiateViewControllerWithIdentifier:@"PLLoginViewController"];
+    
+    [self.navigationController pushViewController:self.loginController animated:YES];
+  }
 }
 
   
