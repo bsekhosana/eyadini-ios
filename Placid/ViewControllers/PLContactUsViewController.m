@@ -53,12 +53,21 @@
   self.shareBubbles.showTumblrBubble = NO;
   self.shareBubbles.showVkBubble = NO;
   self.shareBubbles.showLinkedInBubble = NO;
-  self.shareBubbles.showYoutubeBubble = YES;
+  self.shareBubbles.showYoutubeBubble = NO;
   self.shareBubbles.showVimeoBubble = NO;
   self.shareBubbles.showRedditBubble = NO;
   self.shareBubbles.showPinterestBubble = NO;
   self.shareBubbles.showInstagramBubble = YES;
-  self.shareBubbles.showWhatsappBubble = YES;
+  self.shareBubbles.showWhatsappBubble = NO;
+  
+  // add custom buttons -- buttonId for custom buttons MUST be greater than or equal to 100
+  [self.shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"phone-flat"]
+                        backgroundColor:[UIColor greenColor]
+                            andButtonId:100];
+  
+  [self.shareBubbles addCustomButtonWithIcon:[UIImage imageNamed:@"email-icon"]
+                             backgroundColor:[UIColor blueColor]
+                                 andButtonId:101];
   
   [self.shareBubbles show];
 }
@@ -122,6 +131,40 @@
     case AAShareBubbleTypeInstagram:{
       NSLog(@"Instagram");
       urlString = @"https://www.instagram.com/eyadiniloungenuz/";
+      break;
+    }
+    case 100:{
+      if ([PLConstants OS_VERSION] < 10) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:0319061395"]];
+      }else{
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:0319061395"] options:@{} completionHandler:^(BOOL success) {
+          
+        }];
+      }
+      
+      NSLog(@"Custom Button With Type 100");
+      break;
+    }
+    case 101:{
+      if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailVC = [[MFMailComposeViewController alloc] init];
+        mailVC.mailComposeDelegate = self;
+        [mailVC setSubject:@"Eyadini iOS App"];
+        [mailVC setMessageBody:@"Found and sent using Demo App!" isHTML:NO];
+        [self presentViewController:mailVC animated:YES completion:NULL];
+      } else {
+        __weak typeof(self) weakSelf = self;
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Unable To Send Email" message:@"Please make sure that you have your email doamin setup befor you continue." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+          [weakSelf dismissViewControllerAnimated:alertController completion:nil];
+        }];
+        [alertController addAction:cancel];
+        [self presentViewController:alertController animated:YES completion:^{
+          
+        }];
+        NSLog(@"Unable to send email.");
+      }
+      NSLog(@"Custom Button With Type 101");
       break;
     }
     default:

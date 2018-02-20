@@ -8,8 +8,9 @@
 
 #import "PLBaseViewController.h"
 #import "AAShareBubbles.h"
+#import <MessageUI/MessageUI.h>
 
-@interface PLContactUsViewController : PLBaseViewController<AAShareBubblesDelegate>
+@interface PLContactUsViewController : PLBaseViewController<AAShareBubblesDelegate, MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *centerContactUsImageView;
 
 @end
