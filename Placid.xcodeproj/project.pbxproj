@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E46E7C4203C6053006274B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E46E7C3203C6053006274B1 /* QuartzCore.framework */; };
+		3E46E7C8203C6482006274B1 /* PLProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E46E7C6203C6482006274B1 /* PLProfileTableViewCell.m */; };
+		3E46E7C9203C6482006274B1 /* PLProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E46E7C7203C6482006274B1 /* PLProfileTableViewCell.xib */; };
 		3E4DAEE0203336A200587BF8 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEDF203336A200587BF8 /* FontAwesome.ttf */; };
 		3E4DAEE520333E1D00587BF8 /* PLMainNavTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEE320333E1D00587BF8 /* PLMainNavTableViewCell.m */; };
 		3E4DAEE620333E1D00587BF8 /* PLMainNavTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEE420333E1D00587BF8 /* PLMainNavTableViewCell.xib */; };
@@ -70,6 +73,10 @@
 
 /* Begin PBXFileReference section */
 		3D6B71264106057E6E08E212 /* Pods-Placid.eyadinidebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.eyadinidebug.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.eyadinidebug.xcconfig"; sourceTree = "<group>"; };
+		3E46E7C3203C6053006274B1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3E46E7C5203C6482006274B1 /* PLProfileTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLProfileTableViewCell.h; sourceTree = "<group>"; };
+		3E46E7C6203C6482006274B1 /* PLProfileTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLProfileTableViewCell.m; sourceTree = "<group>"; };
+		3E46E7C7203C6482006274B1 /* PLProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLProfileTableViewCell.xib; sourceTree = "<group>"; };
 		3E4DAEDF203336A200587BF8 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		3E4DAEE220333E1D00587BF8 /* PLMainNavTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLMainNavTableViewCell.h; sourceTree = "<group>"; };
 		3E4DAEE320333E1D00587BF8 /* PLMainNavTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLMainNavTableViewCell.m; sourceTree = "<group>"; };
@@ -154,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E46E7C4203C6053006274B1 /* QuartzCore.framework in Frameworks */,
 				9AC83352EBE4AE06667CE809 /* libPods-Placid.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +212,9 @@
 				3E4DAEFE2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.h */,
 				3E4DAEFF2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m */,
 				3E4DAF002034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib */,
+				3E46E7C5203C6482006274B1 /* PLProfileTableViewCell.h */,
+				3E46E7C6203C6482006274B1 /* PLProfileTableViewCell.m */,
+				3E46E7C7203C6482006274B1 /* PLProfileTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -377,6 +388,7 @@
 		53F3AF4D3D639116E84D5398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E46E7C3203C6053006274B1 /* QuartzCore.framework */,
 				F85A327F602D2BCC8E7B2A89 /* Pods_PlacidTests.framework */,
 				4BA78189AB41A201EE38451B /* Pods_PlacidUITests.framework */,
 				8C1918432611AA1E7EF20490 /* libPods-Placid.a */,
@@ -515,6 +527,7 @@
 				3EE3CCA620328E50005FD2A5 /* Assets.xcassets in Resources */,
 				3E4DAEF3203373EE00587BF8 /* MyriadCondBold.otf in Resources */,
 				3EE3CCDB2032922F005FD2A5 /* EyadiniDebug.xcconfig in Resources */,
+				3E46E7C9203C6482006274B1 /* PLProfileTableViewCell.xib in Resources */,
 				3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */,
 				3EE3CCE02032926B005FD2A5 /* MaxiDebug.xcconfig in Resources */,
 			);
@@ -614,6 +627,7 @@
 			files = (
 				3E4DAF11203C3D0800587BF8 /* PLUser.m in Sources */,
 				3E4DAEF62034119900587BF8 /* PLMyProfileViewController.m in Sources */,
+				3E46E7C8203C6482006274B1 /* PLProfileTableViewCell.m in Sources */,
 				3E4DAEE520333E1D00587BF8 /* PLMainNavTableViewCell.m in Sources */,
 				3EAAD4E82033231900F26053 /* PLBlogViewController.m in Sources */,
 				3EAAD4E52033230700F26053 /* PLCuisineViewController.m in Sources */,

@@ -7,7 +7,12 @@
 //
 
 #import "PLBaseViewController.h"
+#import <MXParallaxHeader/MXScrollView.h>
+#import <MXParallaxHeader/MXParallaxHeader.h>
 
-@interface PLMyProfileViewController : PLBaseViewController
+@interface PLMyProfileViewController : PLBaseViewController <MXParallaxHeaderDelegate>
+@property (weak, nonatomic) IBOutlet MXScrollView *scrollView;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

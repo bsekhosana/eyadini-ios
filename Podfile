@@ -17,4 +17,6 @@ target 'Placid' do
   pod 'Google-Mobile-Ads-SDK'
   pod 'Firebase/AdMob'
   pod 'GoogleSignIn'
+  pod "MXParallaxHeader"
+  pod "UIImageView-Letters"
 end

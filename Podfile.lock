@@ -66,8 +66,10 @@ PODS:
   - GTMSessionFetcher/Full (1.1.8):
     - GTMSessionFetcher/Core (= 1.1.8)
   - JSONModel (1.7.0)
+  - MXParallaxHeader (0.6.0)
   - PureLayout (3.0.2)
   - Shimmer (1.0.2)
+  - UIImageView-Letters (1.1.4)
 
 DEPENDENCIES:
   - AAShareBubbles
@@ -81,8 +83,10 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - GoogleSignIn
   - JSONModel
+  - MXParallaxHeader
   - PureLayout
   - Shimmer
+  - UIImageView-Letters
 
 SPEC CHECKSUMS:
   AAShareBubbles: 53fd5064602fa041a2249dda6b26f7fdccca3093
@@ -103,9 +107,11 @@ SPEC CHECKSUMS:
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  MXParallaxHeader: 2997592b8349baf8557ae0e4346f6b17e141de39
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  UIImageView-Letters: f62db28076797adf3560ab7410647dc6899b9eef
 
-PODFILE CHECKSUM: ba019a9d0f38cff04a92aa2e5e9f6e79e0f73d21
+PODFILE CHECKSUM: 8f721eda981e4c3e9a0cc0c25960afcebaf27259
 
 COCOAPODS: 1.4.0
