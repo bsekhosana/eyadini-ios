@@ -7,6 +7,7 @@
 //
 
 #import "PLLoginViewController.h"
+#import "PLConstants.h"
 
 @interface PLLoginViewController ()
 
@@ -24,8 +25,9 @@
   [self.navigationController.navigationBar setHidden:YES];
   self.facebookLoginButton.readPermissions = @[@"public_profile", @"email"];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkLogIn) name: FBSDKAccessTokenDidChangeNotification object:nil];
-  
-  
+  [self.orLabel setFont:[PLConstants FONT_NAV_HEADING]];
+  [self.orLabel setTextColor:[PLConstants LOOKUP_COLOUR2]];
+  [GIDSignIn sharedInstance].uiDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +47,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
   [super viewWillAppear:animated];
+  
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -63,5 +66,16 @@
     
     [[NSUserDefaults standardUserDefaults]setObject:@YES forKey:@"loggedIn"];
   }
+}
+
+
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+  // Perform any operations on signed in user here.
+  NSString *userId = user.userID;                  // For client-side use only!
+  NSString *idToken = user.authentication.idToken; // Safe to send to the server
+  NSString *name = user.profile.name;
+  NSString *email = user.profile.email;
+  NSLog(@"Customer details: %@ %@ %@ %@", userId, idToken, name, email);
+  // ...
 }
 @end

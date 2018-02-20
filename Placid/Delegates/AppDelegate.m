@@ -57,6 +57,10 @@
   [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
   // Add any custom logic here.
   
+  
+  [GIDSignIn sharedInstance].clientID = @"29198463966-rmjm04s897sakaptuhatnctbclo02b9e.apps.googleusercontent.com";
+  [GIDSignIn sharedInstance].delegate = self;
+  
   return [[FBSDKApplicationDelegate sharedInstance] application:application
                                   didFinishLaunchingWithOptions:launchOptions];
 }
@@ -64,6 +68,10 @@
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+  
+  [[GIDSignIn sharedInstance] handleURL:url
+                      sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                             annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
   
   BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
                                                                 openURL:url
@@ -78,6 +86,10 @@
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
+  
+  [[GIDSignIn sharedInstance] handleURL:url
+                      sourceApplication:sourceApplication
+                             annotation:annotation];
   
   BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
                                                                 openURL:url
@@ -113,6 +125,28 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+- (void)signIn:(GIDSignIn *)signIn
+didSignInForUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+  // Perform any operations on signed in user here.
+  NSString *userId = user.userID;                  // For client-side use only!
+  NSString *idToken = user.authentication.idToken; // Safe to send to the server
+  NSString *fullName = user.profile.name;
+  NSString *givenName = user.profile.givenName;
+  NSString *familyName = user.profile.familyName;
+  NSString *email = user.profile.email;
+  // ...
+  [[NSUserDefaults standardUserDefaults]setObject:@YES forKey:@"loggedIn"];
+}
+
+- (void)signIn:(GIDSignIn *)signIn
+didDisconnectWithUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+  // Perform any operations when the user disconnects from app here.
+  // ...
 }
 
 

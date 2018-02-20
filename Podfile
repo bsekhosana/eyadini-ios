@@ -16,4 +16,5 @@ target 'Placid' do
   pod 'AAShareBubbles'
   pod 'Google-Mobile-Ads-SDK'
   pod 'Firebase/AdMob'
+  pod 'GoogleSignIn'
 end

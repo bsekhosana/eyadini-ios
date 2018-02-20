@@ -442,11 +442,6 @@ Not only do we have the best meat in town but we also host the craziest out of t
                                 <rect key="frame" x="164.5" y="494" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeu-cp-zZe">
-                                <rect key="frame" x="103" y="557" width="132" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Jk-bZ-BR8">
                                 <rect key="frame" x="67" y="72" width="240" height="128"/>
                                 <constraints>
@@ -454,6 +449,20 @@ Not only do we have the best meat in town but we also host the craziest out of t
                                     <constraint firstAttribute="width" secondItem="2Jk-bZ-BR8" secondAttribute="height" multiplier="15:8" id="x4o-sA-lvJ"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ax-j6-wLV">
+                                <rect key="frame" x="179.5" y="532" width="16" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvr-4C-0L5" customClass="GIDSignInButton">
+                                <rect key="frame" x="132" y="561" width="110" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="GVJ-uH-43t"/>
+                                    <constraint firstAttribute="height" constant="26" id="f7C-t5-i0z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -462,8 +471,12 @@ Not only do we have the best meat in town but we also host the craziest out of t
                             <constraint firstItem="2Jk-bZ-BR8" firstAttribute="centerX" secondItem="Xx0-ou-fzb" secondAttribute="centerX" id="Epe-nH-UJf"/>
                             <constraint firstAttribute="top" secondItem="Xx0-ou-fzb" secondAttribute="top" id="JlV-xT-Qyz"/>
                             <constraint firstItem="1Vj-f8-Zm1" firstAttribute="centerX" secondItem="Xx0-ou-fzb" secondAttribute="centerX" id="Mei-3g-VId"/>
+                            <constraint firstItem="gvr-4C-0L5" firstAttribute="centerX" secondItem="Xx0-ou-fzb" secondAttribute="centerX" id="Sse-0a-6sz"/>
+                            <constraint firstItem="9ax-j6-wLV" firstAttribute="top" secondItem="1Vj-f8-Zm1" secondAttribute="bottom" constant="8" id="XAP-rr-pfJ"/>
+                            <constraint firstItem="gvr-4C-0L5" firstAttribute="top" secondItem="9ax-j6-wLV" secondAttribute="bottom" constant="8" id="aRL-YP-1yd"/>
                             <constraint firstItem="1Vj-f8-Zm1" firstAttribute="top" secondItem="2Jk-bZ-BR8" secondAttribute="bottom" constant="294" id="gPl-Qh-tmR"/>
                             <constraint firstItem="Xx0-ou-fzb" firstAttribute="leading" secondItem="EYz-Fk-aYq" secondAttribute="leading" id="us3-ml-0Bm"/>
+                            <constraint firstItem="9ax-j6-wLV" firstAttribute="centerX" secondItem="1Vj-f8-Zm1" secondAttribute="centerX" id="xVQ-tN-9Wb"/>
                             <constraint firstAttribute="trailing" secondItem="Xx0-ou-fzb" secondAttribute="trailing" id="ynb-P2-lFz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ahu-hj-TZS"/>
@@ -472,6 +485,7 @@ Not only do we have the best meat in town but we also host the craziest out of t
                     <connections>
                         <outlet property="backgroundImageView" destination="Xx0-ou-fzb" id="MOK-5A-smq"/>
                         <outlet property="facebookLoginButton" destination="1Vj-f8-Zm1" id="t7f-BX-MNI"/>
+                        <outlet property="orLabel" destination="9ax-j6-wLV" id="lKb-fU-dLe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpq-1B-7WM" userLabel="First Responder" sceneMemberID="firstResponder"/>

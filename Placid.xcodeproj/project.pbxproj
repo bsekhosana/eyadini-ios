@@ -20,11 +20,11 @@
 		3E4DAF012034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEFF2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m */; };
 		3E4DAF022034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAF002034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib */; };
 		3E4DAF0C203BF80300587BF8 /* PLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF0B203BF80300587BF8 /* PLLoginViewController.m */; };
+		3E4DAF0E203C1B4200587BF8 /* PLMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF0D203C1B4200587BF8 /* PLMainNavigationController.m */; };
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
 		3EAAD4C52032EB3B00F26053 /* PLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C42032EB3B00F26053 /* PLBaseViewController.m */; };
-		3EAAD4CA2032ED0000F26053 /* PLMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C92032ED0000F26053 /* PLMainNavigationController.m */; };
 		3EAAD4CE2032F31600F26053 /* PLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4CC2032F31600F26053 /* PLHomeViewController.m */; };
 		3EAAD4D22032FF6900F26053 /* PLTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4D12032FF6900F26053 /* PLTransitions.m */; };
 		3EAAD4D62033001800F26053 /* PLFoldAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4D52033001800F26053 /* PLFoldAnimationController.m */; };
@@ -89,6 +89,7 @@
 		3E4DAF002034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLFacebookFeedTableViewCell.xib; sourceTree = "<group>"; };
 		3E4DAF0A203BF80300587BF8 /* PLLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLLoginViewController.h; sourceTree = "<group>"; };
 		3E4DAF0B203BF80300587BF8 /* PLLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLLoginViewController.m; sourceTree = "<group>"; };
+		3E4DAF0D203C1B4200587BF8 /* PLMainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainNavigationController.m; sourceTree = "<group>"; };
 		3EAAD4B82032DEE600F26053 /* PLAPICLient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAPICLient.h; sourceTree = "<group>"; };
 		3EAAD4B92032DEE600F26053 /* PLAPICLient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAPICLient.m; sourceTree = "<group>"; };
 		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		3EAAD4C32032EB3A00F26053 /* PLBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLBaseViewController.h; sourceTree = "<group>"; };
 		3EAAD4C42032EB3B00F26053 /* PLBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLBaseViewController.m; sourceTree = "<group>"; };
 		3EAAD4C82032ED0000F26053 /* PLMainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLMainNavigationController.h; sourceTree = "<group>"; };
-		3EAAD4C92032ED0000F26053 /* PLMainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLMainNavigationController.m; sourceTree = "<group>"; };
 		3EAAD4CB2032F31600F26053 /* PLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLHomeViewController.h; sourceTree = "<group>"; };
 		3EAAD4CC2032F31600F26053 /* PLHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLHomeViewController.m; sourceTree = "<group>"; };
 		3EAAD4D02032FF6900F26053 /* PLTransitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLTransitions.h; sourceTree = "<group>"; };
@@ -175,6 +175,7 @@
 		3E4DAEDD203336A200587BF8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EAAD4D32032FFE500F26053 /* Transitions */,
 				3E4DAEDE203336A200587BF8 /* Fonts */,
 			);
 			path = Resources;
@@ -245,8 +246,8 @@
 		3EAAD4C72032ECDC00F26053 /* MainNav */ = {
 			isa = PBXGroup;
 			children = (
+				3E4DAF0D203C1B4200587BF8 /* PLMainNavigationController.m */,
 				3EAAD4C82032ED0000F26053 /* PLMainNavigationController.h */,
-				3EAAD4C92032ED0000F26053 /* PLMainNavigationController.m */,
 				3EAAD4D02032FF6900F26053 /* PLTransitions.h */,
 				3EAAD4D12032FF6900F26053 /* PLTransitions.m */,
 			);
@@ -302,7 +303,6 @@
 				3EE3CCE42032C2AA005FD2A5 /* Delegates */,
 				3EAAD4C72032ECDC00F26053 /* MainNav */,
 				3E4DAEDD203336A200587BF8 /* Resources */,
-				3EAAD4D32032FFE500F26053 /* Transitions */,
 				3EE3CCE32032C1E0005FD2A5 /* ViewControllers */,
 				3EE3CCA220328E50005FD2A5 /* Main.storyboard */,
 				3EE3CCA520328E50005FD2A5 /* Assets.xcassets */,
@@ -542,12 +542,16 @@
 				"${PODS_ROOT}/AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf",
+				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AAShareBubbles.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -615,10 +619,10 @@
 				3EAAD4D22032FF6900F26053 /* PLTransitions.m in Sources */,
 				3E4DAEF9203444DF00587BF8 /* PLSocialNetworksViewController.m in Sources */,
 				3E4DAEED20334B6000587BF8 /* UIImage+PLShadow.m in Sources */,
+				3E4DAF0E203C1B4200587BF8 /* PLMainNavigationController.m in Sources */,
 				3EAAD4DC2033003F00F26053 /* PLDynamicTransition.m in Sources */,
 				3E4DAEFD2034EF4200587BF8 /* PLFacebookFeedPost.m in Sources */,
 				3EAAD4EE2033233200F26053 /* PLContactUsViewController.m in Sources */,
-				3EAAD4CA2032ED0000F26053 /* PLMainNavigationController.m in Sources */,
 				3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */,
 				3EAAD4E2203322E800F26053 /* PLGalleryViewController.m in Sources */,
 				3EAAD4CE2032F31600F26053 /* PLHomeViewController.m in Sources */,

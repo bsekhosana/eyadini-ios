@@ -10,8 +10,9 @@
 #import "PLConstants.h"
 #import <AFNetworking/AFNetworking.h>
 #import <ECSlidingViewController/ECSlidingViewController.h>
+#import <GoogleSignIn/GoogleSignIn.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIApplicationDelegate, GIDSignInDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
