@@ -28,6 +28,7 @@
   [self.orLabel setFont:[PLConstants FONT_NAV_HEADING]];
   [self.orLabel setTextColor:[PLConstants LOOKUP_COLOUR2]];
   [GIDSignIn sharedInstance].uiDelegate = self;
+  [GIDSignIn sharedInstance].delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,24 +59,23 @@
 -(void)checkLogIn{
   NSLog(@"Facebook Token Shyt: %@", [FBSDKAccessToken currentAccessToken]);
   if ([FBSDKAccessToken currentAccessToken]) {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self.facebookLoginButton setHidden:YES];
-    // User is logged in, do work such as go to next view controller.
-    [self.navigationController.navigationBar setHidden:NO];
-    [self.navigationController popViewControllerAnimated:YES];
-    
-    [[NSUserDefaults standardUserDefaults]setObject:@YES forKey:@"loggedIn"];
+    [self userLoggedIn];
   }
 }
 
 
 - (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
-  // Perform any operations on signed in user here.
-  NSString *userId = user.userID;                  // For client-side use only!
-  NSString *idToken = user.authentication.idToken; // Safe to send to the server
-  NSString *name = user.profile.name;
-  NSString *email = user.profile.email;
-  NSLog(@"Customer details: %@ %@ %@ %@", userId, idToken, name, email);
-  // ...
+  [self userLoggedIn];
 }
+
+-(void)userLoggedIn{
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+  [self.facebookLoginButton setHidden:YES];
+  // User is logged in, do work such as go to next view controller.
+  [self.navigationController.navigationBar setHidden:NO];
+  [self.navigationController popViewControllerAnimated:YES];
+  
+  [[NSUserDefaults standardUserDefaults]setObject:@YES forKey:@"loggedIn"];
+}
+
 @end
