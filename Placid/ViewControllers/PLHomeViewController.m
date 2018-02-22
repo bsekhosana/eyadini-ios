@@ -88,7 +88,13 @@
 -(void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index{
   NSLog(@"Selected carousel index is %ld",(long)index);
   
-//  self.selectedCarouselLabel.text = [NSString stringWithFormat:@”Selected Index is %ld”,(long)index];
+  PLSponsor *sponsor = [_iCarouselItems objectAtIndex:index];
+  
+  if ([PLConstants OS_VERSION] > 10) {
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:sponsor.url] options:@{} completionHandler:nil];
+  }else{
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:sponsor.url]];
+  }
 }
 
 
