@@ -12,5 +12,9 @@
 @interface PLHomeViewController : PLBaseViewController <iCarouselDataSource, iCarouselDelegate>
 @property (weak, nonatomic) IBOutlet iCarousel *carouselContainer;
 @property (weak, nonatomic) IBOutlet UIView *carouselDividerView;
+@property (weak, nonatomic) IBOutlet UIView *latestNewsContainerView;
+@property (weak, nonatomic) IBOutlet UILabel *latestNewsLable;
+@property (weak, nonatomic) IBOutlet UILabel *upComingEventsLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *upCommingEventsCOntainerView;
 @end

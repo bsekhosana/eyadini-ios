@@ -11,6 +11,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="font.otf">
+            <string>DINNextLTPro-MediumCond</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main Navigation Controller-->
         <scene sceneID="QeQ-Fe-WLd">
@@ -137,16 +142,59 @@
                                 <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DSC_0162" translatesAutoresizingMaskIntoConstraints="NO" id="oFl-AH-pwz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
+                            </imageView>
+                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvP-1D-Fpc">
+                                <rect key="frame" x="16" y="24" width="343" height="267"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LATEST NEWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJa-46-ePH">
+                                <rect key="frame" x="32" y="41" width="311" height="23"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="DINNextLTPro-MediumCond" family="DIN Next LT Pro" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ti8-jU-WJs">
+                                <rect key="frame" x="16" y="315" width="343" height="266.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPCOMING EVENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huh-eC-wl1">
+                                <rect key="frame" x="32" y="324" width="311" height="23"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="DINNextLTPro-MediumCond" family="DIN Next LT Pro" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="CJa-46-ePH" firstAttribute="leading" secondItem="QvP-1D-Fpc" secondAttribute="leading" constant="16" id="10L-e5-OS5"/>
+                            <constraint firstAttribute="trailing" secondItem="oFl-AH-pwz" secondAttribute="trailing" id="1V2-DS-2bS"/>
                             <constraint firstAttribute="trailing" secondItem="xLu-BY-Z0r" secondAttribute="trailing" id="EoV-Yd-Nbk"/>
+                            <constraint firstItem="OT2-Ge-94L" firstAttribute="top" secondItem="oFl-AH-pwz" secondAttribute="bottom" id="FDW-fP-v6m"/>
+                            <constraint firstItem="oFl-AH-pwz" firstAttribute="leading" secondItem="P0o-fB-Jmp" secondAttribute="leading" id="FYb-PJ-ckq"/>
                             <constraint firstAttribute="bottom" secondItem="xLu-BY-Z0r" secondAttribute="bottom" id="FpI-K6-FqI"/>
                             <constraint firstItem="xLu-BY-Z0r" firstAttribute="leading" secondItem="P0o-fB-Jmp" secondAttribute="leading" id="G9N-Qv-YAm"/>
+                            <constraint firstItem="CJa-46-ePH" firstAttribute="trailing" secondItem="QvP-1D-Fpc" secondAttribute="trailing" constant="-16" id="ICS-4c-0yG"/>
+                            <constraint firstItem="ti8-jU-WJs" firstAttribute="height" secondItem="QvP-1D-Fpc" secondAttribute="height" id="KTy-Ho-BHU"/>
+                            <constraint firstItem="QvP-1D-Fpc" firstAttribute="height" secondItem="P0o-fB-Jmp" secondAttribute="height" multiplier="0.4" id="OIm-0y-enp"/>
+                            <constraint firstItem="huh-eC-wl1" firstAttribute="leading" secondItem="ti8-jU-WJs" secondAttribute="leading" constant="16" id="SQp-wS-iGr"/>
+                            <constraint firstItem="QvP-1D-Fpc" firstAttribute="top" secondItem="CJa-46-ePH" secondAttribute="bottom" constant="-40" id="Ul9-wR-6Ir"/>
+                            <constraint firstItem="ti8-jU-WJs" firstAttribute="leading" secondItem="QvP-1D-Fpc" secondAttribute="leading" id="VBA-dT-cmY"/>
+                            <constraint firstItem="QvP-1D-Fpc" firstAttribute="top" secondItem="P0o-fB-Jmp" secondAttribute="top" constant="24" id="a1G-f7-G5N"/>
+                            <constraint firstItem="oFl-AH-pwz" firstAttribute="top" secondItem="P0o-fB-Jmp" secondAttribute="top" id="eJ0-qn-Bn5"/>
                             <constraint firstItem="xLu-BY-Z0r" firstAttribute="top" secondItem="OT2-Ge-94L" secondAttribute="bottom" id="lFI-D3-xPH"/>
+                            <constraint firstItem="ti8-jU-WJs" firstAttribute="trailing" secondItem="QvP-1D-Fpc" secondAttribute="trailing" id="lXJ-vT-qfE"/>
+                            <constraint firstItem="huh-eC-wl1" firstAttribute="trailing" secondItem="ti8-jU-WJs" secondAttribute="trailing" constant="-16" id="pOr-Av-4Yw"/>
                             <constraint firstItem="OT2-Ge-94L" firstAttribute="leading" secondItem="xLu-BY-Z0r" secondAttribute="leading" id="pUt-j4-wqD"/>
+                            <constraint firstItem="ti8-jU-WJs" firstAttribute="top" secondItem="QvP-1D-Fpc" secondAttribute="bottom" constant="24" id="qiV-6A-tgX"/>
                             <constraint firstItem="OT2-Ge-94L" firstAttribute="trailing" secondItem="xLu-BY-Z0r" secondAttribute="trailing" id="ux0-Cy-f2Y"/>
                             <constraint firstItem="xLu-BY-Z0r" firstAttribute="height" secondItem="P0o-fB-Jmp" secondAttribute="height" multiplier="0.1" id="v8i-Wy-skG"/>
+                            <constraint firstAttribute="trailing" secondItem="QvP-1D-Fpc" secondAttribute="trailing" constant="16" id="vKu-8J-B0D"/>
+                            <constraint firstItem="QvP-1D-Fpc" firstAttribute="leading" secondItem="P0o-fB-Jmp" secondAttribute="leading" constant="16" id="xMm-au-T5s"/>
+                            <constraint firstItem="ti8-jU-WJs" firstAttribute="top" secondItem="huh-eC-wl1" secondAttribute="bottom" constant="-32" id="yOf-YL-09f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JoR-oH-hJQ"/>
                     </view>
@@ -156,6 +204,10 @@
                     <connections>
                         <outlet property="carouselContainer" destination="xLu-BY-Z0r" id="Qc7-YC-ZrL"/>
                         <outlet property="carouselDividerView" destination="OT2-Ge-94L" id="wyb-cT-VU4"/>
+                        <outlet property="latestNewsContainerView" destination="QvP-1D-Fpc" id="EgE-F5-nbR"/>
+                        <outlet property="latestNewsLable" destination="CJa-46-ePH" id="AU5-hF-iDW"/>
+                        <outlet property="upComingEventsLabel" destination="huh-eC-wl1" id="9kZ-EM-J8L"/>
+                        <outlet property="upCommingEventsCOntainerView" destination="ti8-jU-WJs" id="UJT-AM-pUW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEU-hX-SN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -755,6 +807,7 @@ Not only do we have the best meat in town but we also host the craziest out of t
     </scenes>
     <resources>
         <image name="89890902" width="600" height="400"/>
+        <image name="DSC_0162" width="750" height="497"/>
         <image name="Twitter_logo_bird_transparent_png" width="2000" height="1624"/>
         <image name="eyadini_nav_logo" width="115" height="113"/>
         <image name="eyadini_night_view" width="1024" height="682"/>

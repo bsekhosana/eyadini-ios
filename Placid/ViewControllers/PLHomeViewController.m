@@ -47,6 +47,12 @@
   
   self.carouselContainer.type = iCarouselTypeLinear;
   
+  self.latestNewsContainerView.layer.cornerRadius = 10;
+  self.latestNewsContainerView.layer.masksToBounds = true;
+  
+  self.upCommingEventsCOntainerView.layer.cornerRadius = 10;
+  self.upCommingEventsCOntainerView.layer.masksToBounds = true;
+
 }
 
 
