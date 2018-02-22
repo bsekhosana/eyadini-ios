@@ -386,7 +386,7 @@
                                 <rect key="frame" x="50" y="271" width="275" height="346"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="35e-LE-BIK">
-                                <rect key="frame" x="16" y="287" width="343" height="364"/>
+                                <rect key="frame" x="16" y="287" width="343" height="340"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Eyadini Lounge is your no1 Ekasi Shisanyama Experience located in the heart of Umlazi Township. A dream that came to life in 2008, Eyadini is a highly sought out shisanyama restaurant and premium event venue popularly known for its “Eyadini walk”, where patrons are photographed midwalk as they enter Eyadini Lounge. Specialising in a unique Shisanyama township experience, the award winning Eyadini lounge is one of the fastest growing businesses in KZN, catering to the young and trendy, meat and music lover alike.
 
@@ -394,6 +394,23 @@ Not only do we have the best meat in town but we also host the craziest out of t
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDP-kq-AZH">
+                                <rect key="frame" x="0.0" y="635" width="375" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By Blaque Dev Ops" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-pW-Ri5">
+                                        <rect key="frame" x="102.5" y="4.5" width="170" height="23"/>
+                                        <fontDescription key="fontDescription" name="DINNextLTPro-MediumCond" family="DIN Next LT Pro" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cCw-pW-Ri5" firstAttribute="centerX" secondItem="PDP-kq-AZH" secondAttribute="centerX" id="5uV-BS-aYm"/>
+                                    <constraint firstAttribute="height" constant="32" id="QcK-o2-fRM"/>
+                                    <constraint firstItem="cCw-pW-Ri5" firstAttribute="centerY" secondItem="PDP-kq-AZH" secondAttribute="centerY" id="ywT-Gr-NZN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -401,12 +418,15 @@ Not only do we have the best meat in town but we also host the craziest out of t
                             <constraint firstItem="nf3-uS-aiS" firstAttribute="leading" secondItem="hla-X4-LBV" secondAttribute="leading" constant="50" id="GVy-OF-pF2"/>
                             <constraint firstItem="2lZ-hD-qQF" firstAttribute="top" secondItem="hla-X4-LBV" secondAttribute="top" id="GgD-8D-2ZJ"/>
                             <constraint firstItem="nf3-uS-aiS" firstAttribute="top" secondItem="2lZ-hD-qQF" secondAttribute="bottom" id="Jon-vv-obi"/>
-                            <constraint firstAttribute="bottom" secondItem="35e-LE-BIK" secondAttribute="bottom" constant="16" id="WvN-tN-4Z5"/>
                             <constraint firstItem="35e-LE-BIK" firstAttribute="top" secondItem="2lZ-hD-qQF" secondAttribute="bottom" constant="16" id="YUJ-Be-c37"/>
+                            <constraint firstAttribute="bottom" secondItem="PDP-kq-AZH" secondAttribute="bottom" id="gVr-yX-tSb"/>
+                            <constraint firstAttribute="trailing" secondItem="PDP-kq-AZH" secondAttribute="trailing" id="gyI-jG-sat"/>
                             <constraint firstItem="hla-X4-LBV" firstAttribute="trailing" secondItem="2lZ-hD-qQF" secondAttribute="trailing" id="i1y-MP-Qzk"/>
                             <constraint firstItem="2lZ-hD-qQF" firstAttribute="leading" secondItem="hla-X4-LBV" secondAttribute="leading" id="jgk-2E-8tX"/>
+                            <constraint firstItem="PDP-kq-AZH" firstAttribute="leading" secondItem="ejS-xJ-frZ" secondAttribute="leading" id="kYK-sL-r3f"/>
                             <constraint firstItem="35e-LE-BIK" firstAttribute="leading" secondItem="ejS-xJ-frZ" secondAttribute="leading" constant="16" id="n5b-Nm-Esu"/>
                             <constraint firstAttribute="trailing" secondItem="35e-LE-BIK" secondAttribute="trailing" constant="16" id="qV0-S0-K2g"/>
+                            <constraint firstItem="PDP-kq-AZH" firstAttribute="top" secondItem="35e-LE-BIK" secondAttribute="bottom" constant="8" id="thA-fU-soZ"/>
                             <constraint firstItem="hla-X4-LBV" firstAttribute="trailing" secondItem="nf3-uS-aiS" secondAttribute="trailing" constant="50" id="wBp-Tq-7Vm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hla-X4-LBV"/>
@@ -415,6 +435,8 @@ Not only do we have the best meat in town but we also host the craziest out of t
                     <connections>
                         <outlet property="blobTextView" destination="35e-LE-BIK" id="KoT-iz-0sH"/>
                         <outlet property="headerImageView" destination="2lZ-hD-qQF" id="fZi-Rt-9sl"/>
+                        <outlet property="poweredByContainer" destination="PDP-kq-AZH" id="El8-sU-Azz"/>
+                        <outlet property="poweredByLable" destination="cCw-pW-Ri5" id="mg2-tV-zZ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMA-Fb-D9m" userLabel="First Responder" sceneMemberID="firstResponder"/>

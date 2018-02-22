@@ -10,6 +10,7 @@
 #import "PLConstants.h"
 
 @interface PLAboutUsViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *poweredByLable;
 
 @end
 
@@ -22,6 +23,9 @@
   
   [self.blobTextView setFont:[PLConstants FONT_MEDIUM_NORMAL_TEXT]];
   [self.blobTextView setTextColor:[PLConstants LOOKUP_COLOUR1]];
+  
+  [self.poweredByLable setTextColor:[PLConstants LOOKUP_COLOUR2]];
+  [self.poweredByContainer setBackgroundColor:[PLConstants LOOKUP_COLOUR1]];
   
 }
 

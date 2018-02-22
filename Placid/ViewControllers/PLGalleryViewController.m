@@ -7,6 +7,7 @@
 //
 
 #import "PLGalleryViewController.h"
+#import <FBSDKCoreKit.h>
 
 @interface PLGalleryViewController ()
 
@@ -18,6 +19,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   self.navigationItem.title = @"Gallery";
+  
+  // For more complex open graph stories, use `FBSDKShareAPI`
+  // with `FBSDKShareOpenGraphContent`
+  /* make the API call */
+  FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                initWithGraphPath:@"/eyadini/albums"
+                                parameters:@{}
+                                HTTPMethod:@"GET"];
+  [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                        id result,
+                                        NSError *error) {
+    NSLog(@"Albums Results : %@", result);
+    // Handle the result
+  }];
 }
 
 - (void)didReceiveMemoryWarning {

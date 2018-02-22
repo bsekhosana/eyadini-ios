@@ -7,6 +7,7 @@
 //
 
 #import "PLEventsViewController.h"
+#import <FBSDKCoreKit.h>
 
 @interface PLEventsViewController ()
 
@@ -18,6 +19,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   self.navigationItem.title = @"Events";
+  
+  // For more complex open graph stories, use `FBSDKShareAPI`
+  // with `FBSDKShareOpenGraphContent`
+  /* make the API call */
+  FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                initWithGraphPath:@"/eyadini/events"
+                                parameters:@{}
+                                HTTPMethod:@"GET"];
+  [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                        id result,
+                                        NSError *error) {
+    NSLog(@"Events Results : %@", result);
+    // Handle the result
+  }];
 }
 
 - (void)didReceiveMemoryWarning {
