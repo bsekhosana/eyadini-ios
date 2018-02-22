@@ -125,16 +125,42 @@
                     <view key="view" contentMode="scaleToFill" id="P0o-fB-Jmp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OT2-Ge-94L">
+                                <rect key="frame" x="0.0" y="599.5" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="U06-bo-r7s"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLu-BY-Z0r" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xLu-BY-Z0r" secondAttribute="trailing" id="EoV-Yd-Nbk"/>
+                            <constraint firstAttribute="bottom" secondItem="xLu-BY-Z0r" secondAttribute="bottom" id="FpI-K6-FqI"/>
+                            <constraint firstItem="xLu-BY-Z0r" firstAttribute="leading" secondItem="P0o-fB-Jmp" secondAttribute="leading" id="G9N-Qv-YAm"/>
+                            <constraint firstItem="xLu-BY-Z0r" firstAttribute="top" secondItem="OT2-Ge-94L" secondAttribute="bottom" id="lFI-D3-xPH"/>
+                            <constraint firstItem="OT2-Ge-94L" firstAttribute="leading" secondItem="xLu-BY-Z0r" secondAttribute="leading" id="pUt-j4-wqD"/>
+                            <constraint firstItem="OT2-Ge-94L" firstAttribute="trailing" secondItem="xLu-BY-Z0r" secondAttribute="trailing" id="ux0-Cy-f2Y"/>
+                            <constraint firstItem="xLu-BY-Z0r" firstAttribute="height" secondItem="P0o-fB-Jmp" secondAttribute="height" multiplier="0.1" id="v8i-Wy-skG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JoR-oH-hJQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" leftItemsSupplementBackButton="YES" id="hMY-U5-kBv">
                         <barButtonItem key="backBarButtonItem" title="Menu" id="IGm-6j-FQz"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="carouselContainer" destination="xLu-BY-Z0r" id="Qc7-YC-ZrL"/>
+                        <outlet property="carouselDividerView" destination="OT2-Ge-94L" id="wyb-cT-VU4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEU-hX-SN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="644"/>
+            <point key="canvasLocation" x="621.60000000000002" y="643.62818590704649"/>
         </scene>
         <!--Events-->
         <scene sceneID="S3J-00-Ujl">
@@ -475,7 +501,7 @@ Not only do we have the best meat in town but we also host the craziest out of t
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89890902" translatesAutoresizingMaskIntoConstraints="NO" id="Xx0-ou-fzb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89890902" translatesAutoresizingMaskIntoConstraints="NO" id="Xx0-ou-fzb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vj-f8-Zm1" customClass="FBSDKLoginButton">

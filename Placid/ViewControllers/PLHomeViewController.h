@@ -7,7 +7,10 @@
 //
 
 #import "PLBaseViewController.h"
+#import <iCarousel/iCarousel.h>
 
-@interface PLHomeViewController : PLBaseViewController
+@interface PLHomeViewController : PLBaseViewController <iCarouselDataSource, iCarouselDelegate>
+@property (weak, nonatomic) IBOutlet iCarousel *carouselContainer;
+@property (weak, nonatomic) IBOutlet UIView *carouselDividerView;
 
 @end

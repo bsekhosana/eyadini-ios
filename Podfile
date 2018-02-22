@@ -19,4 +19,5 @@ target 'Placid' do
   pod 'GoogleSignIn'
   pod "MXParallaxHeader"
   pod "UIImageView-Letters"
+  pod 'iCarousel'
 end

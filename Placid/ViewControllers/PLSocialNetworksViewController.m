@@ -28,7 +28,11 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
     // Do any additional setup after loading the view.
   [self setupTopNavControls];
   
-  [self facebookSetup];
+  [self.facebookTableView registerClass:[PLFacebookFeedTableViewCell class] forCellReuseIdentifier:facebookIdentifier];
+  [self.facebookTableView registerNib:[UINib nibWithNibName:facebookIdentifier bundle:[NSBundle mainBundle]] forCellReuseIdentifier:facebookIdentifier];
+  self.facebookTableView.estimatedRowHeight = 180;
+  self.facebookTableView.rowHeight = UITableViewAutomaticDimension;
+  self.facebookTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +49,12 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)viewWillAppear:(BOOL)animated{
+  [super viewWillAppear:animated];
+  
+  [self facebookSetup];
+}
 
 -(void)setupTopNavControls{
   [self.topViewNav setBackgroundColor:[PLConstants LOOKUP_COLOUR2]];
@@ -92,14 +102,13 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
 
 
 -(void)facebookSetup{
-  [self.facebookTableView registerClass:[PLFacebookFeedTableViewCell class] forCellReuseIdentifier:facebookIdentifier];
-  [self.facebookTableView registerNib:[UINib nibWithNibName:facebookIdentifier bundle:[NSBundle mainBundle]] forCellReuseIdentifier:facebookIdentifier];
-  self.facebookTableView.estimatedRowHeight = 180;
-  self.facebookTableView.rowHeight = UITableViewAutomaticDimension;
-  self.facebookTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+  
   if ([FBSDKAccessToken currentAccessToken]) {
     NSLog(@"Token : %@", [FBSDKAccessToken currentAccessToken]);
-    
+    [self.loginButton removeFromSuperview];
+    self.loginButton = nil;
+    [self.view setNeedsDisplay];
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
                                   initWithGraphPath:@"/eyadini/feed"
                                   parameters:@{@"fields": @"created_time, message, story, id, attachments{media}"}
@@ -120,13 +129,18 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
       
     }];
   }else{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(facebookSetup)
+                                                 name:FBSDKAccessTokenDidChangeNotification
+                                               object:nil];
+    
     self.loginButton = [[FBSDKLoginButton alloc] init];
     // Optional: Place the button in the center of your view.
     [self.facebookContainer addSubview:self.loginButton];
     self.loginButton.center =  CGPointMake(self.view.center.x, CGRectGetHeight(self.view.frame) * 0.15f);
+    [self.loginButton setHidden:NO];
   }
 }
-
 
 #pragma mark - Facebook Datasource & Delagate
 
