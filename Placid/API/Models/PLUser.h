@@ -9,7 +9,7 @@
 #import "JSONModel.h"
 
 @interface PLUser : JSONModel
-@property (strong, nonatomic) NSString *id, *username, *name, *surname, *email, *contactNumber;
+@property (strong, nonatomic) NSString *id, *username, *name, *surname, *email, *contactNumber, *profilePic, *coverPage;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError **)err;
 + (PLUser *)getCurrentUser;

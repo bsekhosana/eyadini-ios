@@ -26,6 +26,8 @@
     [[NSUserDefaults standardUserDefaults] setObject:self.surname forKey:@"user.surname"];
     [[NSUserDefaults standardUserDefaults] setObject:self.contactNumber forKey:@"user.contactNumber"];
     [[NSUserDefaults standardUserDefaults] setObject:self.email forKey:@"user.email"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.coverPage forKey:@"user.coverPage"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.profilePic forKey:@"user.profilePic"];
     
     [[NSUserDefaults standardUserDefaults]synchronize];
   }
@@ -41,7 +43,8 @@
   user.surname = [[NSUserDefaults standardUserDefaults] objectForKey:@"user.surname"];
   user.contactNumber = [[NSUserDefaults standardUserDefaults] objectForKey:@"user.contactNumber"];
   user.email = [[NSUserDefaults standardUserDefaults] objectForKey:@"user.email"];
-  
+  user.coverPage = [[NSUserDefaults standardUserDefaults] objectForKey:@"user.coverPage"];
+  user.profilePic =[[NSUserDefaults standardUserDefaults] objectForKey:@"user.profilePic"];
   return user;
 }
 

@@ -59,10 +59,37 @@
 
 -(void)checkLogIn{
   NSLog(@"Facebook Token Shyt: %@", [FBSDKAccessToken currentAccessToken]);
+  __weak typeof(self) weakSelf = self;
   if ([FBSDKAccessToken currentAccessToken]) {
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                  initWithGraphPath:[NSString stringWithFormat:@"/%@", [[FBSDKAccessToken currentAccessToken] userID]]
+                                  parameters:@{ @"fields": @"id,name,middle_name,last_name,email,cover,picture.type(large)"}
+                                  HTTPMethod:@"GET"];
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+      // Insert your code here
+      NSLog(@"User Profile : %@", result);
+      
+      PLUser *currentUser = [PLUser new];
+      currentUser.id =  [[FBSDKAccessToken currentAccessToken] userID];
+      currentUser.username = result[@"middle_name"];
+      currentUser.name = [NSString stringWithFormat:@"%@ %@", result[@"name"], result[@"last_name"]] ;
+      currentUser.email = result[@"email"];
+      currentUser.coverPage = result[@"cover"][@"source"];
+      currentUser.profilePic = result[@"picture"][@"data"][@"url"];
+      NSError *errorJson;
+      PLUser *newUser = [[PLUser alloc]initWithDictionary:[currentUser toDictionary] error:&errorJson];
+      NSLog(@"Current User : %@", newUser);
+      [weakSelf userLoggedIn];
+    }];
     
-    
-    [self userLoggedIn];
+//    if ([FBSDKAccessToken currentAccessToken]) {
+//      [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
+//       startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+//         if (!error) {
+//           NSLog(@"fetched user:%@", result);
+//         }
+//       }];
+//    }
   }
 }
 

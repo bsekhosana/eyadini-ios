@@ -12,6 +12,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "PLUser.h"
 #import "PLProfileTableViewCell.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface PLMyProfileViewController ()
 @property (strong, nonatomic) UIImageView *headerProfile;
@@ -27,8 +28,59 @@ static NSString *CellIdentifier = @"PLProfileTableViewCell";
     // Do any additional setup after loading the view.
    self.currentUser = [PLUser getCurrentUser];
   
+  int headerViewHeight = CGRectGetHeight(self.view.frame)*0.4;
+  
   [self.tableView registerClass:[PLProfileTableViewCell class] forCellReuseIdentifier:CellIdentifier];
   [self.view setBackgroundColor:[PLConstants LOOKUP_COLOUR2]];
+  
+  
+  UIView *header = [UIView new];
+  UIImageView *headerView = [UIImageView new];
+  if (self.currentUser.coverPage) {
+    [headerView setImageWithURL:[NSURL URLWithString:self.currentUser.coverPage]];
+  }else{
+    headerView.image = [UIImage imageNamed:@"ey2.jpg"];
+  }
+  
+  headerView.contentMode = UIViewContentModeScaleAspectFill;
+  
+  [header addSubview:headerView];
+  [headerView autoPinEdgesToSuperviewEdges];
+  
+  
+  UIImageView *myImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.view.frame)*0.3, CGRectGetWidth(self.view.frame)*0.3)];
+  [header addSubview:myImgView];
+  if (self.currentUser.profilePic) {
+    [myImgView setImageWithURL:[NSURL URLWithString:self.currentUser.profilePic]];
+    [myImgView autoSetDimension:ALDimensionWidth toSize:headerViewHeight*0.4];
+    [myImgView autoSetDimension:ALDimensionHeight toSize:headerViewHeight*0.4];
+    [myImgView setContentMode:UIViewContentModeScaleAspectFit];
+    myImgView.layer.cornerRadius = CGRectGetWidth(myImgView.frame)/2;
+    myImgView.layer.masksToBounds = true;
+    
+    UIImageView *wrapAround = [UIImageView new];
+    [wrapAround setBackgroundColor:[PLConstants LOOKUP_COLOUR1]];
+    [wrapAround autoSetDimension:ALDimensionWidth toSize:headerViewHeight*0.43];
+    [wrapAround autoSetDimension:ALDimensionHeight toSize:headerViewHeight*0.43];
+    [header addSubview:wrapAround];
+    [header bringSubviewToFront:myImgView];
+    wrapAround.layer.cornerRadius = CGRectGetWidth(wrapAround.frame)/2;
+    wrapAround.layer.masksToBounds = true;
+    
+    [wrapAround autoCenterInSuperview];
+    
+    
+  }else{
+    [myImgView setImageWithString:self.currentUser.name color:nil circular:YES];
+  }
+ 
+  [myImgView autoCenterInSuperview];
+  
+  // Parallax Header
+  self.tableView.parallaxHeader.view = header; // You can set the parallax header view from the floating view.
+  self.tableView.parallaxHeader.height = headerViewHeight;
+  self.tableView.parallaxHeader.mode = MXParallaxHeaderModeFill;
+  self.tableView.parallaxHeader.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,29 +100,6 @@ static NSString *CellIdentifier = @"PLProfileTableViewCell";
 
 -(void)viewWillAppear:(BOOL)animated{
   [super viewWillAppear:animated];
-  
-  UIView *header = [UIView new];
-  
-  UIImageView *headerView = [UIImageView new];
-  headerView.image = [UIImage imageNamed:@"ey2.jpg"];
-  headerView.contentMode = UIViewContentModeScaleAspectFill;
-  
-  [header addSubview:headerView];
-  [headerView autoPinEdgesToSuperviewEdges];
-  
-  
-  
-  UIImageView *myImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.view.frame)*0.3, CGRectGetWidth(self.view.frame)*0.3)];
-  [myImgView setImageWithString:self.currentUser.name color:nil circular:YES];
-  [header addSubview:myImgView];
-  [myImgView autoCenterInSuperview];
-
-  // Parallax Header
-  self.tableView.parallaxHeader.view = header; // You can set the parallax header view from the floating view.
-  self.tableView.parallaxHeader.height = 300;
-  self.tableView.parallaxHeader.mode = MXParallaxHeaderModeFill;
-  self.tableView.parallaxHeader.delegate = self;
-  
 }
 
 - (void)viewDidAppear:(BOOL)animated {
