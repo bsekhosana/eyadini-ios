@@ -7,10 +7,11 @@
 //
 
 #import "PLEventsViewController.h"
+#import "PLCHTCollectionViewController.h"
 #import <FBSDKCoreKit.h>
 
 @interface PLEventsViewController ()
-
+@property (strong, nonatomic) PLCHTCollectionViewController *collectionViewController;
 @end
 
 @implementation PLEventsViewController
@@ -20,11 +21,16 @@
     // Do any additional setup after loading the view.
   self.navigationItem.title = @"Events";
   
+  self.collectionViewController = [PLCHTCollectionViewController new];
+  [self.collectionViewController.view setFrame:self.view.frame];
+  [self.collectionViewController configureCollectionViewLayout];
+  [self.view addSubview:self.collectionViewController.view];
+  
   // For more complex open graph stories, use `FBSDKShareAPI`
   // with `FBSDKShareOpenGraphContent`
   /* make the API call */
   FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/eyadini/events"
+                                initWithGraphPath:@"/maxslifestyle/events"
                                 parameters:@{}
                                 HTTPMethod:@"GET"];
   [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
@@ -33,6 +39,9 @@
     NSLog(@"Events Results : %@", result);
     // Handle the result
   }];
+  
+  
+  
 }
 
 - (void)didReceiveMemoryWarning {

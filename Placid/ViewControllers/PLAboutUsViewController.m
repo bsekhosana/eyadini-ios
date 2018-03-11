@@ -27,6 +27,8 @@
   [self.poweredByLable setTextColor:[PLConstants LOOKUP_COLOUR2]];
   [self.poweredByContainer setBackgroundColor:[PLConstants LOOKUP_COLOUR1]];
   
+  [PLConstants ROUND_CONER_VIEW:self.waterMarkImageView];
+  
 }
 
 - (void)didReceiveMemoryWarning {

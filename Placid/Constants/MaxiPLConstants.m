@@ -14,8 +14,8 @@
 // --------------------------------------------------------------
 // COLOUR LIBRARY
 // --------------------------------------------------------------
-+(UIColor *) LOOKUP_COLOUR1 {return [UIColor colorWithRed:249/255. green:184/255. blue:0/255. alpha:1.0];} // #F9B800
-+(UIColor *) LOOKUP_COLOUR2 {return [UIColor colorWithRed:255/255. green:59/255. blue:48/255. alpha:1.0];} // #FF3B30
++(UIColor *) LOOKUP_COLOUR1 {return [UIColor colorWithRed:205/255. green:125/255. blue:20/255. alpha:1.0];} // #CD7D14
++(UIColor *) LOOKUP_COLOUR2 {return [UIColor colorWithRed:255/255. green:255/255. blue:255/255. alpha:1.0];} // #FFFFFF
 +(UIColor *) LOOKUP_COLOUR3 {return [UIColor colorWithRed:247/255. green:123/255. blue:0/255. alpha:1.0];} // #F77B00
 +(UIColor *) LOOKUP_COLOUR4 {return [UIColor colorWithRed:0/255. green:0/255. blue:0/255. alpha:1.0];} // #000000
 +(UIColor *) LOOKUP_COLOUR5 {return [UIColor colorWithRed:19/255. green:19/255. blue:19/255. alpha:1.0];} // #131313
@@ -38,8 +38,8 @@
 // FONT LIBRARY
 // --------------------------------------------------------------
 
-+ (UIFont *) LOOKUP_FONT1 { return [UIFont fontWithName:@"DINNextLTPro-MediumCond" size:1.0f];}
-+ (UIFont *) LOOKUP_FONT1_BOLD { return [UIFont fontWithName:@"DINNextLTPro-MediumCond" size:1.0f];}
++ (UIFont *) LOOKUP_FONT1 { return [UIFont fontWithName:@"MyriadPro-Cond" size:1.0f];}
++ (UIFont *) LOOKUP_FONT1_BOLD { return [UIFont fontWithName:@"MyriadPro-BoldCond" size:1.0f];}
 + (UIFont *) LOOKUP_FONT2 { return [UIFont fontWithName:@"DINNextLTPro-MediumCond" size:1.0f];}
 + (UIFont *) LOOKUP_FONT2_BOLD { return [UIFont fontWithName:@"DINNextLTPro-MediumCond" size:1.0f];}
 + (UIFont *) LOOKUP_FONT3 { return [UIFont systemFontOfSize:0.0];;}
@@ -51,8 +51,51 @@
 + (UIFont *) LOOKUP_ICON_FONT:(float)size{ return [UIFont fontWithName:@"FontAwesome" size:size];}
 
 
+
++(UIColor *) COLOUR_TRANSPARENT { return [UIColor clearColor];}
+
+# pragma mark colours - backgrounds - navigation
+
++(UIColor *) COLOUR_BG_NAV_PRIMARY { return [PLConstants LOOKUP_COLOUR1];}
++(UIColor *) COLOUR_BG_NAV_NOTIFICATION { return [PLConstants LOOKUP_COLOUR2];}
+
+#pragma mark colours - labels - navigation
+
++(UIColor *) COLOUR_LBL_NAV_HEADING { return [PLConstants LOOKUP_COLOUR2];}
++(UIColor *) COLOUR_LBL_NAV_ACTION{ return [PLConstants LOOKUP_COLOUR2];}
++(UIColor *) COLOUR_LBL_NAV_ACTION_SELECTED{ return [[PLConstants COLOUR_LBL_NAV_ACTION] colorWithAlphaComponent:0.2];}
++(UIColor *) COLOUR_LBL_NAV_NOTIFICATION { return [PLConstants LOOKUP_COLOUR14];}
+
+
+#pragma mark fonts - navigation
+
++ (UIFont *) FONT_NAV_HEADING { return [[PLConstants LOOKUP_FONT1_BOLD] fontWithSize:55*fontScaleFactor];}
++ (UIFont *) FONT_NAV_ACTION { return [[PLConstants LOOKUP_FONT3] fontWithSize:34*fontScaleFactor];}
++ (UIFont *) FONT_NAV_ICON { return [[PLConstants LOOKUP_ICON_FONT] fontWithSize:40*fontScaleFactor];}
++ (UIFont *) FONT_NAV_ACTION_SMALL { return [[PLConstants LOOKUP_FONT3] fontWithSize:20*fontScaleFactor];}
++ (UIFont *) FONT_NAV_NOTIFICATION  { return [[PLConstants LOOKUP_FONT3] fontWithSize:20*fontScaleFactor];}
+
+#pragma mark fonts - headers
+
++ (UIFont *) FONT_NORMAL_HEADER { return [[PLConstants LOOKUP_FONT1] fontWithSize:40*fontScaleFactor];}
+
+// MISC
++ (UIFont *) FONT_NORMAL_TEXT { return [[PLConstants LOOKUP_FONT1] fontWithSize:30*fontScaleFactor];}
++ (UIFont *) FONT_MEDIUM_NORMAL_TEXT { return [[PLConstants LOOKUP_FONT1] fontWithSize:40*fontScaleFactor];}
++ (UIFont *) FONT_LARGE_NORMAL_TEXT { return [[PLConstants LOOKUP_FONT1] fontWithSize:50*fontScaleFactor];}
++ (UIFont *) FONT_XLARGE_NORMAL_TEXT { return [[PLConstants LOOKUP_FONT1] fontWithSize:60*fontScaleFactor];}
+
++ (float) OS_VERSION {
+  return [[[UIDevice currentDevice] systemVersion] floatValue];
+}
+
 +(NSString *)navLogoImageName{
   return @"";
+}
+
++(void)ROUND_CONER_VIEW:(UIView *)view{
+  view.layer.cornerRadius = CGRectGetWidth(view.frame)/2;
+  view.layer.masksToBounds = true;
 }
 
 +(NSString *)PLApiKey{

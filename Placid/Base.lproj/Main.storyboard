@@ -25,20 +25,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2M5-di-WK9">
-                                <rect key="frame" x="0.0" y="20" width="375" height="133"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2M5-di-WK9">
+                                <rect key="frame" x="112.5" y="20" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="133" id="q0u-wy-pla"/>
+                                    <constraint firstAttribute="width" secondItem="2M5-di-WK9" secondAttribute="height" multiplier="1:1" id="9bw-Vg-Bgq"/>
+                                    <constraint firstAttribute="height" constant="150" id="q0u-wy-pla"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DcX-7o-WJL">
-                                <rect key="frame" x="122" y="153" width="131.5" height="87"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DcX-7o-WJL">
+                                <rect key="frame" x="113" y="170" width="150" height="87"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="xSM-qm-z1U"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-v4-38X">
-                                <rect key="frame" x="0.0" y="183" width="375" height="434"/>
+                                <rect key="frame" x="0.0" y="200" width="375" height="417"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -79,14 +80,13 @@
                         <constraints>
                             <constraint firstItem="utt-1f-SM7" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" constant="164" id="8Mx-I0-Qa7"/>
                             <constraint firstItem="DcX-7o-WJL" firstAttribute="centerX" secondItem="2M5-di-WK9" secondAttribute="centerX" id="9zJ-jC-fpu"/>
-                            <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="2M5-di-WK9" secondAttribute="trailing" id="BLN-XW-X9N"/>
                             <constraint firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="top" constant="-20" id="DIz-rI-iRp"/>
-                            <constraint firstItem="DcX-7o-WJL" firstAttribute="width" secondItem="2M5-di-WK9" secondAttribute="width" multiplier="0.35" id="K2W-dX-ba3"/>
+                            <constraint firstItem="DcX-7o-WJL" firstAttribute="width" secondItem="2M5-di-WK9" secondAttribute="width" id="K2W-dX-ba3"/>
                             <constraint firstItem="utt-1f-SM7" firstAttribute="top" secondItem="f9W-v4-38X" secondAttribute="bottom" id="U0b-bl-QWq"/>
                             <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="f9W-v4-38X" secondAttribute="trailing" id="Vqx-qJ-dQG"/>
                             <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="utt-1f-SM7" secondAttribute="trailing" constant="165" id="bQx-ZR-mQq"/>
                             <constraint firstItem="f9W-v4-38X" firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="bottom" constant="30" id="dXz-rt-xDw"/>
-                            <constraint firstItem="2M5-di-WK9" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" id="xVO-J0-v1e"/>
+                            <constraint firstItem="2M5-di-WK9" firstAttribute="centerX" secondItem="Vem-Ex-fKt" secondAttribute="centerX" id="tzT-Kr-kAo"/>
                             <constraint firstItem="Vem-Ex-fKt" firstAttribute="bottom" secondItem="utt-1f-SM7" secondAttribute="bottom" constant="16" id="xbC-Qi-Kn4"/>
                             <constraint firstItem="DcX-7o-WJL" firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="bottom" id="zIJ-1j-y1r"/>
                             <constraint firstItem="f9W-v4-38X" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" id="zPp-dD-Cap"/>
@@ -142,29 +142,29 @@
                                 <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DSC_0162" translatesAutoresizingMaskIntoConstraints="NO" id="oFl-AH-pwz">
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_home_screen" translatesAutoresizingMaskIntoConstraints="NO" id="oFl-AH-pwz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
                             </imageView>
                             <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvP-1D-Fpc">
                                 <rect key="frame" x="16" y="24" width="343" height="267"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LATEST NEWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJa-46-ePH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LATEST NEWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJa-46-ePH">
                                 <rect key="frame" x="32" y="41" width="311" height="23"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.76470588240000004" green="0.51372549020000002" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-MediumCond" family="DIN Next LT Pro" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ti8-jU-WJs">
                                 <rect key="frame" x="16" y="315" width="343" height="266.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPCOMING EVENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huh-eC-wl1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPCOMING EVENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huh-eC-wl1">
                                 <rect key="frame" x="32" y="324" width="311" height="23"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.76470588235294112" green="0.51372549019607838" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-MediumCond" family="DIN Next LT Pro" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -376,21 +376,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_night_view" translatesAutoresizingMaskIntoConstraints="NO" id="2lZ-hD-qQF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxi_cover_page" translatesAutoresizingMaskIntoConstraints="NO" id="2lZ-hD-qQF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="207" id="fgJ-5A-5Sx"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_nav_logo" translatesAutoresizingMaskIntoConstraints="NO" id="nf3-uS-aiS">
-                                <rect key="frame" x="50" y="271" width="275" height="346"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="nf3-uS-aiS">
+                                <rect key="frame" x="16" y="285.5" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nf3-uS-aiS" secondAttribute="height" multiplier="1:1" id="5mv-PL-mEG"/>
+                                </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="35e-LE-BIK">
                                 <rect key="frame" x="16" y="287" width="343" height="340"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Eyadini Lounge is your no1 Ekasi Shisanyama Experience located in the heart of Umlazi Township. A dream that came to life in 2008, Eyadini is a highly sought out shisanyama restaurant and premium event venue popularly known for its “Eyadini walk”, where patrons are photographed midwalk as they enter Eyadini Lounge. Specialising in a unique Shisanyama township experience, the award winning Eyadini lounge is one of the fastest growing businesses in KZN, catering to the young and trendy, meat and music lover alike.
+                                <mutableString key="text">Max’s Lifestyle is one of the best restaurants in Umlazi, Durban (KwaZulu Natal) with traditional “Kasie” (Ethnic Township Location) culture. We are the only venue that Tourists and Locals alike can enjoy, feel, and experience unique township culture in upmarket trendy and safe surroundings. People from all walks of life, cultures and races, young and old come to enjoy our best service when they want something to eat or drink and maybe just to wind the down for the day.
 
-Not only do we have the best meat in town but we also host the craziest out of this world events, private functions, birthdays, baby showers, product launches, brand activations…the works…basically Eyadini is here for your pleasure and specific needs, catering to your exclusive demands. From catering services to the biggest stage performances it is true when they say “Eyadi Lizokmangaza.”</string>
+We have top security who ensure nothing illegal is brought into our safe environment.
+
+We welcome all our customers with warm hospitality. We are known for our Sunday Sessions where Top DJ’s entertain for those who enjoy good music and dancing and our VIP Lounge is available for who prefer a relaxed less noisy environment.
+
+So whether you are local or on holiday please come and enjoy our hospitality combined with the amazing experience and ambience of being at a traditional establishment where you can dine on traditional meals featuring meat cooked on a “Braai” (Barbeque) with traditional side dishes as well as a custom Restaurant.</mutableString>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -414,10 +421,10 @@ Not only do we have the best meat in town but we also host the craziest out of t
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hla-X4-LBV" firstAttribute="bottom" secondItem="nf3-uS-aiS" secondAttribute="bottom" constant="50" id="3GN-Pp-Twd"/>
-                            <constraint firstItem="nf3-uS-aiS" firstAttribute="leading" secondItem="hla-X4-LBV" secondAttribute="leading" constant="50" id="GVy-OF-pF2"/>
+                            <constraint firstItem="nf3-uS-aiS" firstAttribute="centerY" secondItem="35e-LE-BIK" secondAttribute="centerY" id="2Yl-jg-RTw"/>
+                            <constraint firstItem="nf3-uS-aiS" firstAttribute="width" secondItem="35e-LE-BIK" secondAttribute="width" id="DWu-uL-QeW"/>
                             <constraint firstItem="2lZ-hD-qQF" firstAttribute="top" secondItem="hla-X4-LBV" secondAttribute="top" id="GgD-8D-2ZJ"/>
-                            <constraint firstItem="nf3-uS-aiS" firstAttribute="top" secondItem="2lZ-hD-qQF" secondAttribute="bottom" id="Jon-vv-obi"/>
+                            <constraint firstItem="nf3-uS-aiS" firstAttribute="centerX" secondItem="35e-LE-BIK" secondAttribute="centerX" id="Irh-wZ-ta5"/>
                             <constraint firstItem="35e-LE-BIK" firstAttribute="top" secondItem="2lZ-hD-qQF" secondAttribute="bottom" constant="16" id="YUJ-Be-c37"/>
                             <constraint firstAttribute="bottom" secondItem="PDP-kq-AZH" secondAttribute="bottom" id="gVr-yX-tSb"/>
                             <constraint firstAttribute="trailing" secondItem="PDP-kq-AZH" secondAttribute="trailing" id="gyI-jG-sat"/>
@@ -427,7 +434,6 @@ Not only do we have the best meat in town but we also host the craziest out of t
                             <constraint firstItem="35e-LE-BIK" firstAttribute="leading" secondItem="ejS-xJ-frZ" secondAttribute="leading" constant="16" id="n5b-Nm-Esu"/>
                             <constraint firstAttribute="trailing" secondItem="35e-LE-BIK" secondAttribute="trailing" constant="16" id="qV0-S0-K2g"/>
                             <constraint firstItem="PDP-kq-AZH" firstAttribute="top" secondItem="35e-LE-BIK" secondAttribute="bottom" constant="8" id="thA-fU-soZ"/>
-                            <constraint firstItem="hla-X4-LBV" firstAttribute="trailing" secondItem="nf3-uS-aiS" secondAttribute="trailing" constant="50" id="wBp-Tq-7Vm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hla-X4-LBV"/>
                     </view>
@@ -437,6 +443,7 @@ Not only do we have the best meat in town but we also host the craziest out of t
                         <outlet property="headerImageView" destination="2lZ-hD-qQF" id="fZi-Rt-9sl"/>
                         <outlet property="poweredByContainer" destination="PDP-kq-AZH" id="El8-sU-Azz"/>
                         <outlet property="poweredByLable" destination="cCw-pW-Ri5" id="mg2-tV-zZ3"/>
+                        <outlet property="waterMarkImageView" destination="nf3-uS-aiS" id="XgL-8u-Qak"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMA-Fb-D9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -469,7 +476,7 @@ Not only do we have the best meat in town but we also host the craziest out of t
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_nav_logo" translatesAutoresizingMaskIntoConstraints="NO" id="3vX-ZK-3AW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="3vX-ZK-3AW">
                                 <rect key="frame" x="137" y="283.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="gpH-WI-Nd3"/>
@@ -575,48 +582,30 @@ Not only do we have the best meat in town but we also host the craziest out of t
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89890902" translatesAutoresizingMaskIntoConstraints="NO" id="Xx0-ou-fzb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_login_screen" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xx0-ou-fzb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vj-f8-Zm1" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="164.5" y="494" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="557" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Jk-bZ-BR8">
-                                <rect key="frame" x="67" y="72" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="2Jk-bZ-BR8">
+                                <rect key="frame" x="112" y="50" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="VgP-a5-tFQ"/>
-                                    <constraint firstAttribute="width" secondItem="2Jk-bZ-BR8" secondAttribute="height" multiplier="15:8" id="x4o-sA-lvJ"/>
+                                    <constraint firstAttribute="width" constant="150" id="VgP-a5-tFQ"/>
+                                    <constraint firstAttribute="width" secondItem="2Jk-bZ-BR8" secondAttribute="height" multiplier="1:1" id="x4o-sA-lvJ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ax-j6-wLV">
-                                <rect key="frame" x="179.5" y="532" width="16" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvr-4C-0L5" customClass="GIDSignInButton">
-                                <rect key="frame" x="132" y="561" width="110" height="26"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="GVJ-uH-43t"/>
-                                    <constraint firstAttribute="height" constant="26" id="f7C-t5-i0z"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Xx0-ou-fzb" firstAttribute="top" secondItem="2Jk-bZ-BR8" secondAttribute="bottom" constant="-200" id="4Rn-Mk-kSL"/>
+                            <constraint firstItem="Ahu-hj-TZS" firstAttribute="bottom" secondItem="1Vj-f8-Zm1" secondAttribute="bottom" constant="80" id="E4R-SG-XPd"/>
                             <constraint firstAttribute="bottom" secondItem="Xx0-ou-fzb" secondAttribute="bottom" id="EjI-Tn-MhU"/>
                             <constraint firstItem="2Jk-bZ-BR8" firstAttribute="centerX" secondItem="Xx0-ou-fzb" secondAttribute="centerX" id="Epe-nH-UJf"/>
                             <constraint firstAttribute="top" secondItem="Xx0-ou-fzb" secondAttribute="top" id="JlV-xT-Qyz"/>
                             <constraint firstItem="1Vj-f8-Zm1" firstAttribute="centerX" secondItem="Xx0-ou-fzb" secondAttribute="centerX" id="Mei-3g-VId"/>
-                            <constraint firstItem="gvr-4C-0L5" firstAttribute="centerX" secondItem="Xx0-ou-fzb" secondAttribute="centerX" id="Sse-0a-6sz"/>
-                            <constraint firstItem="9ax-j6-wLV" firstAttribute="top" secondItem="1Vj-f8-Zm1" secondAttribute="bottom" constant="8" id="XAP-rr-pfJ"/>
-                            <constraint firstItem="gvr-4C-0L5" firstAttribute="top" secondItem="9ax-j6-wLV" secondAttribute="bottom" constant="8" id="aRL-YP-1yd"/>
-                            <constraint firstItem="1Vj-f8-Zm1" firstAttribute="top" secondItem="2Jk-bZ-BR8" secondAttribute="bottom" constant="294" id="gPl-Qh-tmR"/>
                             <constraint firstItem="Xx0-ou-fzb" firstAttribute="leading" secondItem="EYz-Fk-aYq" secondAttribute="leading" id="us3-ml-0Bm"/>
-                            <constraint firstItem="9ax-j6-wLV" firstAttribute="centerX" secondItem="1Vj-f8-Zm1" secondAttribute="centerX" id="xVQ-tN-9Wb"/>
                             <constraint firstAttribute="trailing" secondItem="Xx0-ou-fzb" secondAttribute="trailing" id="ynb-P2-lFz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ahu-hj-TZS"/>
@@ -625,7 +614,7 @@ Not only do we have the best meat in town but we also host the craziest out of t
                     <connections>
                         <outlet property="backgroundImageView" destination="Xx0-ou-fzb" id="MOK-5A-smq"/>
                         <outlet property="facebookLoginButton" destination="1Vj-f8-Zm1" id="t7f-BX-MNI"/>
-                        <outlet property="orLabel" destination="9ax-j6-wLV" id="lKb-fU-dLe"/>
+                        <outlet property="logoImageView" destination="2Jk-bZ-BR8" id="y79-hJ-z7E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpq-1B-7WM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -658,9 +647,12 @@ Not only do we have the best meat in town but we also host the craziest out of t
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_nav_logo" translatesAutoresizingMaskIntoConstraints="NO" id="puC-b5-RV3">
-                                <rect key="frame" x="40" y="64" width="295" height="603"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="puC-b5-RV3">
+                                <rect key="frame" x="37.5" y="215.5" width="300" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="puC-b5-RV3" secondAttribute="height" multiplier="1:1" id="JT5-bw-jbD"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqN-Pn-eFj">
                                 <rect key="frame" x="0.0" y="64" width="375" height="53"/>
@@ -768,23 +760,22 @@ Not only do we have the best meat in town but we also host the craziest out of t
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Hoe-1h-yJR" secondAttribute="bottom" id="0x1-rW-yJd"/>
+                            <constraint firstItem="puC-b5-RV3" firstAttribute="width" secondItem="Xgm-3z-p9Z" secondAttribute="width" multiplier="0.8" id="4sV-RT-GmU"/>
                             <constraint firstItem="Hoe-1h-yJR" firstAttribute="leading" secondItem="Xgm-3z-p9Z" secondAttribute="leading" id="5w6-Kr-2Vu"/>
                             <constraint firstItem="GsC-dD-yRE" firstAttribute="leading" secondItem="Hoe-1h-yJR" secondAttribute="trailing" id="F6W-D1-DOb"/>
                             <constraint firstItem="JtR-Ok-vnz" firstAttribute="width" secondItem="GsC-dD-yRE" secondAttribute="width" id="Iz2-tx-AFA"/>
                             <constraint firstItem="JtR-Ok-vnz" firstAttribute="top" secondItem="GsC-dD-yRE" secondAttribute="top" id="Kmw-L1-6pY"/>
-                            <constraint firstAttribute="trailing" secondItem="puC-b5-RV3" secondAttribute="trailing" constant="40" id="Ovc-TJ-fCN"/>
                             <constraint firstItem="pqN-Pn-eFj" firstAttribute="leading" secondItem="D8s-Hr-Z6l" secondAttribute="leading" id="PDH-Fs-nmA"/>
                             <constraint firstItem="JtR-Ok-vnz" firstAttribute="leading" secondItem="GsC-dD-yRE" secondAttribute="trailing" constant="-1" id="SXW-PU-XDg"/>
                             <constraint firstItem="Hoe-1h-yJR" firstAttribute="top" secondItem="pqN-Pn-eFj" secondAttribute="bottom" id="csR-fX-2qQ"/>
                             <constraint firstItem="D8s-Hr-Z6l" firstAttribute="trailing" secondItem="pqN-Pn-eFj" secondAttribute="trailing" id="cz4-1E-cG2"/>
-                            <constraint firstAttribute="bottom" secondItem="puC-b5-RV3" secondAttribute="bottom" id="gNe-Bd-z49"/>
                             <constraint firstItem="GsC-dD-yRE" firstAttribute="top" secondItem="Hoe-1h-yJR" secondAttribute="top" id="il1-EJ-saN"/>
                             <constraint firstItem="Hoe-1h-yJR" firstAttribute="width" secondItem="Xgm-3z-p9Z" secondAttribute="width" id="k5C-n2-ic7"/>
                             <constraint firstItem="pqN-Pn-eFj" firstAttribute="top" secondItem="D8s-Hr-Z6l" secondAttribute="top" id="kv1-5h-Aj3"/>
+                            <constraint firstItem="puC-b5-RV3" firstAttribute="centerX" secondItem="D8s-Hr-Z6l" secondAttribute="centerX" id="lZa-RO-j0f"/>
                             <constraint firstItem="GsC-dD-yRE" firstAttribute="width" secondItem="Hoe-1h-yJR" secondAttribute="width" id="lfA-kQ-D1B"/>
-                            <constraint firstItem="puC-b5-RV3" firstAttribute="top" secondItem="Xgm-3z-p9Z" secondAttribute="top" constant="64" id="o1X-xm-fYO"/>
                             <constraint firstItem="GsC-dD-yRE" firstAttribute="height" secondItem="Hoe-1h-yJR" secondAttribute="height" id="pM7-SY-TjY"/>
-                            <constraint firstItem="puC-b5-RV3" firstAttribute="leading" secondItem="Xgm-3z-p9Z" secondAttribute="leading" constant="40" id="xwn-WB-293"/>
+                            <constraint firstItem="puC-b5-RV3" firstAttribute="centerY" secondItem="D8s-Hr-Z6l" secondAttribute="centerY" id="z4M-LM-T6H"/>
                             <constraint firstItem="JtR-Ok-vnz" firstAttribute="height" secondItem="GsC-dD-yRE" secondAttribute="height" id="zQu-4q-ekn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D8s-Hr-Z6l"/>
@@ -802,6 +793,7 @@ Not only do we have the best meat in town but we also host the craziest out of t
                         <outlet property="topViewNav" destination="pqN-Pn-eFj" id="KHC-1r-bI5"/>
                         <outlet property="twitterButton" destination="F3s-gQ-GkP" id="jyh-Pk-GVP"/>
                         <outlet property="twitterContainer" destination="JtR-Ok-vnz" id="DAR-BR-pnY"/>
+                        <outlet property="waterMarkImageView" destination="puC-b5-RV3" id="pU3-52-lFq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRZ-jZ-yde" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -828,11 +820,11 @@ Not only do we have the best meat in town but we also host the craziest out of t
         </scene>
     </scenes>
     <resources>
-        <image name="89890902" width="600" height="400"/>
-        <image name="DSC_0162" width="750" height="497"/>
         <image name="Twitter_logo_bird_transparent_png" width="2000" height="1624"/>
-        <image name="eyadini_nav_logo" width="115" height="113"/>
-        <image name="eyadini_night_view" width="1024" height="682"/>
         <image name="instagram-app-logo" width="714" height="540"/>
+        <image name="maxi_cover_page" width="1024" height="682"/>
+        <image name="maxis_home_screen" width="950" height="300"/>
+        <image name="maxis_login_screen" width="1024" height="768"/>
+        <image name="maxis_logo_large" width="256" height="256"/>
     </resources>
 </document>

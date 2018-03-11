@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 @property (weak, nonatomic) IBOutlet UITextView *blobTextView;
 @property (weak, nonatomic) IBOutlet UIView *poweredByContainer;
+@property (weak, nonatomic) IBOutlet UIImageView *waterMarkImageView;
 
 @end

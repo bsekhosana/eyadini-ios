@@ -26,6 +26,7 @@
 		3E4DAF0C203BF80300587BF8 /* PLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF0B203BF80300587BF8 /* PLLoginViewController.m */; };
 		3E4DAF0E203C1B4200587BF8 /* PLMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF0D203C1B4200587BF8 /* PLMainNavigationController.m */; };
 		3E4DAF11203C3D0800587BF8 /* PLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF10203C3D0800587BF8 /* PLUser.m */; };
+		3E4E9868204826FA00E1E598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA520328E50005FD2A5 /* Assets.xcassets */; };
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
@@ -43,7 +44,6 @@
 		3EAAD4EE2033233200F26053 /* PLContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4ED2033233200F26053 /* PLContactUsViewController.m */; };
 		3EE3CC9E20328E50005FD2A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */; };
 		3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA220328E50005FD2A5 /* Main.storyboard */; };
-		3EE3CCA620328E50005FD2A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA520328E50005FD2A5 /* Assets.xcassets */; };
 		3EE3CCA920328E50005FD2A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA720328E50005FD2A5 /* LaunchScreen.storyboard */; };
 		3EE3CCAC20328E50005FD2A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CCAB20328E50005FD2A5 /* main.m */; };
 		3EE3CCB620328E50005FD2A5 /* PlacidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3CCB520328E50005FD2A5 /* PlacidTests.m */; };
@@ -52,6 +52,12 @@
 		3EE3CCDF20329268005FD2A5 /* MaxiRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDE20329263005FD2A5 /* MaxiRelease.xcconfig */; };
 		3EE3CCE02032926B005FD2A5 /* MaxiDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */; };
 		3EE3CCE12032926E005FD2A5 /* EyadiniRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */; };
+		3EEF19372052F4E800563DA1 /* PLCHTCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF19362052F4E800563DA1 /* PLCHTCollectionViewController.m */; };
+		3EEF193A2052F90300563DA1 /* CHTCollectionViewWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF19382052F90300563DA1 /* CHTCollectionViewWaterfallCell.m */; };
+		3EEF193F2052F92A00563DA1 /* CHTCollectionViewWaterfallFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF193D2052F92900563DA1 /* CHTCollectionViewWaterfallFooter.m */; };
+		3EEF19402052F92A00563DA1 /* CHTCollectionViewWaterfallHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF193E2052F92900563DA1 /* CHTCollectionViewWaterfallHeader.m */; };
+		3EEF19432052FE0000563DA1 /* PLFacebookAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF19422052FE0000563DA1 /* PLFacebookAlbum.m */; };
+		3EEF194520556B8A00563DA1 /* CHTCollectionViewWaterfallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EEF194420556B8A00563DA1 /* CHTCollectionViewWaterfallCell.xib */; };
 		9AC83352EBE4AE06667CE809 /* libPods-Placid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1918432611AA1E7EF20490 /* libPods-Placid.a */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +157,17 @@
 		3EE3CCDC20329242005FD2A5 /* EyadiniRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = EyadiniRelease.xcconfig; sourceTree = "<group>"; };
 		3EE3CCDD20329254005FD2A5 /* MaxiDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MaxiDebug.xcconfig; sourceTree = "<group>"; };
 		3EE3CCDE20329263005FD2A5 /* MaxiRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MaxiRelease.xcconfig; sourceTree = "<group>"; };
+		3EEF19352052F4E800563DA1 /* PLCHTCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLCHTCollectionViewController.h; sourceTree = "<group>"; };
+		3EEF19362052F4E800563DA1 /* PLCHTCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLCHTCollectionViewController.m; sourceTree = "<group>"; };
+		3EEF19382052F90300563DA1 /* CHTCollectionViewWaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallCell.m; sourceTree = "<group>"; };
+		3EEF19392052F90300563DA1 /* CHTCollectionViewWaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallCell.h; sourceTree = "<group>"; };
+		3EEF193B2052F92900563DA1 /* CHTCollectionViewWaterfallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallHeader.h; sourceTree = "<group>"; };
+		3EEF193C2052F92900563DA1 /* CHTCollectionViewWaterfallFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallFooter.h; sourceTree = "<group>"; };
+		3EEF193D2052F92900563DA1 /* CHTCollectionViewWaterfallFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallFooter.m; sourceTree = "<group>"; };
+		3EEF193E2052F92900563DA1 /* CHTCollectionViewWaterfallHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallHeader.m; sourceTree = "<group>"; };
+		3EEF19412052FE0000563DA1 /* PLFacebookAlbum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLFacebookAlbum.h; sourceTree = "<group>"; };
+		3EEF19422052FE0000563DA1 /* PLFacebookAlbum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLFacebookAlbum.m; sourceTree = "<group>"; };
+		3EEF194420556B8A00563DA1 /* CHTCollectionViewWaterfallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CHTCollectionViewWaterfallCell.xib; sourceTree = "<group>"; };
 		4BA78189AB41A201EE38451B /* Pods_PlacidUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacidUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1918432611AA1E7EF20490 /* libPods-Placid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Placid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A678BB36701F146BCE93A567 /* Pods-Placid.eyadinirelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.eyadinirelease.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.eyadinirelease.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +226,12 @@
 		3E4DAEE120333DF600587BF8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3EEF193C2052F92900563DA1 /* CHTCollectionViewWaterfallFooter.h */,
+				3EEF193D2052F92900563DA1 /* CHTCollectionViewWaterfallFooter.m */,
+				3EEF193B2052F92900563DA1 /* CHTCollectionViewWaterfallHeader.h */,
+				3EEF193E2052F92900563DA1 /* CHTCollectionViewWaterfallHeader.m */,
+				3EEF19392052F90300563DA1 /* CHTCollectionViewWaterfallCell.h */,
+				3EEF19382052F90300563DA1 /* CHTCollectionViewWaterfallCell.m */,
 				3E4DAEE220333E1D00587BF8 /* PLMainNavTableViewCell.h */,
 				3E4DAEE320333E1D00587BF8 /* PLMainNavTableViewCell.m */,
 				3E4DAEE420333E1D00587BF8 /* PLMainNavTableViewCell.xib */,
@@ -218,6 +241,7 @@
 				3E46E7C5203C6482006274B1 /* PLProfileTableViewCell.h */,
 				3E46E7C6203C6482006274B1 /* PLProfileTableViewCell.m */,
 				3E46E7C7203C6482006274B1 /* PLProfileTableViewCell.xib */,
+				3EEF194420556B8A00563DA1 /* CHTCollectionViewWaterfallCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -240,6 +264,8 @@
 				3E4DAF10203C3D0800587BF8 /* PLUser.m */,
 				3E268210203F2F2500DB625A /* PLSponsor.h */,
 				3E268211203F2F2500DB625A /* PLSponsor.m */,
+				3EEF19412052FE0000563DA1 /* PLFacebookAlbum.h */,
+				3EEF19422052FE0000563DA1 /* PLFacebookAlbum.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +343,7 @@
 		3EE3CC9B20328E50005FD2A5 /* Placid */ = {
 			isa = PBXGroup;
 			children = (
+				3EEF19342052F3FF00563DA1 /* ReUsableViews */,
 				3EAAD4B42032CF8D00F26053 /* API */,
 				3E4DAEE720334ABA00587BF8 /* Categories */,
 				3E4DAEE120333DF600587BF8 /* Cells */,
@@ -388,6 +415,15 @@
 				3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		3EEF19342052F3FF00563DA1 /* ReUsableViews */ = {
+			isa = PBXGroup;
+			children = (
+				3EEF19352052F4E800563DA1 /* PLCHTCollectionViewController.h */,
+				3EEF19362052F4E800563DA1 /* PLCHTCollectionViewController.m */,
+			);
+			path = ReUsableViews;
 			sourceTree = "<group>";
 		};
 		53F3AF4D3D639116E84D5398 /* Frameworks */ = {
@@ -525,12 +561,13 @@
 				3EE3CCA920328E50005FD2A5 /* LaunchScreen.storyboard in Resources */,
 				3E4DAEE620333E1D00587BF8 /* PLMainNavTableViewCell.xib in Resources */,
 				3E4DAF022034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib in Resources */,
+				3E4E9868204826FA00E1E598 /* Assets.xcassets in Resources */,
 				3EE3CCE12032926E005FD2A5 /* EyadiniRelease.xcconfig in Resources */,
 				3E4DAEF2203373EE00587BF8 /* font.otf in Resources */,
 				3E4DAEE0203336A200587BF8 /* FontAwesome.ttf in Resources */,
 				3E4DAEF1203373EE00587BF8 /* MyriadPro-Cond.otf in Resources */,
-				3EE3CCA620328E50005FD2A5 /* Assets.xcassets in Resources */,
 				3E4DAEF3203373EE00587BF8 /* MyriadCondBold.otf in Resources */,
+				3EEF194520556B8A00563DA1 /* CHTCollectionViewWaterfallCell.xib in Resources */,
 				3EE3CCDB2032922F005FD2A5 /* EyadiniDebug.xcconfig in Resources */,
 				3E46E7C9203C6482006274B1 /* PLProfileTableViewCell.xib in Resources */,
 				3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */,
@@ -633,9 +670,12 @@
 				3E4DAF11203C3D0800587BF8 /* PLUser.m in Sources */,
 				3E4DAEF62034119900587BF8 /* PLMyProfileViewController.m in Sources */,
 				3E46E7C8203C6482006274B1 /* PLProfileTableViewCell.m in Sources */,
+				3EEF193F2052F92A00563DA1 /* CHTCollectionViewWaterfallFooter.m in Sources */,
 				3E4DAEE520333E1D00587BF8 /* PLMainNavTableViewCell.m in Sources */,
 				3EAAD4E82033231900F26053 /* PLBlogViewController.m in Sources */,
+				3EEF19402052F92A00563DA1 /* CHTCollectionViewWaterfallHeader.m in Sources */,
 				3EAAD4E52033230700F26053 /* PLCuisineViewController.m in Sources */,
+				3EEF193A2052F90300563DA1 /* CHTCollectionViewWaterfallCell.m in Sources */,
 				3EAAD4C52032EB3B00F26053 /* PLBaseViewController.m in Sources */,
 				3E4DAF0C203BF80300587BF8 /* PLLoginViewController.m in Sources */,
 				3E4DAF012034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m in Sources */,
@@ -644,10 +684,12 @@
 				3EAAD4D22032FF6900F26053 /* PLTransitions.m in Sources */,
 				3E4DAEF9203444DF00587BF8 /* PLSocialNetworksViewController.m in Sources */,
 				3E4DAEED20334B6000587BF8 /* UIImage+PLShadow.m in Sources */,
+				3EEF19372052F4E800563DA1 /* PLCHTCollectionViewController.m in Sources */,
 				3E268212203F2F2500DB625A /* PLSponsor.m in Sources */,
 				3E4DAF0E203C1B4200587BF8 /* PLMainNavigationController.m in Sources */,
 				3EAAD4DC2033003F00F26053 /* PLDynamicTransition.m in Sources */,
 				3E4DAEFD2034EF4200587BF8 /* PLFacebookFeedPost.m in Sources */,
+				3EEF19432052FE0000563DA1 /* PLFacebookAlbum.m in Sources */,
 				3EAAD4EE2033233200F26053 /* PLContactUsViewController.m in Sources */,
 				3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */,
 				3EAAD4E2203322E800F26053 /* PLGalleryViewController.m in Sources */,
@@ -828,7 +870,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D6B71264106057E6E08E212 /* Pods-Placid.eyadinidebug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
+				ASSETCATALOG_COMPILER_APPICON_NAME = MaxiAppIconDebug;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -837,8 +879,9 @@
 					"DEBUG=1",
 				);
 				INFOPLIST_FILE = Placid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.Placid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.maxis.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -848,7 +891,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A678BB36701F146BCE93A567 /* Pods-Placid.eyadinirelease.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
+				ASSETCATALOG_COMPILER_APPICON_NAME = MaxiAppIconDebug;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -857,8 +900,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Placid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.Placid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.maxis.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -981,17 +1025,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF72E720719BB874265BC411 /* Pods-Placid.maxidebug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
+				ASSETCATALOG_COMPILER_APPICON_NAME = MaxiAppIconDebug;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"MAXI=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Placid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.Placid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.maxis.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1084,7 +1130,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F62586C03B1689C15393EBD6 /* Pods-Placid.maxirelease.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "${PL_APP_ICON}";
+				ASSETCATALOG_COMPILER_APPICON_NAME = MaxiAppIconDebug;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1093,8 +1139,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Placid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.Placid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.maxis.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

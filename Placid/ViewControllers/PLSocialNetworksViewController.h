@@ -20,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIView *facebookContainer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *facebookCOntainerLeadingConstraint;
 @property (weak, nonatomic) IBOutlet UITableView *facebookTableView;
+@property (weak, nonatomic) IBOutlet UIImageView *waterMarkImageView;
 
 @end

@@ -30,6 +30,8 @@
   [self.centerContactUsImageView addGestureRecognizer:tap];
   [self.centerContactUsImageView setUserInteractionEnabled:YES];
   
+  [PLConstants ROUND_CONER_VIEW:self.centerContactUsImageView];
+  
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -94,12 +96,12 @@
   switch (bubbleType) {
     case AAShareBubbleTypeFacebook:{
       NSLog(@"Facebook");
-      urlString = @"https://www.facebook.com/eyadini";
+      urlString = @"https://www.facebook.com/maxslifestyle/";
       break;
     }
     case AAShareBubbleTypeTwitter:{
       NSLog(@"Twitter");
-      urlString = @"https://twitter.com/eyadini";
+      urlString = @"https://twitter.com/maxslifestyle1";
       break;
     }
     case AAShareBubbleTypeGooglePlus:{
@@ -130,14 +132,14 @@
     }
     case AAShareBubbleTypeInstagram:{
       NSLog(@"Instagram");
-      urlString = @"https://www.instagram.com/eyadiniloungenuz/";
+      urlString = @"https://www.instagram.com/maxslifestyle/";
       break;
     }
     case 100:{
       if ([PLConstants OS_VERSION] < 10) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:0319061395"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:0319061393"]];
       }else{
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:0319061395"] options:@{} completionHandler:^(BOOL success) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:0319061393"] options:@{} completionHandler:^(BOOL success) {
           
         }];
       }
@@ -149,7 +151,7 @@
       if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailVC = [[MFMailComposeViewController alloc] init];
         mailVC.mailComposeDelegate = self;
-        [mailVC setSubject:@"Eyadini iOS App"];
+        [mailVC setSubject:@"Maxi's iOS App"];
         [mailVC setMessageBody:@"Found and sent using Demo App!" isHTML:NO];
         [self presentViewController:mailVC animated:YES completion:NULL];
       } else {

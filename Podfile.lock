@@ -21,6 +21,9 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - CHTCollectionViewWaterfallLayout (0.9.5):
+    - CHTCollectionViewWaterfallLayout/ObjC (= 0.9.5)
+  - CHTCollectionViewWaterfallLayout/ObjC (0.9.5)
   - ECSlidingViewController (2.0.3)
   - FBSDKCoreKit (4.19.0):
     - Bolts (~> 1.7)
@@ -75,6 +78,7 @@ PODS:
 DEPENDENCIES:
   - AAShareBubbles
   - AFNetworking
+  - CHTCollectionViewWaterfallLayout
   - ECSlidingViewController
   - FBSDKCoreKit
   - FBSDKLoginKit
@@ -94,6 +98,7 @@ SPEC CHECKSUMS:
   AAShareBubbles: 53fd5064602fa041a2249dda6b26f7fdccca3093
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CHTCollectionViewWaterfallLayout: 775ff73f48cfc13859b62d8bceb96e772e4a0318
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   FBSDKCoreKit: 894b2b6eda6a4c8c4204e92e59cc355709ef045c
   FBSDKLoginKit: 83ca4d8f12a2022570af9fd6aacf27f6b425b99f
@@ -115,6 +120,6 @@ SPEC CHECKSUMS:
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   UIImageView-Letters: f62db28076797adf3560ab7410647dc6899b9eef
 
-PODFILE CHECKSUM: 84394c97983ddd93cb28231d7e527bb2ee2ed038
+PODFILE CHECKSUM: 443e8cc53e51fd78be3c36064de138c204e4fe31
 
 COCOAPODS: 1.4.0

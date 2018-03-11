@@ -14,6 +14,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <GoogleSignIn/GoogleSignIn.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface PLMainNavigationController ()
   @property (nonatomic, strong) NSArray *menuItems;
@@ -38,8 +39,10 @@ static NSString *CellIdentifier = @"PLMainNavTableViewCell";
   [self.tableView registerClass:[PLMainNavTableViewCell class] forCellReuseIdentifier:CellIdentifier];
   
   [self.view setBackgroundColor:[PLConstants LOOKUP_COLOUR2]];
-  [self.navLogoImageView setImage:[UIImage imageNamed:[PLConstants navLogoImageName]]];
+  [self.navLogoImageView setImage:[UIImage imageNamed:@"maxis_logo_large"]];
   [self.navLogoImageView setContentMode:UIViewContentModeScaleAspectFit];
+  
+  [PLConstants ROUND_CONER_VIEW:self.navLogoImageView];
   
   // determine the size of the reflection to create
   int reflectionHeight = self.navLogoImageView.bounds.size.height * kDefaultReflectionFraction;
@@ -47,6 +50,7 @@ static NSString *CellIdentifier = @"PLMainNavTableViewCell";
   // create the reflection image and assign it to the UIImageView
   self.reflectionView.image = [self reflectedImage:self.navLogoImageView withHeight:reflectionHeight];
   self.reflectionView.alpha = kDefaultReflectionOpacity;
+  [PLConstants ROUND_CONER_VIEW:self.reflectionView];
   
   [self.logoutButton.titleLabel setFont:[PLConstants FONT_NAV_HEADING]];
   [self.logoutButton setTitleColor:[PLConstants LOOKUP_COLOUR1] forState:UIControlStateNormal];

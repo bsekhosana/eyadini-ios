@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet FBSDKLoginButton *facebookLoginButton;
 @property (weak, nonatomic) IBOutlet UILabel *orLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 
 @end

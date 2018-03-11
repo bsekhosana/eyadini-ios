@@ -89,7 +89,7 @@
 }
 
 +(NSString *)navLogoImageName{
-  return @"eyadini_nav_logo";
+  return @"maxis_logo_large";
 }
 
 +(NSString *)PLApiKey{

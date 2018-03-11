@@ -10,4 +10,11 @@
 
 @implementation PLSponsor
 
+/*
+ * By default, tell JSONMODEL that all properties are optional
+ */
++(BOOL)propertyIsOptional:(NSString *)propertyName {
+  return YES;
+}
+
 @end

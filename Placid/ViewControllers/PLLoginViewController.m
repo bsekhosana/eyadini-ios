@@ -30,6 +30,8 @@
   [self.orLabel setTextColor:[PLConstants LOOKUP_COLOUR2]];
   [GIDSignIn sharedInstance].uiDelegate = self;
   [GIDSignIn sharedInstance].delegate = self;
+  
+  [PLConstants ROUND_CONER_VIEW:self.logoImageView];
 }
 
 - (void)didReceiveMemoryWarning {

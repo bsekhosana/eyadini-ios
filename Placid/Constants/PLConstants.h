@@ -88,6 +88,10 @@ static float fontScaleFactor = 0.5f;
 
 +(NSString *)navLogoImageName;
 
+
++(void)ROUND_CONER_VIEW:(UIView *)view;
+
+
 +(NSString *)PLApiKey;
 
 

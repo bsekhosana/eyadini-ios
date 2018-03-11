@@ -20,4 +20,5 @@ target 'Placid' do
   pod "MXParallaxHeader"
   pod "UIImageView-Letters"
   pod 'iCarousel'
+  pod 'CHTCollectionViewWaterfallLayout'
 end

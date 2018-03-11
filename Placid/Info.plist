@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(PL_APP_BUNDLE_ID)</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -21,7 +21,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb564202827266707</string>
+				<string>fb191956878068919</string>
 			</array>
 		</dict>
 		<dict>
@@ -36,9 +36,9 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>564202827266707</string>
+	<string>191956878068919</string>
 	<key>FacebookDisplayName</key>
-	<string>Eyadini</string>
+	<string>Maxi's</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
