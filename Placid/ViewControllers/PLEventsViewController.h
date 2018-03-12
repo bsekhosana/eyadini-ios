@@ -8,6 +8,7 @@
 
 #import "PLBaseViewController.h"
 
-@interface PLEventsViewController : PLBaseViewController
+@interface PLEventsViewController : PLBaseViewController <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

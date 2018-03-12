@@ -107,7 +107,7 @@
       buildConfiguration = "EyadiniDebug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "EyadiniRelease"
+      buildConfiguration = "MaxiRelease"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

@@ -221,10 +221,29 @@
                     <view key="view" contentMode="scaleToFill" id="ZRh-8X-Cje">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uuQ-7c-O9I">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hx5-0W-u7y" id="18I-uw-Rgj"/>
+                                    <outlet property="delegate" destination="hx5-0W-u7y" id="iMH-fm-mtE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uuQ-7c-O9I" secondAttribute="bottom" id="FQW-oz-AXV"/>
+                            <constraint firstItem="uuQ-7c-O9I" firstAttribute="top" secondItem="jyI-9J-CiZ" secondAttribute="top" id="hOL-Jk-d0O"/>
+                            <constraint firstItem="uuQ-7c-O9I" firstAttribute="leading" secondItem="ZRh-8X-Cje" secondAttribute="leading" id="sGW-Ns-vgV"/>
+                            <constraint firstAttribute="trailing" secondItem="uuQ-7c-O9I" secondAttribute="trailing" id="vk1-i4-fz9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jyI-9J-CiZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="Hac-Hv-AON"/>
+                    <connections>
+                        <outlet property="tableView" destination="uuQ-7c-O9I" id="Ytj-9o-VcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACk-ue-Bmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -391,13 +410,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="35e-LE-BIK">
                                 <rect key="frame" x="16" y="287" width="343" height="340"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Max’s Lifestyle is one of the best restaurants in Umlazi, Durban (KwaZulu Natal) with traditional “Kasie” (Ethnic Township Location) culture. We are the only venue that Tourists and Locals alike can enjoy, feel, and experience unique township culture in upmarket trendy and safe surroundings. People from all walks of life, cultures and races, young and old come to enjoy our best service when they want something to eat or drink and maybe just to wind the down for the day.
+                                <string key="text">Max’s Lifestyle is one of the best restaurants in Umlazi, Durban (KwaZulu Natal) with traditional “Kasie” (Ethnic Township Location) culture. We are the only venue that Tourists and Locals alike can enjoy, feel, and experience unique township culture in upmarket trendy and safe surroundings. People from all walks of life, cultures and races, young and old come to enjoy our best service when they want something to eat or drink and maybe just to wind the down for the day.
 
 We have top security who ensure nothing illegal is brought into our safe environment.
 
 We welcome all our customers with warm hospitality. We are known for our Sunday Sessions where Top DJ’s entertain for those who enjoy good music and dancing and our VIP Lounge is available for who prefer a relaxed less noisy environment.
 
-So whether you are local or on holiday please come and enjoy our hospitality combined with the amazing experience and ambience of being at a traditional establishment where you can dine on traditional meals featuring meat cooked on a “Braai” (Barbeque) with traditional side dishes as well as a custom Restaurant.</mutableString>
+So whether you are local or on holiday please come and enjoy our hospitality combined with the amazing experience and ambience of being at a traditional establishment where you can dine on traditional meals featuring meat cooked on a “Braai” (Barbeque) with traditional side dishes as well as a custom Restaurant.</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

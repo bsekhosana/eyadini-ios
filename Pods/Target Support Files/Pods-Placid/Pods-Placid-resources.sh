@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "EyadiniDebug" ]]; then
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
   install_resource "${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib"
   install_resource "${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle"
 fi
 if [[ "$CONFIGURATION" == "EyadiniRelease" ]]; then
   install_resource "${PODS_ROOT}/AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
@@ -96,6 +97,7 @@ if [[ "$CONFIGURATION" == "EyadiniRelease" ]]; then
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
   install_resource "${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib"
   install_resource "${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle"
 fi
 if [[ "$CONFIGURATION" == "MaxiDebug" ]]; then
   install_resource "${PODS_ROOT}/AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
@@ -103,6 +105,7 @@ if [[ "$CONFIGURATION" == "MaxiDebug" ]]; then
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
   install_resource "${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib"
   install_resource "${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle"
 fi
 if [[ "$CONFIGURATION" == "MaxiRelease" ]]; then
   install_resource "${PODS_ROOT}/AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
@@ -110,6 +113,7 @@ if [[ "$CONFIGURATION" == "MaxiRelease" ]]; then
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
   install_resource "${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib"
   install_resource "${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

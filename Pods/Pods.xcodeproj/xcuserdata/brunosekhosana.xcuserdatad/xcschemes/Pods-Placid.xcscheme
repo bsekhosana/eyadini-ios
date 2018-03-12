@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "57ED4B368C3064E16DFB4D9526F28E15"
+               BlueprintIdentifier = "C290FA96E8F837BA5D98D9B648D2BE95"
                BlueprintName = "Pods-Placid"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-Placid.a">

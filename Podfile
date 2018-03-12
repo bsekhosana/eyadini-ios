@@ -21,4 +21,5 @@ target 'Placid' do
   pod "UIImageView-Letters"
   pod 'iCarousel'
   pod 'CHTCollectionViewWaterfallLayout'
+  pod 'NYTPhotoViewer'
 end

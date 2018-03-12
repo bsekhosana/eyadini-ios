@@ -28,9 +28,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="150" height="189"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWq-fw-wpy">
-                        <rect key="frame" x="75" y="192" width="0.0" height="0.0"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWq-fw-wpy">
+                        <rect key="frame" x="75" y="178" width="0.0" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="W9j-r6-XpW"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="DINNextLTPro-MediumCond" family="DIN Next LT Pro" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -44,6 +46,11 @@
                     </label>
                 </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="5gQ-lH-TwD" firstAttribute="bottom" secondItem="vWq-fw-wpy" secondAttribute="bottom" constant="16" id="0Xy-Bi-Axm"/>
+                <constraint firstItem="vWq-fw-wpy" firstAttribute="leading" secondItem="5gQ-lH-TwD" secondAttribute="leading" constant="75" id="ovx-ds-Vqf"/>
+                <constraint firstItem="5gQ-lH-TwD" firstAttribute="trailing" secondItem="vWq-fw-wpy" secondAttribute="trailing" constant="75" id="pI8-ir-sdq"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="5gQ-lH-TwD"/>
             <size key="customSize" width="150" height="208"/>
             <connections>
