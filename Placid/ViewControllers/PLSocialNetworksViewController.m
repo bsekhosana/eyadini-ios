@@ -25,6 +25,8 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+  [SVProgressHUD show];
     // Do any additional setup after loading the view.
   [self setupTopNavControls];
   
@@ -127,6 +129,7 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
         }
         
         [weakSelf.facebookTableView reloadData];
+        [SVProgressHUD dismiss];
       }
       
     }];

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ECSlidingViewController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface PLBaseViewController : UIViewController <ECSlidingViewControllerDelegate>
 - (IBAction)menuButtonTapped:(id)sender;

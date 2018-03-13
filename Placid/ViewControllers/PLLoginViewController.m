@@ -25,11 +25,10 @@
 //  [self.backgroundImageView addSubview:blurView];
   [self.navigationController.navigationBar setHidden:YES];
   self.facebookLoginButton.readPermissions = @[@"public_profile", @"email"];
+  self.facebookLoginButton.publishPermissions = @[@"publish_actions"];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkLogIn) name: FBSDKAccessTokenDidChangeNotification object:nil];
   [self.orLabel setFont:[PLConstants FONT_NAV_HEADING]];
   [self.orLabel setTextColor:[PLConstants LOOKUP_COLOUR2]];
-  [GIDSignIn sharedInstance].uiDelegate = self;
-  [GIDSignIn sharedInstance].delegate = self;
   
   [PLConstants ROUND_CONER_VIEW:self.logoImageView];
 }
@@ -95,20 +94,6 @@
   }
 }
 
-
-- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
-  
-  PLUser *currentUser = [PLUser new];
-  currentUser.id = user.userID;
-  currentUser.username = user.profile.givenName;
-  currentUser.name = user.profile.name;
-  currentUser.email = user.profile.email;
-//  currentUser.contactNumber = user.c
-  NSError *errorJson;
-  PLUser *newUser = [[PLUser alloc]initWithDictionary:[currentUser toDictionary] error:&errorJson];
-  NSLog(@"Current User : %@", newUser);
-  [self userLoggedIn];
-}
 
 -(void)userLoggedIn{
   [[NSNotificationCenter defaultCenter] removeObserver:self];

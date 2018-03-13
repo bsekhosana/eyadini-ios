@@ -12,12 +12,13 @@
 #import "PLDynamicTransition.h"
 #import "PLTransitions.h"
 #import "PLConstants.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-@interface PLBaseViewController ()
-  @property (nonatomic, strong) PLTransitions *transitions;
-  @property (nonatomic, strong) UIPanGestureRecognizer *dynamicTransitionPanGesture;
+@interface PLBaseViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@property (nonatomic, strong) PLTransitions *transitions;
+@property (nonatomic, strong) UIPanGestureRecognizer *dynamicTransitionPanGesture;
 @end
-
 
 @implementation PLBaseViewController
 
@@ -48,6 +49,14 @@
   [anchorRightButton setTintColor: [PLConstants COLOUR_BG_NAV_PRIMARY]];
   self.navigationItem.leftBarButtonItem  = anchorRightButton;
   
+  UIBarButtonItem *anchorLeftButton = [[UIBarButtonItem alloc] initWithTitle:FA_ICON_CAMERA style:UIBarButtonItemStylePlain target:self action:@selector(takePhoto)];
+  anchorLeftButton.width = 44.0;
+  [anchorLeftButton setTitleTextAttributes:@{
+                                              NSFontAttributeName: [PLConstants FONT_NAV_ICON],
+                                              NSForegroundColorAttributeName: [PLConstants COLOUR_LBL_NAV_ACTION]
+                                              } forState:UIControlStateNormal];
+  [anchorLeftButton setTintColor: [PLConstants COLOUR_BG_NAV_PRIMARY]];
+  self.navigationItem.rightBarButtonItem  = anchorLeftButton;
   
   NSDictionary *transitionData = @{ @"name" : @"Zoom",    @"transition" : self.transitions.zoomAnimationController };
   id<ECSlidingViewControllerDelegate> transition = transitionData[@"transition"];
@@ -62,6 +71,86 @@
     [self.navigationController.view addGestureRecognizer:self.slidingViewController.panGesture];
   
   }
+  
+//  [[NSNotificationCenter defaultCenter] addObserver:self
+//                                           selector:@selector(someMethod:)
+//                                               name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+#pragma mark - take photo
+
+-(void)takePhoto
+{
+  UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+  
+  if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+  {
+    [imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
+  }
+  
+  // image picker needs a delegate,
+  [imagePickerController setDelegate:self];
+  
+  // Place image picker on the screen
+  [self presentViewController:imagePickerController animated:YES completion:nil];
+}
+
+
+
+-(void)chooseFromLibrary
+{
+  
+  UIImagePickerController *imagePickerController= [[UIImagePickerController alloc]init];
+  [imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+  
+  // image picker needs a delegate so we can respond to its messages
+  [imagePickerController setDelegate:self];
+  
+  // Place image picker on the screen
+  [self presentViewController:imagePickerController animated:YES completion:nil];
+  
+}
+
+//delegate methode will be called after picking photo either from camera or library
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+  
+  
+  [self dismissViewControllerAnimated:YES completion:nil];
+  UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+  [SVProgressHUD showWithStatus:@"Uploading"];
+  [self uploadPhotoToFacebook:image];
+}
+
+-(void)uploadPhotoToFacebook:(UIImage *)image{
+  // For more complex open graph stories, use `FBSDKShareAPI`
+  // with `FBSDKShareOpenGraphContent`
+  NSDictionary *params = @{
+                           @"source":image,
+                           @"message":@"#maxslifestyle #ios_maxi_app #luxury #styles #viplounge"
+                           };
+  /* make the API call */
+  FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                initWithGraphPath:@"/maxslifestyle/photos"
+                                parameters:params
+                                HTTPMethod:@"POST"];
+  [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                        id result,
+                                        NSError *error) {
+    [SVProgressHUD dismiss];
+    
+    // Handle the result
+    NSLog(@"post image with error : %@", error.description);
+    if (error) {
+      [SVProgressHUD showErrorWithStatus:@"Facebook post failed, please try again later."];
+    }else{
+      [SVProgressHUD showSuccessWithStatus:@"Your photo has been posted to Maxi's Lifestyle Facebook posts feed."];
+    }
+  }];
+}
+
+
+-(void)showAlertWithTitle:(NSString *)title message:(NSString*)message{
   
 }
 

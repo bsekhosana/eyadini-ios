@@ -61,6 +61,8 @@
 		3EEF194D2056F88200563DA1 /* PLEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF194B2056F88200563DA1 /* PLEventTableViewCell.m */; };
 		3EEF194E2056F88200563DA1 /* PLEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EEF194C2056F88200563DA1 /* PLEventTableViewCell.xib */; };
 		3EEF19512056FC2600563DA1 /* PLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF19502056FC2600563DA1 /* PLEvent.m */; };
+		3EEF19532057103D00563DA1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EEF19522057103D00563DA1 /* MapKit.framework */; };
+		3EEF19572057167D00563DA1 /* PLLocationManagerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF19562057167D00563DA1 /* PLLocationManagerSingleton.m */; };
 		9AC83352EBE4AE06667CE809 /* libPods-Placid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1918432611AA1E7EF20490 /* libPods-Placid.a */; };
 /* End PBXBuildFile section */
 
@@ -176,6 +178,9 @@
 		3EEF194C2056F88200563DA1 /* PLEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLEventTableViewCell.xib; sourceTree = "<group>"; };
 		3EEF194F2056FC2600563DA1 /* PLEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLEvent.h; sourceTree = "<group>"; };
 		3EEF19502056FC2600563DA1 /* PLEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLEvent.m; sourceTree = "<group>"; };
+		3EEF19522057103D00563DA1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3EEF19552057167D00563DA1 /* PLLocationManagerSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLLocationManagerSingleton.h; sourceTree = "<group>"; };
+		3EEF19562057167D00563DA1 /* PLLocationManagerSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLLocationManagerSingleton.m; sourceTree = "<group>"; };
 		4BA78189AB41A201EE38451B /* Pods_PlacidUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacidUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1918432611AA1E7EF20490 /* libPods-Placid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Placid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A678BB36701F146BCE93A567 /* Pods-Placid.eyadinirelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placid.eyadinirelease.xcconfig"; path = "Pods/Target Support Files/Pods-Placid/Pods-Placid.eyadinirelease.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E46E7C4203C6053006274B1 /* QuartzCore.framework in Frameworks */,
+				3EEF19532057103D00563DA1 /* MapKit.framework in Frameworks */,
 				9AC83352EBE4AE06667CE809 /* libPods-Placid.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				3EEF19342052F3FF00563DA1 /* ReUsableViews */,
+				3EEF19542057166A00563DA1 /* Singletons */,
 				3EAAD4B42032CF8D00F26053 /* API */,
 				3E4DAEE720334ABA00587BF8 /* Categories */,
 				3E4DAEE120333DF600587BF8 /* Cells */,
@@ -439,9 +446,19 @@
 			path = ReUsableViews;
 			sourceTree = "<group>";
 		};
+		3EEF19542057166A00563DA1 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				3EEF19552057167D00563DA1 /* PLLocationManagerSingleton.h */,
+				3EEF19562057167D00563DA1 /* PLLocationManagerSingleton.m */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
 		53F3AF4D3D639116E84D5398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3EEF19522057103D00563DA1 /* MapKit.framework */,
 				3E46E7C3203C6053006274B1 /* QuartzCore.framework */,
 				F85A327F602D2BCC8E7B2A89 /* Pods_PlacidTests.framework */,
 				4BA78189AB41A201EE38451B /* Pods_PlacidUITests.framework */,
@@ -532,6 +549,14 @@
 					3EE3CC9820328E50005FD2A5 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3EE3CCB020328E50005FD2A5 = {
 						CreatedOnToolsVersion = 9.2;
@@ -616,18 +641,16 @@
 				"${PODS_ROOT}/AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf",
-				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AAShareBubbles.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NYTPhotoViewer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -689,6 +712,7 @@
 				3EEF193F2052F92A00563DA1 /* CHTCollectionViewWaterfallFooter.m in Sources */,
 				3E4DAEE520333E1D00587BF8 /* PLMainNavTableViewCell.m in Sources */,
 				3EAAD4E82033231900F26053 /* PLBlogViewController.m in Sources */,
+				3EEF19572057167D00563DA1 /* PLLocationManagerSingleton.m in Sources */,
 				3EEF19402052F92A00563DA1 /* CHTCollectionViewWaterfallHeader.m in Sources */,
 				3EAAD4E52033230700F26053 /* PLCuisineViewController.m in Sources */,
 				3EEF193A2052F90300563DA1 /* CHTCollectionViewWaterfallCell.m in Sources */,

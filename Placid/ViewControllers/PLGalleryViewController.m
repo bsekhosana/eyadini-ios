@@ -23,6 +23,8 @@
     // Do any additional setup after loading the view.
   self.navigationItem.title = @"Gallery";
   
+  [SVProgressHUD show];
+  
   CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
   
   layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
@@ -67,6 +69,7 @@
     
     weakSelf.collectionViewController.data = [weakSelf.albums copy];
     [weakSelf.collectionViewController.collectionView reloadData];
+    [SVProgressHUD dismiss];
   }];
 }
 

@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   self.navigationItem.title = @"Events";
-  
+  [SVProgressHUD show];
   
   __weak typeof(self) weakSelf = self;
   // For more complex open graph stories, use `FBSDKShareAPI`
@@ -52,6 +52,7 @@
     }
     
     [weakSelf.tableView reloadData];
+    [SVProgressHUD dismiss];
   }];
   
   [self.tableView registerClass:[PLEventTableViewCell class] forCellReuseIdentifier:@"PLEventTableViewCell"];

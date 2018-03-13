@@ -117,6 +117,7 @@ NSString* const FA_ICON_X_CIRCLE = @"\uf057";
 NSString* const FA_ICON_CHECK_CIRCLE = @"\uf058";
 NSString* const FA_ICON_LOCK = @"\uf023";
 NSString* const FA_ICON_EXCLAMATION_CIRCLE = @"\uf06a";
+NSString* const FA_ICON_CAMERA = @"\uf030";
 
 
 @end

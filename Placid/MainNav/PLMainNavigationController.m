@@ -13,7 +13,6 @@
 #import "UIImage+PLShadow.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import <GoogleSignIn/GoogleSignIn.h>
 #import <QuartzCore/QuartzCore.h>
 
 @interface PLMainNavigationController ()
@@ -67,7 +66,6 @@ static NSString *CellIdentifier = @"PLMainNavTableViewCell";
   UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Logout" message:@"Are you sure?" preferredStyle:UIAlertControllerStyleAlert];
   UIAlertAction *yes = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
     [FBSDKAccessToken setCurrentAccessToken:nil];
-    [[GIDSignIn sharedInstance] signOut];
     NSString *domainName = [[NSBundle mainBundle] bundleIdentifier];
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:domainName];
     weakSelf.slidingViewController.topViewController = weakSelf.transitionsNavigationController;

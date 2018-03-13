@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import <GoogleSignIn/GoogleSignIn.h>
 
-@interface PLLoginViewController : UIViewController <GIDSignInUIDelegate>
+@interface PLLoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet FBSDKLoginButton *facebookLoginButton;
 @property (weak, nonatomic) IBOutlet UILabel *orLabel;

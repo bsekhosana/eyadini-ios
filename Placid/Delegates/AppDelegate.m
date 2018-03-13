@@ -12,7 +12,7 @@
 #import "PLHomeViewController.h"
 #import "PLMainNavigationController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <Firebase/Firebase.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface AppDelegate ()
 @end
@@ -28,6 +28,10 @@
   
   [NSThread sleepForTimeInterval:2];
   
+  [SVProgressHUD setForegroundColor:[PLConstants LOOKUP_COLOUR2]];
+  [SVProgressHUD setBackgroundColor:[PLConstants LOOKUP_COLOUR1]];
+  [SVProgressHUD setBackgroundLayerColor:[[UIColor grayColor] colorWithAlphaComponent:0.4]];
+  [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeCustom];
   // Push Notification settings
   
   /*if ([YUMCustomerSession instance].customerCopy != nil) {
@@ -54,13 +58,13 @@
     }
   }*/
   
+  
+  
+  
+  
   // Facebook
   [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
   // Add any custom logic here.
-  
-  
-  [GIDSignIn sharedInstance].clientID = @"29198463966-rmjm04s897sakaptuhatnctbclo02b9e.apps.googleusercontent.com";
-  [GIDSignIn sharedInstance].delegate = self;
   
   return [[FBSDKApplicationDelegate sharedInstance] application:application
                                   didFinishLaunchingWithOptions:launchOptions];
@@ -70,9 +74,6 @@
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
   
-  [[GIDSignIn sharedInstance] handleURL:url
-                      sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
-                             annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
   
   BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
                                                                 openURL:url
@@ -87,10 +88,6 @@
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-  
-  [[GIDSignIn sharedInstance] handleURL:url
-                      sourceApplication:sourceApplication
-                             annotation:annotation];
   
   BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
                                                                 openURL:url
@@ -128,27 +125,6 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
-- (void)signIn:(GIDSignIn *)signIn
-didSignInForUser:(GIDGoogleUser *)user
-     withError:(NSError *)error {
-  // Perform any operations on signed in user here.
-  NSString *userId = user.userID;                  // For client-side use only!
-  NSString *idToken = user.authentication.idToken; // Safe to send to the server
-  NSString *fullName = user.profile.name;
-  NSString *givenName = user.profile.givenName;
-  NSString *familyName = user.profile.familyName;
-  NSString *email = user.profile.email;
-  // ...
-  [[NSUserDefaults standardUserDefaults]setObject:@YES forKey:@"loggedIn"];
-}
-
-- (void)signIn:(GIDSignIn *)signIn
-didDisconnectWithUser:(GIDGoogleUser *)user
-     withError:(NSError *)error {
-  // Perform any operations when the user disconnects from app here.
-  // ...
-}
 
 
 @end

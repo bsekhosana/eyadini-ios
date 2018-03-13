@@ -14,12 +14,10 @@ target 'Placid' do
   pod'FBSDKLoginKit'
   pod'FBSDKShareKit'
   pod 'AAShareBubbles'
-  pod 'Google-Mobile-Ads-SDK'
-  pod 'Firebase/AdMob'
-  pod 'GoogleSignIn'
   pod "MXParallaxHeader"
   pod "UIImageView-Letters"
   pod 'iCarousel'
   pod 'CHTCollectionViewWaterfallLayout'
   pod 'NYTPhotoViewer'
+  pod 'SVProgressHUD'
 end
