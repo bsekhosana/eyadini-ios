@@ -14,6 +14,7 @@
 @interface PLGalleryViewController ()
 @property (strong, nonatomic) PLCHTCollectionViewController *collectionViewController;
 @property (strong, nonatomic) NSMutableArray *albums;
+
 @end
 
 @implementation PLGalleryViewController
@@ -35,6 +36,7 @@
   
   self.collectionViewController = [[PLCHTCollectionViewController alloc]initWithCollectionViewLayout:layout];
   [self.collectionViewController.view setFrame:self.view.frame];
+  self.collectionViewController.navController = self.navigationController;
 //  [self.collectionViewController configureCollectionViewLayout];
   self.collectionViewController.albumType = FacebookAlbum;
   [self.view addSubview:self.collectionViewController.view];

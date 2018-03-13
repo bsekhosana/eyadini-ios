@@ -12,14 +12,17 @@
 #import "CHTCollectionViewWaterfallFooter.h"
 #import "PLFacebookAlbum.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import <FBSDKCoreKit.h>
+#import "MWPhotoBrowser.h"
 
 #define CELL_COUNT 30
 #define CELL_IDENTIFIER @"WaterfallCell"
 #define HEADER_IDENTIFIER @"WaterfallHeader"
 #define FOOTER_IDENTIFIER @"WaterfallFooter"
 
-@interface PLCHTCollectionViewController ()
+@interface PLCHTCollectionViewController () <MWPhotoBrowserDelegate>
 @property (nonatomic, strong) NSArray *cellSizes;
+@property (nonatomic, strong) NSMutableArray *photos;
 @end
 
 @implementation PLCHTCollectionViewController
@@ -151,9 +154,92 @@ static NSString * const reuseIdentifier = @"Cell";
   return reusableView;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+  PLFacebookAlbum *album = (PLFacebookAlbum*)[self.data objectAtIndex:indexPath.row];
+  __weak typeof(self) weakSelf = self;
+  [SVProgressHUD show];
+  // For more complex open graph stories, use `FBSDKShareAPI`
+  // with `FBSDKShareOpenGraphContent`
+  /* make the API call */
+  FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                initWithGraphPath:[NSString stringWithFormat:@"/%@/photos", album.id]
+                                parameters:@{@"fields":@"images,name,created_time,id", @"limit":@"100"}
+                                HTTPMethod:@"GET"];
+  [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                        NSDictionary * result,
+                                        NSError *error) {
+    // Handle the result
+    weakSelf.photos = [NSMutableArray new];
+    
+    
+    for (int i = 0; i < [result[@"data"] count]; i++) {
+      NSLog(@"Data : %@", result[@"data"][i]);
+      PLFacebookAlbum *album = [PLFacebookAlbum new];
+      album.id = result[@"data"][i][@"id"];
+      album.name = result[@"data"][i][@"name"];
+      album.created_time = result[@"data"][i][@"created_time"];
+      album.pictureUrl = result[@"data"][i][@"webp_images"][0][@"source"];
+      
+      MWPhoto * photo = [MWPhoto photoWithURL:[NSURL URLWithString:result[@"data"][i][@"images"][0][@"source"]]];
+      photo.caption = result[@"data"][i][@"name"];
+      [weakSelf.photos addObject:photo];
+    }
+    
+    [weakSelf initializePhotoBrowserWithImages:[weakSelf.photos copy]];
+  }];
+  
+}
+
 #pragma mark - CHTCollectionViewDelegateWaterfallLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
   return [self.cellSizes[indexPath.item % 4] CGSizeValue];
+}
+
+
+
+#pragma mark - photo browser
+
+-(void)initializePhotoBrowserWithImages:(NSArray *)images{
+  
+  // Create browser (must be done each time photo browser is
+  // displayed. Photo browser objects cannot be re-used)
+  MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+  
+  // Set options
+  browser.displayActionButton = YES; // Show action button to allow sharing, copying, etc (defaults to YES)
+  browser.displayNavArrows = NO; // Whether to display left and right nav arrows on toolbar (defaults to NO)
+  browser.displaySelectionButtons = NO; // Whether selection buttons are shown on each image (defaults to NO)
+  browser.zoomPhotosToFill = YES; // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
+  browser.alwaysShowControls = NO; // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
+  browser.enableGrid = YES; // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
+  browser.startOnGrid = NO; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
+  browser.autoPlayOnAppear = NO; // Auto-play first video
+  
+  // Optionally set the current visible photo before displaying
+  [browser setCurrentPhotoIndex:1];
+  
+  [SVProgressHUD dismiss];
+  
+  // Present
+  [self.navController pushViewController:browser animated:YES];
+  
+  // Manipulate
+  [browser showNextPhotoAnimated:YES];
+  [browser showPreviousPhotoAnimated:YES];
+  [browser setCurrentPhotoIndex:10];
+
+}
+
+
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+  return self.photos.count;
+}
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+  if (index < self.photos.count) {
+    return [self.photos objectAtIndex:index];
+  }
+  return nil;
 }
 
 @end

@@ -20,4 +20,5 @@ target 'Placid' do
   pod 'CHTCollectionViewWaterfallLayout'
   pod 'NYTPhotoViewer'
   pod 'SVProgressHUD'
+  pod "MWPhotoBrowser"
 end

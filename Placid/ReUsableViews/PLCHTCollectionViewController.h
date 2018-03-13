@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CHTCollectionViewWaterfallLayout.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 typedef enum {
   FacebookAlbum,
@@ -16,6 +17,7 @@ typedef enum {
 } AlbumType;
 
 @interface PLCHTCollectionViewController : UICollectionViewController
+@property (nonatomic, strong) UINavigationController *navController;
 @property (nonatomic, strong) NSArray *data;
 @property (nonatomic) AlbumType *albumType;
 -(void)configureCollectionViewLayout;

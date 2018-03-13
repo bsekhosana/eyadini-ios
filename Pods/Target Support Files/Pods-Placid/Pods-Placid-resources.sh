@@ -87,6 +87,7 @@ if [[ "$CONFIGURATION" == "EyadiniDebug" ]]; then
   install_resource "${PODS_ROOT}/AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
   install_resource "${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle"
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "EyadiniRelease" ]]; then
   install_resource "${PODS_ROOT}/AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
   install_resource "${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle"
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
@@ -101,6 +103,7 @@ if [[ "$CONFIGURATION" == "MaxiDebug" ]]; then
   install_resource "${PODS_ROOT}/AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
   install_resource "${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle"
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
@@ -108,6 +111,7 @@ if [[ "$CONFIGURATION" == "MaxiRelease" ]]; then
   install_resource "${PODS_ROOT}/AAShareBubbles/AAShareBubbles/AAShareBubbles.bundle"
   install_resource "${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle"
   install_resource "${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
