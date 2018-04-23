@@ -27,6 +27,33 @@
 		3E4DAF0E203C1B4200587BF8 /* PLMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF0D203C1B4200587BF8 /* PLMainNavigationController.m */; };
 		3E4DAF11203C3D0800587BF8 /* PLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF10203C3D0800587BF8 /* PLUser.m */; };
 		3E4E9868204826FA00E1E598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA520328E50005FD2A5 /* Assets.xcassets */; };
+		3E9466DC208E8690000045AB /* TotalLikes_Comments.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466BA208E868F000045AB /* TotalLikes_Comments.m */; };
+		3E9466DD208E8690000045AB /* TotalLikes_Comments.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466BC208E868F000045AB /* TotalLikes_Comments.xib */; };
+		3E9466DE208E8690000045AB /* PostDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466BE208E868F000045AB /* PostDescription.m */; };
+		3E9466DF208E8690000045AB /* PostDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466C0208E868F000045AB /* PostDescription.xib */; };
+		3E9466E0208E8690000045AB /* UploadedOn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466C2208E868F000045AB /* UploadedOn.m */; };
+		3E9466E1208E8690000045AB /* UploadedOn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466C4208E868F000045AB /* UploadedOn.xib */; };
+		3E9466E2208E8690000045AB /* DetailText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466C6208E868F000045AB /* DetailText.xib */; };
+		3E9466E3208E8690000045AB /* DetailText.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466C7208E868F000045AB /* DetailText.m */; };
+		3E9466E4208E8690000045AB /* Buttons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466CA208E868F000045AB /* Buttons.m */; };
+		3E9466E5208E8690000045AB /* Buttons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466CC208E868F000045AB /* Buttons.xib */; };
+		3E9466E6208E8690000045AB /* SectionHeaderOfPost.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466CF208E868F000045AB /* SectionHeaderOfPost.xib */; };
+		3E9466E7208E8690000045AB /* SectionHeaderOfPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466D0208E868F000045AB /* SectionHeaderOfPost.m */; };
+		3E9466E8208E8690000045AB /* SuggestedPeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466D2208E8690000045AB /* SuggestedPeopleCell.m */; };
+		3E9466E9208E8690000045AB /* SuggestedPeopleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466D3208E8690000045AB /* SuggestedPeopleCollectionViewCell.m */; };
+		3E9466EA208E8690000045AB /* SuggestedPeopleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466D4208E8690000045AB /* SuggestedPeopleCollectionViewCell.xib */; };
+		3E9466EB208E8690000045AB /* SuggestedPeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466D6208E8690000045AB /* SuggestedPeopleCell.xib */; };
+		3E9466EC208E8690000045AB /* PostImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466D9208E8690000045AB /* PostImage.m */; };
+		3E9466ED208E8690000045AB /* PostImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466DA208E8690000045AB /* PostImage.xib */; };
+		3E9466F1208E8707000045AB /* PLInstagramTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466EF208E8707000045AB /* PLInstagramTableViewController.m */; };
+		3E9466F2208E8707000045AB /* PLInstagramTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466F0208E8707000045AB /* PLInstagramTableViewController.xib */; };
+		3E9466F8208E8F79000045AB /* Twitter.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466F3208E8F78000045AB /* Twitter.plist */; };
+		3E9466F9208E8F79000045AB /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466F4208E8F78000045AB /* TwitterKitResources.bundle */; };
+		3E9466FA208E8F79000045AB /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9466F5208E8F79000045AB /* TwitterKit.framework */; };
+		3E9466FB208E8F79000045AB /* TwitterShareExtensionUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466F6208E8F79000045AB /* TwitterShareExtensionUIResources.bundle */; };
+		3E9466FC208E8F79000045AB /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9466F7208E8F79000045AB /* TwitterCore.framework */; };
+		3E946700208E9024000045AB /* PLTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466FE208E9024000045AB /* PLTwitterViewController.m */; };
+		3E946701208E9024000045AB /* PLTwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466FF208E9024000045AB /* PLTwitterViewController.xib */; };
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
@@ -114,6 +141,44 @@
 		3E4DAF0D203C1B4200587BF8 /* PLMainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainNavigationController.m; sourceTree = "<group>"; };
 		3E4DAF0F203C3D0800587BF8 /* PLUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLUser.h; sourceTree = "<group>"; };
 		3E4DAF10203C3D0800587BF8 /* PLUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLUser.m; sourceTree = "<group>"; };
+		3E9466BA208E868F000045AB /* TotalLikes_Comments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalLikes_Comments.m; sourceTree = "<group>"; };
+		3E9466BB208E868F000045AB /* TotalLikes_Comments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalLikes_Comments.h; sourceTree = "<group>"; };
+		3E9466BC208E868F000045AB /* TotalLikes_Comments.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalLikes_Comments.xib; sourceTree = "<group>"; };
+		3E9466BE208E868F000045AB /* PostDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDescription.m; sourceTree = "<group>"; };
+		3E9466BF208E868F000045AB /* PostDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDescription.h; sourceTree = "<group>"; };
+		3E9466C0208E868F000045AB /* PostDescription.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDescription.xib; sourceTree = "<group>"; };
+		3E9466C2208E868F000045AB /* UploadedOn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadedOn.m; sourceTree = "<group>"; };
+		3E9466C3208E868F000045AB /* UploadedOn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadedOn.h; sourceTree = "<group>"; };
+		3E9466C4208E868F000045AB /* UploadedOn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadedOn.xib; sourceTree = "<group>"; };
+		3E9466C6208E868F000045AB /* DetailText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailText.xib; sourceTree = "<group>"; };
+		3E9466C7208E868F000045AB /* DetailText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailText.m; sourceTree = "<group>"; };
+		3E9466C8208E868F000045AB /* DetailText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailText.h; sourceTree = "<group>"; };
+		3E9466CA208E868F000045AB /* Buttons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buttons.m; sourceTree = "<group>"; };
+		3E9466CB208E868F000045AB /* Buttons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buttons.h; sourceTree = "<group>"; };
+		3E9466CC208E868F000045AB /* Buttons.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Buttons.xib; sourceTree = "<group>"; };
+		3E9466CE208E868F000045AB /* SectionHeaderOfPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHeaderOfPost.h; sourceTree = "<group>"; };
+		3E9466CF208E868F000045AB /* SectionHeaderOfPost.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderOfPost.xib; sourceTree = "<group>"; };
+		3E9466D0208E868F000045AB /* SectionHeaderOfPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeaderOfPost.m; sourceTree = "<group>"; };
+		3E9466D2208E8690000045AB /* SuggestedPeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestedPeopleCell.m; sourceTree = "<group>"; };
+		3E9466D3208E8690000045AB /* SuggestedPeopleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestedPeopleCollectionViewCell.m; sourceTree = "<group>"; };
+		3E9466D4208E8690000045AB /* SuggestedPeopleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestedPeopleCollectionViewCell.xib; sourceTree = "<group>"; };
+		3E9466D5208E8690000045AB /* SuggestedPeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestedPeopleCell.h; sourceTree = "<group>"; };
+		3E9466D6208E8690000045AB /* SuggestedPeopleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestedPeopleCell.xib; sourceTree = "<group>"; };
+		3E9466D7208E8690000045AB /* SuggestedPeopleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestedPeopleCollectionViewCell.h; sourceTree = "<group>"; };
+		3E9466D9208E8690000045AB /* PostImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostImage.m; sourceTree = "<group>"; };
+		3E9466DA208E8690000045AB /* PostImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostImage.xib; sourceTree = "<group>"; };
+		3E9466DB208E8690000045AB /* PostImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostImage.h; sourceTree = "<group>"; };
+		3E9466EE208E8707000045AB /* PLInstagramTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLInstagramTableViewController.h; sourceTree = "<group>"; };
+		3E9466EF208E8707000045AB /* PLInstagramTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLInstagramTableViewController.m; sourceTree = "<group>"; };
+		3E9466F0208E8707000045AB /* PLInstagramTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLInstagramTableViewController.xib; sourceTree = "<group>"; };
+		3E9466F3208E8F78000045AB /* Twitter.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Twitter.plist; sourceTree = "<group>"; };
+		3E9466F4208E8F78000045AB /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		3E9466F5208E8F79000045AB /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		3E9466F6208E8F79000045AB /* TwitterShareExtensionUIResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterShareExtensionUIResources.bundle; path = TwitterKit.framework/TwitterShareExtensionUIResources.bundle; sourceTree = "<group>"; };
+		3E9466F7208E8F79000045AB /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		3E9466FD208E9024000045AB /* PLTwitterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLTwitterViewController.h; sourceTree = "<group>"; };
+		3E9466FE208E9024000045AB /* PLTwitterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLTwitterViewController.m; sourceTree = "<group>"; };
+		3E9466FF208E9024000045AB /* PLTwitterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLTwitterViewController.xib; sourceTree = "<group>"; };
 		3EAAD4B82032DEE600F26053 /* PLAPICLient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAPICLient.h; sourceTree = "<group>"; };
 		3EAAD4B92032DEE600F26053 /* PLAPICLient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAPICLient.m; sourceTree = "<group>"; };
 		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
@@ -195,9 +260,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9466FC208E8F79000045AB /* TwitterCore.framework in Frameworks */,
 				3E46E7C4203C6053006274B1 /* QuartzCore.framework in Frameworks */,
 				3EEF19532057103D00563DA1 /* MapKit.framework in Frameworks */,
 				9AC83352EBE4AE06667CE809 /* libPods-Placid.a in Frameworks */,
+				3E9466FA208E8F79000045AB /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +308,14 @@
 		3E4DAEE120333DF600587BF8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3E9466C9208E868F000045AB /* Buttons */,
+				3E9466C5208E868F000045AB /* DetailText */,
+				3E9466BD208E868F000045AB /* PostDescription */,
+				3E9466D8208E8690000045AB /* PostImage */,
+				3E9466CD208E868F000045AB /* SectionHeaderOfPost */,
+				3E9466D1208E8690000045AB /* SuggestedPeopleCell */,
+				3E9466B9208E868F000045AB /* TotalLikes&Comments */,
+				3E9466C1208E868F000045AB /* UploadedOn */,
 				3EEF193C2052F92900563DA1 /* CHTCollectionViewWaterfallFooter.h */,
 				3EEF193D2052F92900563DA1 /* CHTCollectionViewWaterfallFooter.m */,
 				3EEF193B2052F92900563DA1 /* CHTCollectionViewWaterfallHeader.h */,
@@ -288,6 +363,89 @@
 				3EEF19502056FC2600563DA1 /* PLEvent.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3E9466B9208E868F000045AB /* TotalLikes&Comments */ = {
+			isa = PBXGroup;
+			children = (
+				3E9466BA208E868F000045AB /* TotalLikes_Comments.m */,
+				3E9466BB208E868F000045AB /* TotalLikes_Comments.h */,
+				3E9466BC208E868F000045AB /* TotalLikes_Comments.xib */,
+			);
+			path = "TotalLikes&Comments";
+			sourceTree = "<group>";
+		};
+		3E9466BD208E868F000045AB /* PostDescription */ = {
+			isa = PBXGroup;
+			children = (
+				3E9466BE208E868F000045AB /* PostDescription.m */,
+				3E9466BF208E868F000045AB /* PostDescription.h */,
+				3E9466C0208E868F000045AB /* PostDescription.xib */,
+			);
+			path = PostDescription;
+			sourceTree = "<group>";
+		};
+		3E9466C1208E868F000045AB /* UploadedOn */ = {
+			isa = PBXGroup;
+			children = (
+				3E9466C2208E868F000045AB /* UploadedOn.m */,
+				3E9466C3208E868F000045AB /* UploadedOn.h */,
+				3E9466C4208E868F000045AB /* UploadedOn.xib */,
+			);
+			path = UploadedOn;
+			sourceTree = "<group>";
+		};
+		3E9466C5208E868F000045AB /* DetailText */ = {
+			isa = PBXGroup;
+			children = (
+				3E9466C6208E868F000045AB /* DetailText.xib */,
+				3E9466C7208E868F000045AB /* DetailText.m */,
+				3E9466C8208E868F000045AB /* DetailText.h */,
+			);
+			path = DetailText;
+			sourceTree = "<group>";
+		};
+		3E9466C9208E868F000045AB /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				3E9466CA208E868F000045AB /* Buttons.m */,
+				3E9466CB208E868F000045AB /* Buttons.h */,
+				3E9466CC208E868F000045AB /* Buttons.xib */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		3E9466CD208E868F000045AB /* SectionHeaderOfPost */ = {
+			isa = PBXGroup;
+			children = (
+				3E9466CE208E868F000045AB /* SectionHeaderOfPost.h */,
+				3E9466CF208E868F000045AB /* SectionHeaderOfPost.xib */,
+				3E9466D0208E868F000045AB /* SectionHeaderOfPost.m */,
+			);
+			path = SectionHeaderOfPost;
+			sourceTree = "<group>";
+		};
+		3E9466D1208E8690000045AB /* SuggestedPeopleCell */ = {
+			isa = PBXGroup;
+			children = (
+				3E9466D2208E8690000045AB /* SuggestedPeopleCell.m */,
+				3E9466D3208E8690000045AB /* SuggestedPeopleCollectionViewCell.m */,
+				3E9466D4208E8690000045AB /* SuggestedPeopleCollectionViewCell.xib */,
+				3E9466D5208E8690000045AB /* SuggestedPeopleCell.h */,
+				3E9466D6208E8690000045AB /* SuggestedPeopleCell.xib */,
+				3E9466D7208E8690000045AB /* SuggestedPeopleCollectionViewCell.h */,
+			);
+			path = SuggestedPeopleCell;
+			sourceTree = "<group>";
+		};
+		3E9466D8208E8690000045AB /* PostImage */ = {
+			isa = PBXGroup;
+			children = (
+				3E9466D9208E8690000045AB /* PostImage.m */,
+				3E9466DA208E8690000045AB /* PostImage.xib */,
+				3E9466DB208E8690000045AB /* PostImage.h */,
+			);
+			path = PostImage;
 			sourceTree = "<group>";
 		};
 		3EAAD4B42032CF8D00F26053 /* API */ = {
@@ -363,6 +521,11 @@
 		3EE3CC9B20328E50005FD2A5 /* Placid */ = {
 			isa = PBXGroup;
 			children = (
+				3E9466F3208E8F78000045AB /* Twitter.plist */,
+				3E9466F7208E8F79000045AB /* TwitterCore.framework */,
+				3E9466F5208E8F79000045AB /* TwitterKit.framework */,
+				3E9466F4208E8F78000045AB /* TwitterKitResources.bundle */,
+				3E9466F6208E8F79000045AB /* TwitterShareExtensionUIResources.bundle */,
 				3EEF19342052F3FF00563DA1 /* ReUsableViews */,
 				3EEF19542057166A00563DA1 /* Singletons */,
 				3EAAD4B42032CF8D00F26053 /* API */,
@@ -425,6 +588,12 @@
 				3E4DAEF8203444DF00587BF8 /* PLSocialNetworksViewController.m */,
 				3E4DAF0A203BF80300587BF8 /* PLLoginViewController.h */,
 				3E4DAF0B203BF80300587BF8 /* PLLoginViewController.m */,
+				3E9466EE208E8707000045AB /* PLInstagramTableViewController.h */,
+				3E9466EF208E8707000045AB /* PLInstagramTableViewController.m */,
+				3E9466F0208E8707000045AB /* PLInstagramTableViewController.xib */,
+				3E9466FD208E9024000045AB /* PLTwitterViewController.h */,
+				3E9466FE208E9024000045AB /* PLTwitterViewController.m */,
+				3E9466FF208E9024000045AB /* PLTwitterViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -597,18 +766,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9466ED208E8690000045AB /* PostImage.xib in Resources */,
+				3E9466EB208E8690000045AB /* SuggestedPeopleCell.xib in Resources */,
 				3EE3CCDF20329268005FD2A5 /* MaxiRelease.xcconfig in Resources */,
+				3E9466EA208E8690000045AB /* SuggestedPeopleCollectionViewCell.xib in Resources */,
 				3EE3CCA920328E50005FD2A5 /* LaunchScreen.storyboard in Resources */,
 				3E4DAEE620333E1D00587BF8 /* PLMainNavTableViewCell.xib in Resources */,
+				3E9466F2208E8707000045AB /* PLInstagramTableViewController.xib in Resources */,
+				3E9466E1208E8690000045AB /* UploadedOn.xib in Resources */,
+				3E9466F9208E8F79000045AB /* TwitterKitResources.bundle in Resources */,
 				3E4DAF022034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib in Resources */,
 				3E4E9868204826FA00E1E598 /* Assets.xcassets in Resources */,
+				3E9466DD208E8690000045AB /* TotalLikes_Comments.xib in Resources */,
 				3EE3CCE12032926E005FD2A5 /* EyadiniRelease.xcconfig in Resources */,
 				3E4DAEF2203373EE00587BF8 /* font.otf in Resources */,
+				3E946701208E9024000045AB /* PLTwitterViewController.xib in Resources */,
 				3E4DAEE0203336A200587BF8 /* FontAwesome.ttf in Resources */,
+				3E9466E5208E8690000045AB /* Buttons.xib in Resources */,
 				3E4DAEF1203373EE00587BF8 /* MyriadPro-Cond.otf in Resources */,
+				3E9466F8208E8F79000045AB /* Twitter.plist in Resources */,
+				3E9466E2208E8690000045AB /* DetailText.xib in Resources */,
 				3E4DAEF3203373EE00587BF8 /* MyriadCondBold.otf in Resources */,
 				3EEF194E2056F88200563DA1 /* PLEventTableViewCell.xib in Resources */,
+				3E9466DF208E8690000045AB /* PostDescription.xib in Resources */,
 				3EEF194520556B8A00563DA1 /* CHTCollectionViewWaterfallCell.xib in Resources */,
+				3E9466FB208E8F79000045AB /* TwitterShareExtensionUIResources.bundle in Resources */,
+				3E9466E6208E8690000045AB /* SectionHeaderOfPost.xib in Resources */,
 				3EE3CCDB2032922F005FD2A5 /* EyadiniDebug.xcconfig in Resources */,
 				3E46E7C9203C6482006274B1 /* PLProfileTableViewCell.xib in Resources */,
 				3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */,
@@ -712,16 +895,23 @@
 			files = (
 				3E4DAF11203C3D0800587BF8 /* PLUser.m in Sources */,
 				3E4DAEF62034119900587BF8 /* PLMyProfileViewController.m in Sources */,
+				3E9466E8208E8690000045AB /* SuggestedPeopleCell.m in Sources */,
 				3E46E7C8203C6482006274B1 /* PLProfileTableViewCell.m in Sources */,
 				3EEF193F2052F92A00563DA1 /* CHTCollectionViewWaterfallFooter.m in Sources */,
 				3E4DAEE520333E1D00587BF8 /* PLMainNavTableViewCell.m in Sources */,
 				3EAAD4E82033231900F26053 /* PLBlogViewController.m in Sources */,
 				3EEF19572057167D00563DA1 /* PLLocationManagerSingleton.m in Sources */,
+				3E9466E3208E8690000045AB /* DetailText.m in Sources */,
 				3EEF19402052F92A00563DA1 /* CHTCollectionViewWaterfallHeader.m in Sources */,
+				3E9466E4208E8690000045AB /* Buttons.m in Sources */,
+				3E9466EC208E8690000045AB /* PostImage.m in Sources */,
 				3EAAD4E52033230700F26053 /* PLCuisineViewController.m in Sources */,
+				3E9466E7208E8690000045AB /* SectionHeaderOfPost.m in Sources */,
 				3EEF193A2052F90300563DA1 /* CHTCollectionViewWaterfallCell.m in Sources */,
 				3EAAD4C52032EB3B00F26053 /* PLBaseViewController.m in Sources */,
+				3E9466DC208E8690000045AB /* TotalLikes_Comments.m in Sources */,
 				3E4DAF0C203BF80300587BF8 /* PLLoginViewController.m in Sources */,
+				3E9466F1208E8707000045AB /* PLInstagramTableViewController.m in Sources */,
 				3E4DAF012034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m in Sources */,
 				3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */,
 				3EEF19512056FC2600563DA1 /* PLEvent.m in Sources */,
@@ -733,13 +923,17 @@
 				3E268212203F2F2500DB625A /* PLSponsor.m in Sources */,
 				3E4DAF0E203C1B4200587BF8 /* PLMainNavigationController.m in Sources */,
 				3EAAD4DC2033003F00F26053 /* PLDynamicTransition.m in Sources */,
+				3E9466DE208E8690000045AB /* PostDescription.m in Sources */,
 				3E4DAEFD2034EF4200587BF8 /* PLFacebookFeedPost.m in Sources */,
 				3EEF194D2056F88200563DA1 /* PLEventTableViewCell.m in Sources */,
 				3EEF19432052FE0000563DA1 /* PLFacebookAlbum.m in Sources */,
 				3EAAD4EE2033233200F26053 /* PLContactUsViewController.m in Sources */,
+				3E9466E9208E8690000045AB /* SuggestedPeopleCollectionViewCell.m in Sources */,
 				3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */,
 				3EAAD4E2203322E800F26053 /* PLGalleryViewController.m in Sources */,
 				3EAAD4CE2032F31600F26053 /* PLHomeViewController.m in Sources */,
+				3E9466E0208E8690000045AB /* UploadedOn.m in Sources */,
+				3E946700208E9024000045AB /* PLTwitterViewController.m in Sources */,
 				3EAAD4DF203322D200F26053 /* PLEventsViewController.m in Sources */,
 				3EAAD4D62033001800F26053 /* PLFoldAnimationController.m in Sources */,
 				3EE3CCAC20328E50005FD2A5 /* main.m in Sources */,
@@ -920,6 +1114,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Placid",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"EYADINI=1",
 					"$(inherited)",
@@ -943,6 +1141,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Placid",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"EYADINI=1",
 					"PROD=1",
@@ -1079,6 +1281,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Placid",
+				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1186,6 +1392,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Placid",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"PROD=1",
 					"MAXI=1",

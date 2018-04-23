@@ -13,10 +13,14 @@
 #import "PLFacebookFeedPost.h"
 #import "PLFacebookFeedTableViewCell.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import "PLInstagramTableViewController.h"
+#import "PLTwitterViewController.h"
 
 @interface PLSocialNetworksViewController ()
 @property (strong, nonatomic) NSMutableArray *facebookPosts;
 @property (strong, nonatomic) FBSDKLoginButton *loginButton;
+@property (strong, nonatomic) PLInstagramTableViewController *instagramController;
+@property (strong, nonatomic) PLTwitterViewController *twitterController;
 @end
 
 static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
@@ -58,6 +62,10 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
   [super viewWillAppear:animated];
   
   [self facebookSetup];
+  
+  [self instagramSetup];
+  
+  [self twitterSetup];
 }
 
 -(void)setupTopNavControls{
@@ -104,6 +112,23 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
                    }];
 }
 
+
+-(void)instagramSetup{
+  
+  self.instagramController = [[PLInstagramTableViewController alloc]initWithNibName:@"PLInstagramTableViewController" bundle:[NSBundle mainBundle]];
+  [self.instagramController.tableView setFrame:CGRectMake(0, 0, CGRectGetWidth(self.instagramContainer.frame), CGRectGetHeight(self.instagramContainer.frame))];
+  
+  [self.instagramContainer addSubview:self.instagramController.tableView];
+}
+
+-(void)twitterSetup{
+  
+  self.twitterController = [[PLTwitterViewController alloc]initWithNibName:@"PLTwitterViewController" bundle:[NSBundle mainBundle]];
+  
+  [self.twitterController.view setFrame:CGRectMake(0, 0, CGRectGetWidth([[UIScreen mainScreen] bounds]), CGRectGetHeight(self.facebookContainer.frame) + 80)];
+  
+  [self.twitterContainer addSubview:self.twitterController.view];
+}
 
 -(void)facebookSetup{
   [[NSNotificationCenter defaultCenter] removeObserver:self];

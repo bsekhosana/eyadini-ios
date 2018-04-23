@@ -14,6 +14,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 @import GoogleMobileAds;
+#import <TwitterKit/TwitterKit.h>
 
 
 @interface AppDelegate ()
@@ -71,6 +72,15 @@
   // Initialize Google Mobile Ads SDK
   // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
   [GADMobileAds configureWithApplicationID:@"ca-app-pub-3940256099942544~1458002511"];
+  
+  NSMutableDictionary *twitterKeys;
+  
+  NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Twitter" ofType:@"plist"];
+  
+  twitterKeys = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
+  
+  [[Twitter sharedInstance] startWithConsumerKey:[twitterKeys objectForKey:@"consumer_key"] consumerSecret:[twitterKeys objectForKey:@"consumer_secret"]];
+
   
   return [[FBSDKApplicationDelegate sharedInstance] application:application
                                   didFinishLaunchingWithOptions:launchOptions];
