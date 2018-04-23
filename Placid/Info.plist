@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>Would like to access your camera to take a photo to upload to facebbok.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -23,7 +21,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb191956878068919</string>
+				<string>fb564202827266707</string>
 			</array>
 		</dict>
 		<dict>
@@ -38,9 +36,9 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>191956878068919</string>
+	<string>564202827266707</string>
 	<key>FacebookDisplayName</key>
-	<string>Maxi&apos;s</string>
+	<string>Eyadini</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -50,6 +48,8 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Would like to access your camera to take a photo to upload to facebbok.</string>
 	<key>PL_API_KEY</key>
 	<string>$(PL_API_KEY)</string>
 	<key>UIAppFonts</key>

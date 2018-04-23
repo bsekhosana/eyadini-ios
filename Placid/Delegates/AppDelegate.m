@@ -13,6 +13,8 @@
 #import "PLMainNavigationController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+@import GoogleMobileAds;
+
 
 @interface AppDelegate ()
 @end
@@ -65,6 +67,10 @@
   // Facebook
   [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
   // Add any custom logic here.
+  
+  // Initialize Google Mobile Ads SDK
+  // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
+  [GADMobileAds configureWithApplicationID:@"ca-app-pub-3940256099942544~1458002511"];
   
   return [[FBSDKApplicationDelegate sharedInstance] application:application
                                   didFinishLaunchingWithOptions:launchOptions];

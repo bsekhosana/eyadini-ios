@@ -142,27 +142,27 @@
                                 <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_home_screen" translatesAutoresizingMaskIntoConstraints="NO" id="oFl-AH-pwz">
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DSC_0162" translatesAutoresizingMaskIntoConstraints="NO" id="oFl-AH-pwz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="599.5"/>
                             </imageView>
-                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvP-1D-Fpc">
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvP-1D-Fpc">
                                 <rect key="frame" x="16" y="24" width="343" height="267"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LATEST NEWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJa-46-ePH">
                                 <rect key="frame" x="32" y="41" width="311" height="23"/>
-                                <color key="backgroundColor" red="0.76470588240000004" green="0.51372549020000002" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.7803921568627451" green="0.6705882352941176" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-MediumCond" family="DIN Next LT Pro" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ti8-jU-WJs">
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ti8-jU-WJs">
                                 <rect key="frame" x="16" y="315" width="343" height="266.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPCOMING EVENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huh-eC-wl1">
                                 <rect key="frame" x="32" y="324" width="311" height="23"/>
-                                <color key="backgroundColor" red="0.76470588235294112" green="0.51372549019607838" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.7803921568627451" green="0.6705882352941176" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-MediumCond" family="DIN Next LT Pro" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -395,13 +395,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxi_cover_page" translatesAutoresizingMaskIntoConstraints="NO" id="2lZ-hD-qQF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_night_view" translatesAutoresizingMaskIntoConstraints="NO" id="2lZ-hD-qQF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="207" id="fgJ-5A-5Sx"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="nf3-uS-aiS">
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_nav_logo" translatesAutoresizingMaskIntoConstraints="NO" id="nf3-uS-aiS">
                                 <rect key="frame" x="16" y="285.5" width="343" height="343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nf3-uS-aiS" secondAttribute="height" multiplier="1:1" id="5mv-PL-mEG"/>
@@ -410,13 +410,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="35e-LE-BIK">
                                 <rect key="frame" x="16" y="287" width="343" height="340"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Max’s Lifestyle is one of the best restaurants in Umlazi, Durban (KwaZulu Natal) with traditional “Kasie” (Ethnic Township Location) culture. We are the only venue that Tourists and Locals alike can enjoy, feel, and experience unique township culture in upmarket trendy and safe surroundings. People from all walks of life, cultures and races, young and old come to enjoy our best service when they want something to eat or drink and maybe just to wind the down for the day.
+                                <string key="text">Eyadini Lounge is your no1 Ekasi Shisanyama Experience located in the heart of Umlazi Township. A dream that came to life in 2008, Eyadini is a highly sought out shisanyama restaurant and premium event venue popularly known for its “Eyadini walk”, where patrons are photographed midwalk as they enter Eyadini Lounge. Specialising in a unique Shisanyama township experience, the award winning Eyadini lounge is one of the fastest growing businesses in KZN, catering to the young and trendy, meat and music lover alike.
 
-We have top security who ensure nothing illegal is brought into our safe environment.
-
-We welcome all our customers with warm hospitality. We are known for our Sunday Sessions where Top DJ’s entertain for those who enjoy good music and dancing and our VIP Lounge is available for who prefer a relaxed less noisy environment.
-
-So whether you are local or on holiday please come and enjoy our hospitality combined with the amazing experience and ambience of being at a traditional establishment where you can dine on traditional meals featuring meat cooked on a “Braai” (Barbeque) with traditional side dishes as well as a custom Restaurant.</string>
+Not only do we have the best meat in town but we also host the craziest out of this world events, private functions, birthdays, baby showers, product launches, brand activations…the works…basically Eyadini is here for your pleasure and specific needs, catering to your exclusive demands. From catering services to the biggest stage performances it is true when they say “Eyadi Lizokmangaza.”</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -495,7 +491,7 @@ So whether you are local or on holiday please come and enjoy our hospitality com
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="3vX-ZK-3AW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_nav_logo" translatesAutoresizingMaskIntoConstraints="NO" id="3vX-ZK-3AW">
                                 <rect key="frame" x="137" y="283.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="gpH-WI-Nd3"/>
@@ -601,14 +597,14 @@ So whether you are local or on holiday please come and enjoy our hospitality com
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_login_screen" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xx0-ou-fzb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89890902" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xx0-ou-fzb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vj-f8-Zm1" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="164.5" y="557" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="2Jk-bZ-BR8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_nav_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Jk-bZ-BR8">
                                 <rect key="frame" x="112" y="50" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="VgP-a5-tFQ"/>
@@ -666,7 +662,7 @@ So whether you are local or on holiday please come and enjoy our hospitality com
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxis_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="puC-b5-RV3">
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_nav_logo" translatesAutoresizingMaskIntoConstraints="NO" id="puC-b5-RV3">
                                 <rect key="frame" x="37.5" y="215.5" width="300" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -839,11 +835,11 @@ So whether you are local or on holiday please come and enjoy our hospitality com
         </scene>
     </scenes>
     <resources>
+        <image name="89890902" width="600" height="400"/>
+        <image name="DSC_0162" width="750" height="497"/>
         <image name="Twitter_logo_bird_transparent_png" width="2000" height="1624"/>
+        <image name="eyadini_nav_logo" width="115" height="113"/>
+        <image name="eyadini_night_view" width="1024" height="682"/>
         <image name="instagram-app-logo" width="714" height="540"/>
-        <image name="maxi_cover_page" width="1024" height="682"/>
-        <image name="maxis_home_screen" width="950" height="300"/>
-        <image name="maxis_login_screen" width="1024" height="768"/>
-        <image name="maxis_logo_large" width="256" height="256"/>
     </resources>
 </document>

@@ -21,4 +21,5 @@ target 'Placid' do
   pod 'NYTPhotoViewer'
   pod 'SVProgressHUD'
   pod "MWPhotoBrowser"
+  pod 'Google-Mobile-Ads-SDK'
 end

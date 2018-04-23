@@ -15,7 +15,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-@interface PLBaseViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface PLBaseViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate, GADInterstitialDelegate>
 @property (nonatomic, strong) PLTransitions *transitions;
 @property (nonatomic, strong) UIPanGestureRecognizer *dynamicTransitionPanGesture;
 @end
@@ -75,22 +75,49 @@
 //  [[NSNotificationCenter defaultCenter] addObserver:self
 //                                           selector:@selector(someMethod:)
 //                                               name:UIApplicationDidBecomeActiveNotification object:nil];
+  
+  self.interstitialAd = [self createLoadInterstitial];
+}
+
+
+-(GADInterstitial *)createLoadInterstitial{
+  GADRequest *request = [GADRequest new];
+  GADInterstitial *interstitial = [[GADInterstitial alloc]initWithAdUnitID:@"ca-app-pub-3940256099942544~1458002511"];
+  [interstitial setDelegate:self];
+  request.testDevices = @[ kGADSimulatorID ];
+  [interstitial loadRequest:request];
+  
+  return interstitial;
+}
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
+  self.interstitialAd = [self createLoadInterstitial];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+  [super viewDidAppear:animated];
 }
 
 #pragma mark - take photo
 
 -(void)takePhoto
 {
+//  if (self.interstitialAd.isReady) {
+//    [self.interstitialAd presentFromRootViewController:self];
+//  } else {
+//    NSLog(@"Ad wasn't ready");
+//  }
+//
   UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-  
+
   if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
   {
     [imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
   }
-  
+
   // image picker needs a delegate,
   [imagePickerController setDelegate:self];
-  
+
   // Place image picker on the screen
   [self presentViewController:imagePickerController animated:YES completion:nil];
 }
@@ -127,11 +154,11 @@
   // with `FBSDKShareOpenGraphContent`
   NSDictionary *params = @{
                            @"source":image,
-                           @"message":@"#maxslifestyle #ios_maxi_app #luxury #styles #viplounge"
+                           @"message":@"#eyadini #iyadiLizokuMangaza #ios_eyadini_app"
                            };
   /* make the API call */
   FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/maxslifestyle/photos"
+                                initWithGraphPath:@"/eyadini/photos"
                                 parameters:params
                                 HTTPMethod:@"POST"];
   [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
@@ -144,7 +171,7 @@
     if (error) {
       [SVProgressHUD showErrorWithStatus:@"Facebook post failed, please try again later."];
     }else{
-      [SVProgressHUD showSuccessWithStatus:@"Your photo has been posted to Maxi's Lifestyle Facebook posts feed."];
+      [SVProgressHUD showSuccessWithStatus:@"Your photo has been posted to Eyadini Facebook posts feed."];
     }
   }];
 }

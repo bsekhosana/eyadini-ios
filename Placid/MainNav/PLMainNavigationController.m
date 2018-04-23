@@ -38,7 +38,7 @@ static NSString *CellIdentifier = @"PLMainNavTableViewCell";
   [self.tableView registerClass:[PLMainNavTableViewCell class] forCellReuseIdentifier:CellIdentifier];
   
   [self.view setBackgroundColor:[PLConstants LOOKUP_COLOUR2]];
-  [self.navLogoImageView setImage:[UIImage imageNamed:@"maxis_logo_large"]];
+  [self.navLogoImageView setImage:[UIImage imageNamed:@"eyadini_nav_logo"]];
   [self.navLogoImageView setContentMode:UIViewContentModeScaleAspectFit];
   
   [PLConstants ROUND_CONER_VIEW:self.navLogoImageView];

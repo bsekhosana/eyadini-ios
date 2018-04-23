@@ -29,7 +29,7 @@
   // with `FBSDKShareOpenGraphContent`
   /* make the API call */
   FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/maxslifestyle/events"
+                                initWithGraphPath:@"/eyadini/events"
                                 parameters:@{@"fields":@"cover, name, place, start_time"}
                                 HTTPMethod:@"GET"];
   [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
@@ -97,7 +97,7 @@
     [cell.nameLabel setText:event.name];
     [cell.locationLabel setText:event.location[@"city"]];
     [cell.dateLabel setText:event.start_time];
-    [cell.eventCoverImageView setImageWithURL:[NSURL URLWithString:event.imageUrl] placeholderImage:[UIImage imageNamed:@"maxis_logo_large"]];
+    [cell.eventCoverImageView setImageWithURL:[NSURL URLWithString:event.imageUrl] placeholderImage:[UIImage imageNamed:@"eyadini_nav_logo"]];
   }
   
   return cell;

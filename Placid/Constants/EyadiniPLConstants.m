@@ -89,7 +89,12 @@
 }
 
 +(NSString *)navLogoImageName{
-  return @"maxis_logo_large";
+  return @"eyadini_nav_logo";
+}
+
++(void)ROUND_CONER_VIEW:(UIView *)view{
+  view.layer.cornerRadius = CGRectGetWidth(view.frame)/2;
+  view.layer.masksToBounds = true;
 }
 
 +(NSString *)PLApiKey{

@@ -49,7 +49,7 @@
   // with `FBSDKShareOpenGraphContent`
   /* make the API call */
   FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/maxslifestyle/albums"
+                                initWithGraphPath:@"/eyadini/albums"
                                 parameters:@{@"fields": @"picture, cover_photo"}
                                 HTTPMethod:@"GET"];
   [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,

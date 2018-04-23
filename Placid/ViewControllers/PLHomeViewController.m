@@ -138,6 +138,7 @@
   [super viewDidAppear:animated];
   
   self.carouselContainer.autoscroll = -0.2;
+
 }
   
 -(BOOL)prefersStatusBarHidden{

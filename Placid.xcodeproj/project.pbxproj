@@ -144,6 +144,7 @@
 		3EAAD4EA2033232700F26053 /* PLAboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAboutUsViewController.m; sourceTree = "<group>"; };
 		3EAAD4EC2033233200F26053 /* PLContactUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLContactUsViewController.h; sourceTree = "<group>"; };
 		3EAAD4ED2033233200F26053 /* PLContactUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLContactUsViewController.m; sourceTree = "<group>"; };
+		3EDAEC48206D48FA00F6D031 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Desktop/GoogleMobileAdsSdkiOS-7.30.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		3EE3CC9920328E50005FD2A5 /* Placid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Placid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE3CC9C20328E50005FD2A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EE3CC9D20328E50005FD2A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -458,6 +459,7 @@
 		53F3AF4D3D639116E84D5398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3EDAEC48206D48FA00F6D031 /* GoogleMobileAds.framework */,
 				3EEF19522057103D00563DA1 /* MapKit.framework */,
 				3E46E7C3203C6053006274B1 /* QuartzCore.framework */,
 				F85A327F602D2BCC8E7B2A89 /* Pods_PlacidTests.framework */,
@@ -914,7 +916,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D6B71264106057E6E08E212 /* Pods-Placid.eyadinidebug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = MaxiAppIconDebug;
+				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIconDebug;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
@@ -926,7 +928,7 @@
 				INFOPLIST_FILE = Placid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.maxis.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.eyadini.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -937,7 +939,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A678BB36701F146BCE93A567 /* Pods-Placid.eyadinirelease.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = MaxiAppIconDebug;
+				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIconDebug;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
@@ -949,7 +951,7 @@
 				INFOPLIST_FILE = Placid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.maxis.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.eyadini.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1073,7 +1075,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF72E720719BB874265BC411 /* Pods-Placid.maxidebug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = MaxiAppIconDebug;
+				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIconDebug;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
@@ -1086,7 +1088,7 @@
 				INFOPLIST_FILE = Placid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.maxis.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.eyadini.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1180,7 +1182,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F62586C03B1689C15393EBD6 /* Pods-Placid.maxirelease.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = MaxiAppIconDebug;
+				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIconDebug;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
@@ -1192,7 +1194,7 @@
 				INFOPLIST_FILE = Placid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.maxis.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.strapblaque.eyadini.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

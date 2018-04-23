@@ -129,7 +129,7 @@ static NSString * const reuseIdentifier = @"Cell";
   
   if (self.albumType == FacebookAlbum) {
     PLFacebookAlbum *album = [self.data objectAtIndex:indexPath.row];
-    [cell.imageView setImageWithURL:[NSURL URLWithString:album.pictureUrl] placeholderImage:[UIImage imageNamed:@"maxis_logo_large"]];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:album.pictureUrl] placeholderImage:[UIImage imageNamed:@"eyadini_nav_logo"]];
     cell.name.text = album.name;
     cell.date.text = album.created_time;
   }
@@ -212,11 +212,11 @@ static NSString * const reuseIdentifier = @"Cell";
   browser.zoomPhotosToFill = YES; // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
   browser.alwaysShowControls = NO; // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
   browser.enableGrid = YES; // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
-  browser.startOnGrid = NO; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
+  browser.startOnGrid = YES; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
   browser.autoPlayOnAppear = NO; // Auto-play first video
   
   // Optionally set the current visible photo before displaying
-  [browser setCurrentPhotoIndex:1];
+  [browser setCurrentPhotoIndex:0];
   
   [SVProgressHUD dismiss];
   
@@ -226,7 +226,6 @@ static NSString * const reuseIdentifier = @"Cell";
   // Manipulate
   [browser showNextPhotoAnimated:YES];
   [browser showPreviousPhotoAnimated:YES];
-  [browser setCurrentPhotoIndex:10];
 
 }
 

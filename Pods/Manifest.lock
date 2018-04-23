@@ -34,6 +34,7 @@ PODS:
     - FBSDKCoreKit
   - FLAnimatedImage (1.0.12)
   - FontAwesome (4.5.0)
+  - Google-Mobile-Ads-SDK (7.18.0)
   - iCarousel (1.8.3)
   - JSONModel (1.7.0)
   - MBProgressHUD (0.9.2)
@@ -66,6 +67,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - FontAwesome
+  - Google-Mobile-Ads-SDK
   - iCarousel
   - JSONModel
   - MWPhotoBrowser
@@ -88,6 +90,7 @@ SPEC CHECKSUMS:
   FBSDKShareKit: 5953758366278430dc322d5cdc906db361ed7f81
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FontAwesome: dd8c48bf965e771309d8af17c4d8579217b3e756
+  Google-Mobile-Ads-SDK: 658065b4cb5a299bea254c4d24bf7786b6d3e75d
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
@@ -100,6 +103,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UIImageView-Letters: f62db28076797adf3560ab7410647dc6899b9eef
 
-PODFILE CHECKSUM: a45bbfbc6f3d33ff5a7cb11f7afa46641eaa5965
+PODFILE CHECKSUM: 12cfa2950f8e29516140149fb073e14f9ebcc6db
 
 COCOAPODS: 1.4.0

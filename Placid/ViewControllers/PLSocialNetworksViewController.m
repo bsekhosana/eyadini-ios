@@ -114,7 +114,7 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
     self.loginButton = nil;
     [self.view setNeedsDisplay];
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                  initWithGraphPath:@"/maxslifestyle/feed"
+                                  initWithGraphPath:@"/eyadini/feed"
                                   parameters:@{@"fields": @"created_time, message, story, id, attachments{media}"}
                                   HTTPMethod:@"GET"];
     __weak typeof(self) weakSelf = self;
@@ -159,7 +159,7 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
     [cell.storyLabel setText:post.story];
     [cell.messageLabel setText:post.message];
     if (post.imageSource) {
-      [cell.feedImageView setImageWithURL:[NSURL URLWithString:post.imageSource] placeholderImage:[UIImage imageNamed:@"maxis_logo_large"]];
+      [cell.feedImageView setImageWithURL:[NSURL URLWithString:post.imageSource] placeholderImage:[UIImage imageNamed:@"eyadini_nav_logo"]];
     }
   }
   
