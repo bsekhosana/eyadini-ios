@@ -498,17 +498,26 @@ Not only do we have the best meat in town but we also host the craziest out of t
                                     <constraint firstAttribute="width" secondItem="3vX-ZK-3AW" secondAttribute="height" multiplier="1:1" id="hO2-24-id5"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoe-XL-cv6">
+                                <rect key="frame" x="166" y="626" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hoe-XL-cv6" firstAttribute="centerX" secondItem="bjg-IQ-FLl" secondAttribute="centerX" id="bKi-qM-njE"/>
                             <constraint firstItem="3vX-ZK-3AW" firstAttribute="centerX" secondItem="60f-bj-9iZ" secondAttribute="centerX" id="gzj-r9-dqN"/>
                             <constraint firstItem="3vX-ZK-3AW" firstAttribute="centerY" secondItem="60f-bj-9iZ" secondAttribute="centerY" id="hby-MR-pru"/>
+                            <constraint firstItem="bjg-IQ-FLl" firstAttribute="bottom" secondItem="hoe-XL-cv6" secondAttribute="bottom" constant="20" id="xkb-Mk-xF3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bjg-IQ-FLl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contact Us" id="Log-Ap-YV0"/>
                     <connections>
                         <outlet property="centerContactUsImageView" destination="3vX-ZK-3AW" id="rKi-kc-lJM"/>
+                        <outlet property="versionLabel" destination="hoe-XL-cv6" id="yrT-Gp-8Ww"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4g-a2-0nl" userLabel="First Responder" sceneMemberID="firstResponder"/>

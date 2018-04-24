@@ -57,6 +57,7 @@
 		3E946704208EA15C000045AB /* PLInstagramFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E946703208EA15C000045AB /* PLInstagramFeed.m */; };
 		3E946708208EAF2A000045AB /* PLInstagramTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E946706208EAF2A000045AB /* PLInstagramTableViewCell.m */; };
 		3E946709208EAF2A000045AB /* PLInstagramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E946707208EAF2A000045AB /* PLInstagramTableViewCell.xib */; };
+		3E94670B208F2A3F000045AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E94670A208F2A3E000045AB /* CoreLocation.framework */; };
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
@@ -187,6 +188,7 @@
 		3E946705208EAF2A000045AB /* PLInstagramTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLInstagramTableViewCell.h; sourceTree = "<group>"; };
 		3E946706208EAF2A000045AB /* PLInstagramTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLInstagramTableViewCell.m; sourceTree = "<group>"; };
 		3E946707208EAF2A000045AB /* PLInstagramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLInstagramTableViewCell.xib; sourceTree = "<group>"; };
+		3E94670A208F2A3E000045AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3EAAD4B82032DEE600F26053 /* PLAPICLient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAPICLient.h; sourceTree = "<group>"; };
 		3EAAD4B92032DEE600F26053 /* PLAPICLient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAPICLient.m; sourceTree = "<group>"; };
 		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E94670B208F2A3F000045AB /* CoreLocation.framework in Frameworks */,
 				3E9466FC208E8F79000045AB /* TwitterCore.framework in Frameworks */,
 				3E46E7C4203C6053006274B1 /* QuartzCore.framework in Frameworks */,
 				3EEF19532057103D00563DA1 /* MapKit.framework in Frameworks */,
@@ -641,6 +644,7 @@
 		53F3AF4D3D639116E84D5398 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E94670A208F2A3E000045AB /* CoreLocation.framework */,
 				3EDAEC48206D48FA00F6D031 /* GoogleMobileAds.framework */,
 				3EEF19522057103D00563DA1 /* MapKit.framework */,
 				3E46E7C3203C6053006274B1 /* QuartzCore.framework */,

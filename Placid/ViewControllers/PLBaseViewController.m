@@ -14,10 +14,14 @@
 #import "PLConstants.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface PLBaseViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate, GADInterstitialDelegate>
+@interface PLBaseViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate, GADInterstitialDelegate, CLLocationManagerDelegate>
 @property (nonatomic, strong) PLTransitions *transitions;
 @property (nonatomic, strong) UIPanGestureRecognizer *dynamicTransitionPanGesture;
+@property (nonatomic, strong)  CLLocationManager *locationManager;
+@property (nonatomic, strong)  CLGeocoder *geocoder;
+@property (strong, nonatomic) CLLocation *currentLocation;
 @end
 
 @implementation PLBaseViewController
@@ -75,7 +79,7 @@
 //  [[NSNotificationCenter defaultCenter] addObserver:self
 //                                           selector:@selector(someMethod:)
 //                                               name:UIApplicationDidBecomeActiveNotification object:nil];
-  
+
   self.interstitialAd = [self createLoadInterstitial];
 }
 
@@ -102,27 +106,72 @@
 
 -(void)takePhoto
 {
-//  if (self.interstitialAd.isReady) {
-//    [self.interstitialAd presentFromRootViewController:self];
-//  } else {
-//    NSLog(@"Ad wasn't ready");
-//  }
-//
-  UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+  if ([CLLocationManager locationServicesEnabled]) {
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
 
-  if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-  {
-    [imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+    {
+      [self.locationManager requestWhenInUseAuthorization];
+    }else{
+      [self.locationManager requestAlwaysAuthorization];
+    }
+    
+    [self.locationManager startUpdatingLocation];
+  } else {
+    NSLog(@"Location services are not enabled");
+    
+    [self erroWithLocationService];
   }
-
-  // image picker needs a delegate,
-  [imagePickerController setDelegate:self];
-
-  // Place image picker on the screen
-  [self presentViewController:imagePickerController animated:YES completion:nil];
 }
 
+-(void)erroWithLocationService{
+  UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Location Service" message:@"Please enable your location service on your device settings before you continue with this action." preferredStyle:UIAlertControllerStyleAlert];
+  UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+  [alert addAction:action];
+  
+  [self.navigationController presentViewController:alert animated:YES completion:nil];
+}
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+  self.currentLocation = [locations lastObject];
+  
+  CLLocation *centerLocation = [[CLLocation alloc]initWithLatitude:-29.956644 longitude:30.921089];
+  
+  CLLocationDistance distance = [[locations lastObject] distanceFromLocation:centerLocation];
+  
+  CLLocationDistance kilometers = distance / 1000.0;
+  
+  NSLog(@"%f",kilometers);
+  
+  if (kilometers > 0 && kilometers < 0.1) {
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+      [imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
+    
+    // image picker needs a delegate,
+    [imagePickerController setDelegate:self];
+    
+    // Place image picker on the screen
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+  }else{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Not Within Bounds" message:@"You have to be within atleast 100 meters of Eyadini Lounge to take a selfie." preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:action];
+    
+    [self.navigationController presentViewController:alert animated:YES completion:nil];
+  }
+  
+  [self.locationManager stopUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+  NSLog(@"failed to fetch current location : %@", error);
+  [self erroWithLocationService];
+}
 
 -(void)chooseFromLibrary
 {

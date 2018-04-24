@@ -14,6 +14,7 @@
 @property (strong, nonatomic) AAShareBubbles *shareBubbles;
 @property CGFloat radius;
 @property CGFloat bubbleRadius;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 @end
 
@@ -31,6 +32,8 @@
   [self.centerContactUsImageView setUserInteractionEnabled:YES];
   
   [PLConstants ROUND_CONER_VIEW:self.centerContactUsImageView];
+  
+  [self.versionLabel setText:[NSString stringWithFormat:@"v%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]];
   
 }
 
