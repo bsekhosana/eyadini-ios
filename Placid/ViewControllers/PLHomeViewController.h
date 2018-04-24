@@ -15,6 +15,10 @@
 @property (weak, nonatomic) IBOutlet UIView *latestNewsContainerView;
 @property (weak, nonatomic) IBOutlet UILabel *latestNewsLable;
 @property (weak, nonatomic) IBOutlet UILabel *upComingEventsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *latestNewsImage;
+@property (weak, nonatomic) IBOutlet UILabel *latestNewLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *eventImageView;
+@property (weak, nonatomic) IBOutlet UILabel *eventLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *upCommingEventsCOntainerView;
 @end

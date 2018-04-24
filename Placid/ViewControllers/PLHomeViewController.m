@@ -15,9 +15,13 @@
 #import "PLLoginViewController.h"
 #import "PLSponsor.h"
 #import "PLConstants.h"
+#import "PLFacebookFeedPost.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface PLHomeViewController()
 @property (strong, nonatomic) PLLoginViewController *loginController;
+@property (weak, nonatomic) IBOutlet UILabel *noNewsToDisplayLable;
+@property (weak, nonatomic) IBOutlet UILabel *noEventsTODisplay;
 @property (nonatomic, strong) NSMutableArray *iCarouselItems;
 @end
 
@@ -52,6 +56,62 @@
   
   self.upCommingEventsCOntainerView.layer.cornerRadius = 10;
   self.upCommingEventsCOntainerView.layer.masksToBounds = true;
+  
+  
+  
+  __weak typeof(self) weakSelf = self;
+  // For more complex open graph stories, use `FBSDKShareAPI`
+  // with `FBSDKShareOpenGraphContent`
+  /* make the API call */
+  FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                initWithGraphPath:@"/eyadini/events?limit=1"
+                                parameters:@{@"fields":@"cover, name, place, start_time"}
+                                HTTPMethod:@"GET"];
+  [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                        NSDictionary * result,
+                                        NSError *error) {
+    NSLog(@"Events Results : %@", result);
+    // Handle the result
+    if ([result[@"data"] count] > 0) {
+      [weakSelf.noEventsTODisplay setHidden:YES];
+      [weakSelf.eventLabel setHidden:NO];
+      [weakSelf.eventImageView setHidden:NO];
+      [weakSelf.eventLabel setText:result[@"data"][0][@"name"]];
+      [weakSelf.eventImageView setImageWithURL:[NSURL URLWithString:result[@"data"][0][@"cover"][@"source"]] placeholderImage:[UIImage imageNamed:@"eyadini_nav_logo"]];
+    }else{
+      [weakSelf.noEventsTODisplay setHidden:NO];
+      [weakSelf.eventLabel setHidden:YES];
+      [weakSelf.eventImageView setHidden:YES];
+    }
+    
+  }];
+  
+  
+  FBSDKGraphRequest *newRequest = [[FBSDKGraphRequest alloc]
+                                initWithGraphPath:@"/eyadini/feed?limit=1"
+                                parameters:@{@"fields": @"created_time, message, story, id, attachments{media}, full_picture"}
+                                HTTPMethod:@"GET"];
+  [newRequest startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+    if (!error) {
+      NSError *error;
+      
+      if ([result[@"data"] count] > 0) {
+        [weakSelf.noNewsToDisplayLable setHidden:YES];
+        [weakSelf.latestNewLabel setHidden:NO];
+        [weakSelf.latestNewsImage setHidden:NO];
+        PLFacebookFeedPost *post = [[PLFacebookFeedPost alloc]initWithDictionary:result[@"data"][0] error:&error];
+        post.imageSource = result[@"data"][0][@"full_picture"];
+        [weakSelf.latestNewsImage setImageWithURL:[NSURL URLWithString:post.imageSource] placeholderImage:[UIImage imageNamed:@"eyadini_nav_logo"]];
+        
+        [weakSelf.latestNewLabel setText:post.message];
+      }else{
+        [weakSelf.noNewsToDisplayLable setHidden:NO];
+        [weakSelf.latestNewLabel setHidden:YES];
+        [weakSelf.latestNewsImage setHidden:YES];
+      }
+    }
+    
+  }];
 
 }
 
