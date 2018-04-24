@@ -22,4 +22,5 @@ target 'Placid' do
   pod 'SVProgressHUD'
   pod "MWPhotoBrowser"
   pod 'Google-Mobile-Ads-SDK'
+  pod 'NSDate+TimeAgo'
 end

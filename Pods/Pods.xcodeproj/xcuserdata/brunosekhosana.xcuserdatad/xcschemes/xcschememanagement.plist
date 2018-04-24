@@ -84,6 +84,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NSDate+TimeAgo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>NYTPhotoViewer-NYTPhotoViewer.xcscheme</key>
 		<dict>
 			<key>isShown</key>

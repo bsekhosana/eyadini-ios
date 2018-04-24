@@ -54,6 +54,9 @@
 		3E9466FC208E8F79000045AB /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9466F7208E8F79000045AB /* TwitterCore.framework */; };
 		3E946700208E9024000045AB /* PLTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9466FE208E9024000045AB /* PLTwitterViewController.m */; };
 		3E946701208E9024000045AB /* PLTwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9466FF208E9024000045AB /* PLTwitterViewController.xib */; };
+		3E946704208EA15C000045AB /* PLInstagramFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E946703208EA15C000045AB /* PLInstagramFeed.m */; };
+		3E946708208EAF2A000045AB /* PLInstagramTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E946706208EAF2A000045AB /* PLInstagramTableViewCell.m */; };
+		3E946709208EAF2A000045AB /* PLInstagramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E946707208EAF2A000045AB /* PLInstagramTableViewCell.xib */; };
 		3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4B92032DEE600F26053 /* PLAPICLient.m */; };
 		3EAAD4C02032E22A00F26053 /* EyadiniPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4BF2032E22A00F26053 /* EyadiniPLConstants.m */; };
 		3EAAD4C22032E23C00F26053 /* MaxiPLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAAD4C12032E23C00F26053 /* MaxiPLConstants.m */; };
@@ -179,6 +182,11 @@
 		3E9466FD208E9024000045AB /* PLTwitterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLTwitterViewController.h; sourceTree = "<group>"; };
 		3E9466FE208E9024000045AB /* PLTwitterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLTwitterViewController.m; sourceTree = "<group>"; };
 		3E9466FF208E9024000045AB /* PLTwitterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLTwitterViewController.xib; sourceTree = "<group>"; };
+		3E946702208EA15C000045AB /* PLInstagramFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLInstagramFeed.h; sourceTree = "<group>"; };
+		3E946703208EA15C000045AB /* PLInstagramFeed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLInstagramFeed.m; sourceTree = "<group>"; };
+		3E946705208EAF2A000045AB /* PLInstagramTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLInstagramTableViewCell.h; sourceTree = "<group>"; };
+		3E946706208EAF2A000045AB /* PLInstagramTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLInstagramTableViewCell.m; sourceTree = "<group>"; };
+		3E946707208EAF2A000045AB /* PLInstagramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLInstagramTableViewCell.xib; sourceTree = "<group>"; };
 		3EAAD4B82032DEE600F26053 /* PLAPICLient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAPICLient.h; sourceTree = "<group>"; };
 		3EAAD4B92032DEE600F26053 /* PLAPICLient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAPICLient.m; sourceTree = "<group>"; };
 		3EAAD4BC2032DF7D00F26053 /* PLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLConstants.h; sourceTree = "<group>"; };
@@ -335,6 +343,9 @@
 				3EEF194A2056F88200563DA1 /* PLEventTableViewCell.h */,
 				3EEF194B2056F88200563DA1 /* PLEventTableViewCell.m */,
 				3EEF194C2056F88200563DA1 /* PLEventTableViewCell.xib */,
+				3E946705208EAF2A000045AB /* PLInstagramTableViewCell.h */,
+				3E946706208EAF2A000045AB /* PLInstagramTableViewCell.m */,
+				3E946707208EAF2A000045AB /* PLInstagramTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -361,6 +372,8 @@
 				3EEF19422052FE0000563DA1 /* PLFacebookAlbum.m */,
 				3EEF194F2056FC2600563DA1 /* PLEvent.h */,
 				3EEF19502056FC2600563DA1 /* PLEvent.m */,
+				3E946702208EA15C000045AB /* PLInstagramFeed.h */,
+				3E946703208EA15C000045AB /* PLInstagramFeed.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -792,6 +805,7 @@
 				3EEF194520556B8A00563DA1 /* CHTCollectionViewWaterfallCell.xib in Resources */,
 				3E9466FB208E8F79000045AB /* TwitterShareExtensionUIResources.bundle in Resources */,
 				3E9466E6208E8690000045AB /* SectionHeaderOfPost.xib in Resources */,
+				3E946709208EAF2A000045AB /* PLInstagramTableViewCell.xib in Resources */,
 				3EE3CCDB2032922F005FD2A5 /* EyadiniDebug.xcconfig in Resources */,
 				3E46E7C9203C6482006274B1 /* PLProfileTableViewCell.xib in Resources */,
 				3EE3CCA420328E50005FD2A5 /* Main.storyboard in Resources */,
@@ -827,6 +841,7 @@
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/FontAwesome/Resources/FontAwesome.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle",
+				"${PODS_ROOT}/NSDate+TimeAgo/NSDateTimeAgo.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -836,6 +851,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MWPhotoBrowser.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NSDateTimeAgo.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NYTPhotoViewer.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
@@ -905,6 +921,7 @@
 				3EEF19402052F92A00563DA1 /* CHTCollectionViewWaterfallHeader.m in Sources */,
 				3E9466E4208E8690000045AB /* Buttons.m in Sources */,
 				3E9466EC208E8690000045AB /* PostImage.m in Sources */,
+				3E946708208EAF2A000045AB /* PLInstagramTableViewCell.m in Sources */,
 				3EAAD4E52033230700F26053 /* PLCuisineViewController.m in Sources */,
 				3E9466E7208E8690000045AB /* SectionHeaderOfPost.m in Sources */,
 				3EEF193A2052F90300563DA1 /* CHTCollectionViewWaterfallCell.m in Sources */,
@@ -927,6 +944,7 @@
 				3E4DAEFD2034EF4200587BF8 /* PLFacebookFeedPost.m in Sources */,
 				3EEF194D2056F88200563DA1 /* PLEventTableViewCell.m in Sources */,
 				3EEF19432052FE0000563DA1 /* PLFacebookAlbum.m in Sources */,
+				3E946704208EA15C000045AB /* PLInstagramFeed.m in Sources */,
 				3EAAD4EE2033233200F26053 /* PLContactUsViewController.m in Sources */,
 				3E9466E9208E8690000045AB /* SuggestedPeopleCollectionViewCell.m in Sources */,
 				3EAAD4BA2032DEE600F26053 /* PLAPICLient.m in Sources */,
