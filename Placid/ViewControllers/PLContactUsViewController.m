@@ -43,13 +43,13 @@
 }
 
 -(void)showShareBubbles{
-  self.radius = 170;
-  self.bubbleRadius = 50;
+  self.radius = CGRectGetWidth([[UIScreen mainScreen] bounds]) * 0.4;
+  self.bubbleRadius = CGRectGetWidth([[UIScreen mainScreen] bounds]) * 0.12;
   
   if(self.shareBubbles) {
     self.shareBubbles = nil;
   }
-  self.shareBubbles = [[AAShareBubbles alloc] initWithPoint:CGPointMake(CGRectGetWidth(self.view.frame)/2, self.centerContactUsImageView.center.y) radius:self.radius inView:self.view];
+  self.shareBubbles = [[AAShareBubbles alloc] initWithPoint:CGPointMake(CGRectGetWidth([[UIScreen mainScreen] bounds])*0.5, CGRectGetHeight([[UIScreen mainScreen] bounds])*0.43) radius:self.radius inView:self.view];
   self.shareBubbles.delegate = self;
   self.shareBubbles.bubbleRadius = self.bubbleRadius;
   self.shareBubbles.showFacebookBubble = YES;
