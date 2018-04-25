@@ -23,4 +23,5 @@ target 'Placid' do
   pod "MWPhotoBrowser"
   pod 'Google-Mobile-Ads-SDK'
   pod 'NSDate+TimeAgo'
+  pod 'HockeySDK'
 end

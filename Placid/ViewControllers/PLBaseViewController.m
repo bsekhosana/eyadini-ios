@@ -15,6 +15,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <FBSDKGraphRequest.h>
 
 @interface PLBaseViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate, GADInterstitialDelegate, CLLocationManagerDelegate>
 @property (nonatomic, strong) PLTransitions *transitions;
@@ -60,7 +61,17 @@
                                               NSForegroundColorAttributeName: [PLConstants COLOUR_LBL_NAV_ACTION]
                                               } forState:UIControlStateNormal];
   [anchorLeftButton setTintColor: [PLConstants COLOUR_BG_NAV_PRIMARY]];
-  self.navigationItem.rightBarButtonItem  = anchorLeftButton;
+  
+  
+  UIBarButtonItem *anchorLeftButton1 = [[UIBarButtonItem alloc] initWithTitle:FA_ICON_MAP_MARKER style:UIBarButtonItemStylePlain target:self action:@selector(checkIn)];
+  anchorLeftButton1.width = 44.0;
+  [anchorLeftButton1 setTitleTextAttributes:@{
+                                             NSFontAttributeName: [PLConstants FONT_NAV_ICON],
+                                             NSForegroundColorAttributeName: [PLConstants COLOUR_LBL_NAV_ACTION]
+                                             } forState:UIControlStateNormal];
+  [anchorLeftButton1 setTintColor: [PLConstants COLOUR_BG_NAV_PRIMARY]];
+  
+  self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:anchorLeftButton1,anchorLeftButton, nil];
   
   NSDictionary *transitionData = @{ @"name" : @"Zoom",    @"transition" : self.transitions.zoomAnimationController };
   id<ECSlidingViewControllerDelegate> transition = transitionData[@"transition"];
@@ -81,8 +92,51 @@
 //                                               name:UIApplicationDidBecomeActiveNotification object:nil];
 
   self.interstitialAd = [self createLoadInterstitial];
+
 }
 
+
+-(void)checkIn{
+  UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Facebook Checkin" message:@"Do you want to check in @ Eyadini?." preferredStyle:UIAlertControllerStyleAlert];
+  UIAlertAction *action = [UIAlertAction actionWithTitle:@"CANCEL" style:UIAlertActionStyleCancel handler:nil];
+  UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [SVProgressHUD showWithStatus:@"Checking In To Eyadini Lounge"];
+    // For more complex open graph stories, use `FBSDKShareAPI`
+    // with `FBSDKShareOpenGraphContent`
+    /* make the API call */
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                  initWithGraphPath:@"/eyadini?fields=location"
+                                  parameters:nil
+                                  HTTPMethod:@"GET"];
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                          id result,
+                                          NSError *error) {
+      // Handle the result
+      NSLog(@"Location : %@", result);
+      
+      NSMutableDictionary * params = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"#eyadini_ios_app", @"message", result[@"id"], @"place", nil];
+      
+      FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                    initWithGraphPath:@"me/feed"
+                                    parameters:params
+                                    HTTPMethod:@"POST"];
+      [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                            id result,
+                                            NSError *error) {
+        // Handle the result
+        NSLog(@"Location Post Result : %@", result);
+        [SVProgressHUD showSuccessWithStatus:@"Your have successfully checked into Eyadini Lounge."];
+      }];
+      
+    }];
+  }];
+  [alert addAction:action];
+  [alert addAction:actionOk];
+  
+  [self.navigationController presentViewController:alert animated:YES completion:nil];
+  
+  
+}
 
 -(GADInterstitial *)createLoadInterstitial{
   GADRequest *request = [GADRequest new];
@@ -123,6 +177,7 @@
     
     [self erroWithLocationService];
   }
+  
 }
 
 -(void)erroWithLocationService{
@@ -172,6 +227,7 @@
   NSLog(@"failed to fetch current location : %@", error);
   [self erroWithLocationService];
 }
+
 
 -(void)chooseFromLibrary
 {

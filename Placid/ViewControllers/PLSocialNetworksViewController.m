@@ -184,7 +184,11 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
     [cell.storyLabel setText:post.story];
     [cell.messageLabel setText:post.message];
     if (post.imageSource) {
-      [cell.feedImageView setImageWithURL:[NSURL URLWithString:post.imageSource] placeholderImage:[UIImage imageNamed:@"eyadini_nav_logo"]];
+      [cell.feedImageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:post.imageSource]] placeholderImage:[UIImage imageNamed:@"eyadini_nav_logo"] success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+        [cell.feedImageView setImage:[PLConstants imageWithImage:image scaledToMaxWidth: CGRectGetWidth(cell.feedImageView.frame) maxHeight: CGRectGetHeight(cell.feedImageView.frame)]];
+      } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+      
+      }];
     }
   }
   

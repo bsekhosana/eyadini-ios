@@ -8,6 +8,7 @@
 //
 
 #import "PLConstants.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation PLConstants
 
@@ -88,6 +89,32 @@
   return [[[UIDevice currentDevice] systemVersion] floatValue];
 }
 
++ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)size {
+  if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
+    UIGraphicsBeginImageContextWithOptions(size, NO, [[UIScreen mainScreen] scale]);
+  } else {
+    UIGraphicsBeginImageContext(size);
+  }
+  [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+  UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  
+  return newImage;
+}
+
++ (UIImage *)imageWithImage:(UIImage *)image scaledToMaxWidth:(CGFloat)width maxHeight:(CGFloat)height {
+  CGFloat oldWidth = image.size.width;
+  CGFloat oldHeight = image.size.height;
+
+  CGFloat scaleFactor = (oldWidth > oldHeight) ? width / oldWidth : height / oldHeight;
+
+  CGFloat newHeight = oldHeight * scaleFactor;
+  CGFloat newWidth = oldWidth * scaleFactor;
+  CGSize newSize = CGSizeMake(newWidth, newHeight);
+
+  return [PLConstants imageWithImage:image scaledToSize:newSize];
+}
+
 +(NSString *)navLogoImageName{
   return @"eyadini_nav_logo";
 }
@@ -123,7 +150,7 @@ NSString* const FA_ICON_CHECK_CIRCLE = @"\uf058";
 NSString* const FA_ICON_LOCK = @"\uf023";
 NSString* const FA_ICON_EXCLAMATION_CIRCLE = @"\uf06a";
 NSString* const FA_ICON_CAMERA = @"\uf030";
-
+NSString* const FA_ICON_MAP_MARKER = @"\uf041";
 
 @end
 #endif

@@ -60,6 +60,7 @@
   
   
   __weak typeof(self) weakSelf = self;
+  
   // For more complex open graph stories, use `FBSDKShareAPI`
   // with `FBSDKShareOpenGraphContent`
   /* make the API call */

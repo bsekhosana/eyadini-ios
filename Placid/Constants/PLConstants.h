@@ -86,6 +86,10 @@ static float fontScaleFactor = 0.5f;
 
 + (float) OS_VERSION;
 
++ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)size ;
+
++ (UIImage *)imageWithImage:(UIImage *)image scaledToMaxWidth:(CGFloat)width maxHeight:(CGFloat)height;
+
 +(NSString *)navLogoImageName;
 
 
@@ -116,5 +120,6 @@ FOUNDATION_EXPORT NSString *const FA_ICON_CHECK_CIRCLE;
 FOUNDATION_EXPORT NSString *const FA_ICON_LOCK;
 FOUNDATION_EXPORT NSString *const FA_ICON_EXCLAMATION_CIRCLE;
 FOUNDATION_EXPORT NSString* const FA_ICON_CAMERA;
+FOUNDATION_EXPORT NSString* const FA_ICON_MAP_MARKER;
 
 @end

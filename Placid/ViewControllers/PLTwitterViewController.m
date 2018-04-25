@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view from its nib.
   
   TWTRAPIClient *client = [[TWTRAPIClient alloc] init];
-  self.dataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName:@"eyadini" APIClient:client];
+  self.dataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName:@"eyadini_lounge" APIClient:client];
 }
 
 - (void)didReceiveMemoryWarning {

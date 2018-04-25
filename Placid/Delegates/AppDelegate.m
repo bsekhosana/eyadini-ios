@@ -15,6 +15,7 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 @import GoogleMobileAds;
 #import <TwitterKit/TwitterKit.h>
+@import HockeySDK;
 
 
 @interface AppDelegate ()
@@ -30,6 +31,14 @@
   [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
   
   [NSThread sleepForTimeInterval:2];
+  
+#if DEBUG
+  
+  [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"cdc968b42e524bac8275f0a88ec1a45e"];
+  // Do some additional configuration if needed here
+  [[BITHockeyManager sharedHockeyManager] startManager];
+  [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation]; // This line is obsolete in the crash only builds
+#endif
   
   [SVProgressHUD setForegroundColor:[PLConstants LOOKUP_COLOUR2]];
   [SVProgressHUD setBackgroundColor:[PLConstants LOOKUP_COLOUR1]];
