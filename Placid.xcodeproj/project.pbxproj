@@ -1174,7 +1174,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D6B71264106057E6E08E212 /* Pods-Placid.eyadinidebug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIconDebug;
+				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
@@ -1201,7 +1201,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A678BB36701F146BCE93A567 /* Pods-Placid.eyadinirelease.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIconDebug;
+				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
@@ -1341,7 +1341,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF72E720719BB874265BC411 /* Pods-Placid.maxidebug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIconDebug;
+				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;
@@ -1452,7 +1452,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F62586C03B1689C15393EBD6 /* Pods-Placid.maxirelease.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIconDebug;
+				ASSETCATALOG_COMPILER_APPICON_NAME = EyadiniAppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HVGWN44W78;

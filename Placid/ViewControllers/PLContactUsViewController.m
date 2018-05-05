@@ -99,7 +99,7 @@
   switch (bubbleType) {
     case AAShareBubbleTypeFacebook:{
       NSLog(@"Facebook");
-      urlString = @"https://www.facebook.com/eyadini";
+      urlString = @"https://www.facebook.com/EyadiniLoungenuz";
       break;
     }
     case AAShareBubbleTypeTwitter:{

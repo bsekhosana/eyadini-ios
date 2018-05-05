@@ -29,7 +29,7 @@
   // with `FBSDKShareOpenGraphContent`
   /* make the API call */
   FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/eyadini/events"
+                                initWithGraphPath:@"/EyadiniLoungenuz/events"
                                 parameters:@{@"fields":@"cover, name, place, start_time"}
                                 HTTPMethod:@"GET"];
   [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,

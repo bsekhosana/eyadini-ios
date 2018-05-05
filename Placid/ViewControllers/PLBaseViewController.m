@@ -105,7 +105,7 @@
     // with `FBSDKShareOpenGraphContent`
     /* make the API call */
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                  initWithGraphPath:@"/eyadini?fields=location"
+                                  initWithGraphPath:@"/EyadiniLoungenuz?fields=location"
                                   parameters:nil
                                   HTTPMethod:@"GET"];
     [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
@@ -263,7 +263,7 @@
                            };
   /* make the API call */
   FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/eyadini/photos"
+                                initWithGraphPath:@"/EyadiniLoungenuz/photos"
                                 parameters:params
                                 HTTPMethod:@"POST"];
   [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,

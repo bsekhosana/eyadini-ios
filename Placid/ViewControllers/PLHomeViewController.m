@@ -65,7 +65,7 @@
   // with `FBSDKShareOpenGraphContent`
   /* make the API call */
   FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/eyadini/events?limit=1"
+                                initWithGraphPath:@"/EyadiniLoungenuz/events?limit=1"
                                 parameters:@{@"fields":@"cover, name, place, start_time"}
                                 HTTPMethod:@"GET"];
   [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
@@ -89,7 +89,7 @@
   
   
   FBSDKGraphRequest *newRequest = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/eyadini/feed?limit=1"
+                                initWithGraphPath:@"/EyadiniLoungenuz/feed?limit=1"
                                 parameters:@{@"fields": @"created_time, message, story, id, attachments{media}, full_picture"}
                                 HTTPMethod:@"GET"];
   [newRequest startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {

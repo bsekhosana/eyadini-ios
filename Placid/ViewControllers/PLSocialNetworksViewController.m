@@ -139,7 +139,7 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
     self.loginButton = nil;
     [self.view setNeedsDisplay];
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                  initWithGraphPath:@"/eyadini/feed"
+                                  initWithGraphPath:@"/EyadiniLoungenuz/feed"
                                   parameters:@{@"fields": @"created_time, message, story, id, attachments{media}"}
                                   HTTPMethod:@"GET"];
     __weak typeof(self) weakSelf = self;
