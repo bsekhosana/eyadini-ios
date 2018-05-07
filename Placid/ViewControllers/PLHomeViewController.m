@@ -31,6 +31,7 @@
   
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [self setIsHomeScreen];
   [self.view setBackgroundColor:[PLConstants LOOKUP_COLOUR2]];
   [self.carouselDividerView setBackgroundColor:[[PLConstants LOOKUP_COLOUR1] colorWithAlphaComponent:0.3]];
   _iCarouselItems = [[NSMutableArray alloc]init];

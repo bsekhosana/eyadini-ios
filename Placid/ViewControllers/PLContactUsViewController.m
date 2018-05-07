@@ -155,7 +155,7 @@
         MFMailComposeViewController *mailVC = [[MFMailComposeViewController alloc] init];
         mailVC.mailComposeDelegate = self;
         [mailVC setSubject:@"Eyadini iOS App"];
-        [mailVC setMessageBody:@"Found and sent using Demo App!" isHTML:NO];
+        [mailVC setMessageBody:@"Hi Eyadini Crew :) !!" isHTML:NO];
         [self presentViewController:mailVC animated:YES completion:NULL];
       } else {
         __weak typeof(self) weakSelf = self;

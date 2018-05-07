@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B57A9F6ECEDD0A6EE6D5A8AB5278D8D8"
+               BlueprintIdentifier = "4DCCFF6A51398A0198383E88CE5863FB"
                BlueprintName = "UIImageView-Letters"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libUIImageView-Letters.a">

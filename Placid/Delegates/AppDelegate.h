@@ -10,11 +10,10 @@
 #import "PLConstants.h"
 #import <AFNetworking/AFNetworking.h>
 #import <ECSlidingViewController/ECSlidingViewController.h>
-
+@import GoogleMobileAds;
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-
+@property(nonatomic, strong) GADInterstitial *interstitial;
 @end
 

@@ -16,6 +16,7 @@
 @import GoogleMobileAds;
 #import <TwitterKit/TwitterKit.h>
 @import HockeySDK;
+@import Firebase;
 
 
 @interface AppDelegate ()
@@ -80,7 +81,10 @@
   
   // Initialize Google Mobile Ads SDK
   // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
-  [GADMobileAds configureWithApplicationID:@"ca-app-pub-3940256099942544~1458002511"];
+  [GADMobileAds configureWithApplicationID:@"ca-app-pub-4729924057203075~4306090721"];
+  
+  // Use Firebase library to configure APIs
+  [FIRApp configure];
   
   NSMutableDictionary *twitterKeys;
   
@@ -90,6 +94,7 @@
   
   [[Twitter sharedInstance] startWithConsumerKey:[twitterKeys objectForKey:@"consumer_key"] consumerSecret:[twitterKeys objectForKey:@"consumer_secret"]];
 
+  self.interstitial = [self createAndLoadInterstitial];
   
   return [[FBSDKApplicationDelegate sharedInstance] application:application
                                   didFinishLaunchingWithOptions:launchOptions];
@@ -121,7 +126,16 @@
                   ];
   // Add any custom logic here.
   return handled;
-} 
+}
+
+- (GADInterstitial *)createAndLoadInterstitial {
+  GADInterstitial *interstitial =
+  [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-4729924057203075/1999491582"];
+  GADRequest *request = [GADRequest request];
+  request.testDevices = @[ @"88d259d71435f65e7765d4e0264b39c9" ];
+  [interstitial loadRequest:request];
+  return interstitial;
+}
   
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

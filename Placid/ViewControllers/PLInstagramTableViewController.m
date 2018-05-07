@@ -8,14 +8,6 @@
 
 #import "PLInstagramTableViewController.h"
 
-#import "UploadedOn.h"
-#import "TotalLikes_Comments.h"
-#import "SuggestedPeopleCell.h"
-#import "PostImage.h"
-#import "PostDescription.h"
-#import "DetailText.h"
-#import "Buttons.h"
-#import "SectionHeaderOfPost.h"
 #import "PLInstagramFeed.h"
 #import <AFNetworking/AFNetworking.h>
 #import "PLInstagramTableViewCell.h"
@@ -91,9 +83,16 @@
   
   if (cell) {
     PLInstagramFeed * feed = [self.feedDataArray objectAtIndex:indexPath.row];
-    NSTimeInterval epoch = [feed.caption[@"created_time"] doubleValue];
-    NSDate * date = [NSDate dateWithTimeIntervalSince1970:epoch];
-    [cell.dateTimeLabel setText:[date timeAgo]];
+    @try {
+      NSTimeInterval epoch = [feed.caption[@"created_time"] doubleValue];
+      NSDate * date = [NSDate dateWithTimeIntervalSince1970:epoch];
+      [cell.dateTimeLabel setText:[date timeAgo]];
+    }
+    @catch (NSException *exception) {
+      NSLog(@"%@", exception.reason);
+      [cell.dateTimeLabel setText:@""];
+    }
+    
     [cell.captionLabel setText:feed.caption[@"text"]];
     [cell.numberOfLikesLabel setText:[NSString stringWithFormat:@"%@ Likes", feed.likes[@"count"]]];
     [cell.numberOfCommentsLabel setText:[NSString stringWithFormat:@"%@ Comments", feed.comments[@"count"]]];
@@ -119,13 +118,7 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-  SuggestedPeopleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CollectionViewCellIdentifier forIndexPath:indexPath];
-  //cell.titleLabel.text=@"Name";
-  // cell.subTitleLabel.text = @"Detail Text";
-  cell.layer.cornerRadius=4;
-  cell.layer.borderColor=[UIColor lightGrayColor].CGColor;
-  cell.layer.borderWidth=0.5;
-  return cell;
+  return [UICollectionViewCell new];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

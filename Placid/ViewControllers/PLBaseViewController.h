@@ -13,6 +13,6 @@
 
 @interface PLBaseViewController : UIViewController <ECSlidingViewControllerDelegate>
 
-@property (nonatomic, strong) GADInterstitial *interstitialAd;
 - (IBAction)menuButtonTapped:(id)sender;
+-(void)setIsHomeScreen;
 @end

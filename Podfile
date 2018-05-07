@@ -22,6 +22,8 @@ target 'Placid' do
   pod 'SVProgressHUD'
   pod "MWPhotoBrowser"
   pod 'Google-Mobile-Ads-SDK'
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
   pod 'NSDate+TimeAgo'
   pod 'HockeySDK'
 end
