@@ -18,12 +18,10 @@
 		3E4DAEF1203373EE00587BF8 /* MyriadPro-Cond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEEE203373ED00587BF8 /* MyriadPro-Cond.otf */; };
 		3E4DAEF2203373EE00587BF8 /* font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEEF203373EE00587BF8 /* font.otf */; };
 		3E4DAEF3203373EE00587BF8 /* MyriadCondBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAEF0203373EE00587BF8 /* MyriadCondBold.otf */; };
-		3E4DAEF62034119900587BF8 /* PLMyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEF52034119900587BF8 /* PLMyProfileViewController.m */; };
 		3E4DAEF9203444DF00587BF8 /* PLSocialNetworksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEF8203444DF00587BF8 /* PLSocialNetworksViewController.m */; };
 		3E4DAEFD2034EF4200587BF8 /* PLFacebookFeedPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEFC2034EF4200587BF8 /* PLFacebookFeedPost.m */; };
 		3E4DAF012034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAEFF2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m */; };
 		3E4DAF022034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4DAF002034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib */; };
-		3E4DAF0C203BF80300587BF8 /* PLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF0B203BF80300587BF8 /* PLLoginViewController.m */; };
 		3E4DAF0E203C1B4200587BF8 /* PLMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF0D203C1B4200587BF8 /* PLMainNavigationController.m */; };
 		3E4DAF11203C3D0800587BF8 /* PLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DAF10203C3D0800587BF8 /* PLUser.m */; };
 		3E4E9868204826FA00E1E598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3CCA520328E50005FD2A5 /* Assets.xcassets */; };
@@ -118,8 +116,6 @@
 		3E4DAEEE203373ED00587BF8 /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Cond.otf"; sourceTree = "<group>"; };
 		3E4DAEEF203373EE00587BF8 /* font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font.otf; sourceTree = "<group>"; };
 		3E4DAEF0203373EE00587BF8 /* MyriadCondBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyriadCondBold.otf; sourceTree = "<group>"; };
-		3E4DAEF42034119900587BF8 /* PLMyProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLMyProfileViewController.h; sourceTree = "<group>"; };
-		3E4DAEF52034119900587BF8 /* PLMyProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLMyProfileViewController.m; sourceTree = "<group>"; };
 		3E4DAEF7203444DF00587BF8 /* PLSocialNetworksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLSocialNetworksViewController.h; sourceTree = "<group>"; };
 		3E4DAEF8203444DF00587BF8 /* PLSocialNetworksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLSocialNetworksViewController.m; sourceTree = "<group>"; };
 		3E4DAEFB2034EF4200587BF8 /* PLFacebookFeedPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLFacebookFeedPost.h; sourceTree = "<group>"; };
@@ -127,8 +123,6 @@
 		3E4DAEFE2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLFacebookFeedTableViewCell.h; sourceTree = "<group>"; };
 		3E4DAEFF2034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLFacebookFeedTableViewCell.m; sourceTree = "<group>"; };
 		3E4DAF002034F3BD00587BF8 /* PLFacebookFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PLFacebookFeedTableViewCell.xib; sourceTree = "<group>"; };
-		3E4DAF0A203BF80300587BF8 /* PLLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLLoginViewController.h; sourceTree = "<group>"; };
-		3E4DAF0B203BF80300587BF8 /* PLLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLLoginViewController.m; sourceTree = "<group>"; };
 		3E4DAF0D203C1B4200587BF8 /* PLMainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainNavigationController.m; sourceTree = "<group>"; };
 		3E4DAF0F203C3D0800587BF8 /* PLUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLUser.h; sourceTree = "<group>"; };
 		3E4DAF10203C3D0800587BF8 /* PLUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLUser.m; sourceTree = "<group>"; };
@@ -472,12 +466,8 @@
 				3EAAD4EA2033232700F26053 /* PLAboutUsViewController.m */,
 				3EAAD4EC2033233200F26053 /* PLContactUsViewController.h */,
 				3EAAD4ED2033233200F26053 /* PLContactUsViewController.m */,
-				3E4DAEF42034119900587BF8 /* PLMyProfileViewController.h */,
-				3E4DAEF52034119900587BF8 /* PLMyProfileViewController.m */,
 				3E4DAEF7203444DF00587BF8 /* PLSocialNetworksViewController.h */,
 				3E4DAEF8203444DF00587BF8 /* PLSocialNetworksViewController.m */,
-				3E4DAF0A203BF80300587BF8 /* PLLoginViewController.h */,
-				3E4DAF0B203BF80300587BF8 /* PLLoginViewController.m */,
 				3E9466EE208E8707000045AB /* PLInstagramTableViewController.h */,
 				3E9466EF208E8707000045AB /* PLInstagramTableViewController.m */,
 				3E9466F0208E8707000045AB /* PLInstagramTableViewController.xib */,
@@ -781,7 +771,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E4DAF11203C3D0800587BF8 /* PLUser.m in Sources */,
-				3E4DAEF62034119900587BF8 /* PLMyProfileViewController.m in Sources */,
 				3E46E7C8203C6482006274B1 /* PLProfileTableViewCell.m in Sources */,
 				3EEF193F2052F92A00563DA1 /* CHTCollectionViewWaterfallFooter.m in Sources */,
 				3E4DAEE520333E1D00587BF8 /* PLMainNavTableViewCell.m in Sources */,
@@ -789,7 +778,6 @@
 				3E946708208EAF2A000045AB /* PLInstagramTableViewCell.m in Sources */,
 				3EEF193A2052F90300563DA1 /* CHTCollectionViewWaterfallCell.m in Sources */,
 				3EAAD4C52032EB3B00F26053 /* PLBaseViewController.m in Sources */,
-				3E4DAF0C203BF80300587BF8 /* PLLoginViewController.m in Sources */,
 				3E9466F1208E8707000045AB /* PLInstagramTableViewController.m in Sources */,
 				3E4DAF012034F3BD00587BF8 /* PLFacebookFeedTableViewCell.m in Sources */,
 				3EEF19512056FC2600563DA1 /* PLEvent.m in Sources */,

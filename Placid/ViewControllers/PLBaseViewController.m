@@ -18,6 +18,7 @@
 #import <FBSDKGraphRequest.h>
 @import GoogleMobileAds;
 #import "AppDelegate.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface PLBaseViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate, GADInterstitialDelegate, CLLocationManagerDelegate, GADBannerViewDelegate>
 @property (nonatomic, strong) PLTransitions *transitions;
@@ -36,7 +37,7 @@
   [super viewDidLoad];
 
   self.transitions.dynamicTransition.slidingViewController = self.slidingViewController;
-  
+  self.slidingViewController.panGesture.enabled = YES;
   AppDelegate *appDel = (AppDelegate *)[UIApplication sharedApplication].delegate;
   
   self.interstitial = appDel.interstitial;
@@ -156,45 +157,89 @@
 
 
 -(void)checkIn{
-  UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Facebook Checkin" message:@"Do you want to check in @ Eyadini?." preferredStyle:UIAlertControllerStyleAlert];
-  UIAlertAction *action = [UIAlertAction actionWithTitle:@"CANCEL" style:UIAlertActionStyleCancel handler:nil];
-  UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-    [SVProgressHUD showWithStatus:@"Checking In To Eyadini Lounge"];
-    // For more complex open graph stories, use `FBSDKShareAPI`
-    // with `FBSDKShareOpenGraphContent`
-    /* make the API call */
-    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                  initWithGraphPath:@"/EyadiniLoungenuz?fields=location"
-                                  parameters:nil
-                                  HTTPMethod:@"GET"];
-    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
-                                          id result,
-                                          NSError *error) {
-      // Handle the result
-      NSLog(@"Location : %@", result);
-      
-      NSMutableDictionary * params = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"#eyadini_ios_app", @"message", result[@"id"], @"place", nil];
-      
-      FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                    initWithGraphPath:@"me/feed"
-                                    parameters:params
-                                    HTTPMethod:@"POST"];
-      [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
-                                            id result,
-                                            NSError *error) {
-        // Handle the result
-        NSLog(@"Location Post Result : %@", result);
-        [SVProgressHUD showSuccessWithStatus:@"Your have successfully checked into Eyadini Lounge."];
+    if ([FBSDKAccessToken currentAccessToken]) {
+      NSLog(@"Token : %@", [FBSDKAccessToken currentAccessToken]);
+      UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Facebook Checkin" message:@"Do you want to check in @ Eyadini?." preferredStyle:UIAlertControllerStyleAlert];
+      UIAlertAction *action = [UIAlertAction actionWithTitle:@"CANCEL" style:UIAlertActionStyleCancel handler:nil];
+      UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [SVProgressHUD showWithStatus:@"Checking In To Eyadini Lounge"];
+        // For more complex open graph stories, use `FBSDKShareAPI`
+        // with `FBSDKShareOpenGraphContent`
+        /* make the API call */
+        FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                      initWithGraphPath:@"/EyadiniLoungenuz?fields=location"
+                                      parameters:nil
+                                      HTTPMethod:@"GET"];
+        
+        [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                              id result,
+                                              NSError *error) {
+          // Handle the result
+          NSLog(@"Location : %@", result);
+          
+          NSMutableDictionary * params = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"#eyadini_ios_app", @"message", result[@"id"], @"place", nil];
+          
+          FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+                                        initWithGraphPath:@"me/feed"
+                                        parameters:params
+                                        HTTPMethod:@"POST"];
+          [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                                id result,
+                                                NSError *error) {
+            // Handle the result
+            NSLog(@"Location Post Result : %@", result);
+            [SVProgressHUD showSuccessWithStatus:@"Your have successfully checked into Eyadini Lounge."];
+          }];
+          
+        }];
       }];
+      [alert addAction:action];
+      [alert addAction:actionOk];
       
-    }];
-  }];
-  [alert addAction:action];
-  [alert addAction:actionOk];
-  
-  [self.navigationController presentViewController:alert animated:YES completion:nil];
-  
-  
+      [self.navigationController presentViewController:alert animated:YES completion:nil];
+    }else{
+      UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Facebook Login" message:@"Please login to your facebook account in order for you to checkin @ Eyadini." preferredStyle:UIAlertControllerStyleAlert];
+      UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        __weak typeof(self) weakSelf = self;
+        FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
+        [loginManager logInWithReadPermissions:@[@"public_profile"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+          //TODO: process error or result.
+          if (error) {
+            NSLog(@"Process error");
+            [self facebookLoginFailed:YES];
+          } else if (result.isCancelled) {
+            [self facebookLoginFailed:NO];
+          } else {
+            if ([FBSDKAccessToken currentAccessToken]) {
+              NSLog(@"Token is available : %@",[[FBSDKAccessToken currentAccessToken]tokenString]);
+              [weakSelf checkIn];
+            }
+            else {
+              [self facebookLoginFailed:YES];
+            }
+          }
+        }];
+      }];
+      [alert addAction:actionOk];
+      
+      [self.navigationController presentViewController:alert animated:YES completion:nil];
+      
+    }
+}
+
+- (void)facebookLoginFailed:(BOOL)isFBResponce{
+  if(isFBResponce){
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"The request had an error, please try again" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:actionOk];
+    [self.navigationController presentViewController:alert animated:YES completion:nil];
+  }
+  else{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Login Error" message:@"Credentials do not match, please try again" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:actionOk];
+    [self.navigationController presentViewController:alert animated:YES completion:nil];
+  }
 }
 
 - (GADInterstitial *)createAndLoadInterstitial {
@@ -213,24 +258,54 @@
 
 -(void)takePhoto
 {
-  if ([CLLocationManager locationServicesEnabled]) {
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
-
-    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
-    {
-      [self.locationManager requestWhenInUseAuthorization];
-    }else{
-      [self.locationManager requestAlwaysAuthorization];
+  if ([FBSDKAccessToken currentAccessToken]) {
+    NSLog(@"Token : %@", [FBSDKAccessToken currentAccessToken]);
+    if ([CLLocationManager locationServicesEnabled]) {
+      self.locationManager = [[CLLocationManager alloc] init];
+      self.locationManager.delegate = self;
+      
+      if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+      {
+        [self.locationManager requestWhenInUseAuthorization];
+      }else{
+        [self.locationManager requestAlwaysAuthorization];
+      }
+      
+      [self.locationManager startUpdatingLocation];
+    } else {
+      NSLog(@"Location services are not enabled");
+      
+      [self erroWithLocationService];
     }
     
-    [self.locationManager startUpdatingLocation];
-  } else {
-    NSLog(@"Location services are not enabled");
+  }else{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Facebook Login" message:@"Please login to your facebook account in order for you to take a selfie." preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+      __weak typeof(self) weakSelf = self;
+      FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
+      [loginManager logInWithPublishPermissions:@[@"publish_actions"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+        //TODO: process error or result.
+        if (error) {
+          NSLog(@"Process error");
+          [self facebookLoginFailed:YES];
+        } else if (result.isCancelled) {
+          [self facebookLoginFailed:NO];
+        } else {
+          if ([FBSDKAccessToken currentAccessToken]) {
+            NSLog(@"Token is available : %@",[[FBSDKAccessToken currentAccessToken]tokenString]);
+            [weakSelf takePhoto];
+          }
+          else {
+            [self facebookLoginFailed:YES];
+          }
+        }
+      }];
+    }];
+    [alert addAction:actionOk];
     
-    [self erroWithLocationService];
+    [self.navigationController presentViewController:alert animated:YES completion:nil];
+    
   }
-  
 }
 
 -(void)erroWithLocationService{

@@ -11,6 +11,7 @@
 #import "PLEvent.h"
 #import "PLEventTableViewCell.h"
 #import <UIImageView+AFNetworking.h>
+#import "AFHTTPSessionManager.h"
 
 @interface PLEventsViewController ()
 @property (strong, nonatomic) NSMutableArray *events;
@@ -25,16 +26,11 @@
   [SVProgressHUD show];
   
   __weak typeof(self) weakSelf = self;
-  // For more complex open graph stories, use `FBSDKShareAPI`
-  // with `FBSDKShareOpenGraphContent`
-  /* make the API call */
-  FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/EyadiniLoungenuz/events"
-                                parameters:@{@"fields":@"cover, name, place, start_time"}
-                                HTTPMethod:@"GET"];
-  [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
-                                        NSDictionary * result,
-                                        NSError *error) {
+  
+  
+  AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+  NSString *strURL = [@"https://graph.facebook.com/eyadiniloungenuz/events?access_token=564202827266707|a142d6093609903a733d60797255520f&fields=start_time,place,cover,name,description&limit=4" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  [manager GET:strURL parameters:nil progress:nil success:^(NSURLSessionTask *task, id result) {
     NSLog(@"Events Results : %@", result);
     // Handle the result
     
@@ -53,7 +49,11 @@
     
     [weakSelf.tableView reloadData];
     [SVProgressHUD dismiss];
+  } failure:^(NSURLSessionTask *operation, NSError *error) {
+    NSLog(@"Error: %@", error);
+    [SVProgressHUD dismiss];
   }];
+  
   
   [self.tableView registerClass:[PLEventTableViewCell class] forCellReuseIdentifier:@"PLEventTableViewCell"];
   [self.tableView registerNib:[UINib nibWithNibName:@"PLEventTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PLEventTableViewCell"];

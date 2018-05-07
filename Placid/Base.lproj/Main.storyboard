@@ -39,7 +39,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-v4-38X">
-                                <rect key="frame" x="0.0" y="200" width="375" height="417"/>
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -67,34 +67,22 @@
                                     <outlet property="delegate" destination="GtO-ba-nFx" id="tBa-7W-reU"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utt-1f-SM7">
-                                <rect key="frame" x="164" y="617" width="46" height="34"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="didTapLogoutButton:" destination="GtO-ba-nFx" eventType="touchUpInside" id="Z2K-6V-eIT"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="utt-1f-SM7" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" constant="164" id="8Mx-I0-Qa7"/>
                             <constraint firstItem="DcX-7o-WJL" firstAttribute="centerX" secondItem="2M5-di-WK9" secondAttribute="centerX" id="9zJ-jC-fpu"/>
                             <constraint firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="top" constant="-20" id="DIz-rI-iRp"/>
                             <constraint firstItem="DcX-7o-WJL" firstAttribute="width" secondItem="2M5-di-WK9" secondAttribute="width" id="K2W-dX-ba3"/>
-                            <constraint firstItem="utt-1f-SM7" firstAttribute="top" secondItem="f9W-v4-38X" secondAttribute="bottom" id="U0b-bl-QWq"/>
                             <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="f9W-v4-38X" secondAttribute="trailing" id="Vqx-qJ-dQG"/>
-                            <constraint firstItem="Vem-Ex-fKt" firstAttribute="trailing" secondItem="utt-1f-SM7" secondAttribute="trailing" constant="165" id="bQx-ZR-mQq"/>
                             <constraint firstItem="f9W-v4-38X" firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="bottom" constant="30" id="dXz-rt-xDw"/>
+                            <constraint firstAttribute="bottom" secondItem="f9W-v4-38X" secondAttribute="bottom" id="jku-6B-aSA"/>
                             <constraint firstItem="2M5-di-WK9" firstAttribute="centerX" secondItem="Vem-Ex-fKt" secondAttribute="centerX" id="tzT-Kr-kAo"/>
-                            <constraint firstItem="Vem-Ex-fKt" firstAttribute="bottom" secondItem="utt-1f-SM7" secondAttribute="bottom" constant="16" id="xbC-Qi-Kn4"/>
                             <constraint firstItem="DcX-7o-WJL" firstAttribute="top" secondItem="2M5-di-WK9" secondAttribute="bottom" id="zIJ-1j-y1r"/>
                             <constraint firstItem="f9W-v4-38X" firstAttribute="leading" secondItem="Vem-Ex-fKt" secondAttribute="leading" id="zPp-dD-Cap"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vem-Ex-fKt"/>
                     </view>
                     <connections>
-                        <outlet property="logoutButton" destination="utt-1f-SM7" id="Fk3-vV-CCO"/>
                         <outlet property="navLogoImageView" destination="2M5-di-WK9" id="Dj1-cB-bsS"/>
                         <outlet property="reflectionView" destination="DcX-7o-WJL" id="29n-N6-RV3"/>
                         <outlet property="tableView" destination="f9W-v4-38X" id="P3v-Zn-5nr"/>
@@ -403,7 +391,7 @@
                                     <constraint firstAttribute="width" secondItem="nf3-uS-aiS" secondAttribute="height" multiplier="1:1" id="5mv-PL-mEG"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="35e-LE-BIK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35e-LE-BIK">
                                 <rect key="frame" x="16" y="287" width="343" height="340"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Eyadini Lounge is your no1 Ekasi Shisanyama Experience located in the heart of Umlazi Township. A dream that came to life in 2008, Eyadini is a highly sought out shisanyama restaurant and premium event venue popularly known for its “Eyadini walk”, where patrons are photographed midwalk as they enter Eyadini Lounge. Specialising in a unique Shisanyama township experience, the award winning Eyadini lounge is one of the fastest growing businesses in KZN, catering to the young and trendy, meat and music lover alike.
@@ -537,127 +525,6 @@ Not only do we have the best meat in town but we also host the craziest out of t
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxf-eV-FiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-964" y="5137"/>
-        </scene>
-        <!--My Profile-->
-        <scene sceneID="PiJ-Dz-JhT">
-            <objects>
-                <viewController storyboardIdentifier="My Profile" id="Xma-jv-D9a" customClass="PLMyProfileViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qez-MD-OoQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MRO-Dx-NIB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="dKb-KI-uRX" style="IBUITableViewCellStyleDefault" id="qYG-BI-M54">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qYG-BI-M54" id="Chf-C1-Lxi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dKb-KI-uRX">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                                <connections>
-                                    <outlet property="dataSource" destination="Xma-jv-D9a" id="b1f-e2-3Vg"/>
-                                    <outlet property="delegate" destination="Xma-jv-D9a" id="0a7-Hv-2Th"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="MRO-Dx-NIB" firstAttribute="leading" secondItem="qez-MD-OoQ" secondAttribute="leading" id="4s8-ee-hhV"/>
-                            <constraint firstAttribute="trailing" secondItem="MRO-Dx-NIB" secondAttribute="trailing" id="AXB-HZ-Qnx"/>
-                            <constraint firstItem="MRO-Dx-NIB" firstAttribute="top" secondItem="qez-MD-OoQ" secondAttribute="top" id="hjf-WR-OKd"/>
-                            <constraint firstAttribute="bottom" secondItem="MRO-Dx-NIB" secondAttribute="bottom" id="sL8-6D-Nwc"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="w9o-dQ-evg"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="My Profile" id="M55-4h-Tcz"/>
-                    <connections>
-                        <outlet property="tableView" destination="MRO-Dx-NIB" id="N0T-Ui-GNr"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s3T-2F-KLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="621.60000000000002" y="2835.832083958021"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="hzu-1p-Udx">
-            <objects>
-                <viewController storyboardIdentifier="PLLoginViewController" id="ivQ-Mp-ZWI" customClass="PLLoginViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EYz-Fk-aYq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89890902" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xx0-ou-fzb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vj-f8-Zm1" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="164.5" y="557" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyadini_nav_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Jk-bZ-BR8">
-                                <rect key="frame" x="112" y="50" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="VgP-a5-tFQ"/>
-                                    <constraint firstAttribute="width" secondItem="2Jk-bZ-BR8" secondAttribute="height" multiplier="1:1" id="x4o-sA-lvJ"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Xx0-ou-fzb" firstAttribute="top" secondItem="2Jk-bZ-BR8" secondAttribute="bottom" constant="-200" id="4Rn-Mk-kSL"/>
-                            <constraint firstItem="Ahu-hj-TZS" firstAttribute="bottom" secondItem="1Vj-f8-Zm1" secondAttribute="bottom" constant="80" id="E4R-SG-XPd"/>
-                            <constraint firstAttribute="bottom" secondItem="Xx0-ou-fzb" secondAttribute="bottom" id="EjI-Tn-MhU"/>
-                            <constraint firstItem="2Jk-bZ-BR8" firstAttribute="centerX" secondItem="Xx0-ou-fzb" secondAttribute="centerX" id="Epe-nH-UJf"/>
-                            <constraint firstAttribute="top" secondItem="Xx0-ou-fzb" secondAttribute="top" id="JlV-xT-Qyz"/>
-                            <constraint firstItem="1Vj-f8-Zm1" firstAttribute="centerX" secondItem="Xx0-ou-fzb" secondAttribute="centerX" id="Mei-3g-VId"/>
-                            <constraint firstItem="Xx0-ou-fzb" firstAttribute="leading" secondItem="EYz-Fk-aYq" secondAttribute="leading" id="us3-ml-0Bm"/>
-                            <constraint firstAttribute="trailing" secondItem="Xx0-ou-fzb" secondAttribute="trailing" id="ynb-P2-lFz"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ahu-hj-TZS"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="6KT-2l-goo"/>
-                    <connections>
-                        <outlet property="backgroundImageView" destination="Xx0-ou-fzb" id="MOK-5A-smq"/>
-                        <outlet property="facebookLoginButton" destination="1Vj-f8-Zm1" id="t7f-BX-MNI"/>
-                        <outlet property="logoImageView" destination="2Jk-bZ-BR8" id="y79-hJ-z7E"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hpq-1B-7WM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2885.5999999999999" y="2959.9700149925038"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="TMN-fM-9Wf">
-            <objects>
-                <navigationController storyboardIdentifier="PLMyProfileNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="eXG-bR-vAO" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zpP-g2-Gac">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Xma-jv-D9a" kind="relationship" relationship="rootViewController" id="Vjg-p5-YHV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Eu4-vs-4bZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1026" y="2836"/>
         </scene>
         <!--Social  Networks-->
         <scene sceneID="vQY-jc-qby">
@@ -840,7 +707,6 @@ Not only do we have the best meat in town but we also host the craziest out of t
         </scene>
     </scenes>
     <resources>
-        <image name="89890902" width="600" height="400"/>
         <image name="DSC_0162" width="750" height="497"/>
         <image name="Twitter_logo_bird_transparent_png" width="2000" height="1624"/>
         <image name="eyadini_nav_logo" width="115" height="113"/>

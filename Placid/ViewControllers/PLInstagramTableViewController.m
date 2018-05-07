@@ -93,9 +93,30 @@
       [cell.dateTimeLabel setText:@""];
     }
     
-    [cell.captionLabel setText:feed.caption[@"text"]];
-    [cell.numberOfLikesLabel setText:[NSString stringWithFormat:@"%@ Likes", feed.likes[@"count"]]];
-    [cell.numberOfCommentsLabel setText:[NSString stringWithFormat:@"%@ Comments", feed.comments[@"count"]]];
+    @try {
+      [cell.captionLabel setText:feed.caption[@"text"]];
+    }
+    @catch (NSException *exception) {
+      NSLog(@"%@", exception.reason);
+      [cell.captionLabel setText:@""];
+    }
+    
+    @try {
+      [cell.numberOfLikesLabel setText:[NSString stringWithFormat:@"%@ Likes", feed.likes[@"count"]]];
+    }
+    @catch (NSException *exception) {
+      NSLog(@"%@", exception.reason);
+      [cell.numberOfLikesLabel setText:@"0 Likes"];
+    }
+    
+    @try {
+      [cell.numberOfCommentsLabel setText:[NSString stringWithFormat:@"%@ Comments", feed.comments[@"count"]]];
+    }
+    @catch (NSException *exception) {
+      NSLog(@"%@", exception.reason);
+      [cell.numberOfCommentsLabel setText:@"0 Comments"];
+    }
+    
     [cell.postImageView setImageWithURL:[NSURL URLWithString:feed.images[@"standard_resolution"][@"url"]] placeholderImage:[UIImage imageNamed:@"eyadini_nav_logo"]];
   }
 

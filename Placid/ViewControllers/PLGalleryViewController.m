@@ -10,6 +10,8 @@
 #import "PLCHTCollectionViewController.h"
 #import "PLFacebookAlbum.h"
 #import <FBSDKCoreKit.h>
+#import "AFHTTPSessionManager.h"
+#import "PLConstants.h"
 
 @interface PLGalleryViewController ()
 @property (strong, nonatomic) PLCHTCollectionViewController *collectionViewController;
@@ -48,13 +50,12 @@
   // For more complex open graph stories, use `FBSDKShareAPI`
   // with `FBSDKShareOpenGraphContent`
   /* make the API call */
-  FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/EyadiniLoungenuz/albums"
-                                parameters:@{@"fields": @"picture, cover_photo"}
-                                HTTPMethod:@"GET"];
-  [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
-                                        NSDictionary * result,
-                                        NSError *error) {
+  
+  
+  
+  AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+  NSString *strURL = [@"https://graph.facebook.com/eyadiniloungenuz/albums?access_token=564202827266707|a142d6093609903a733d60797255520f&fields=created_time,picture,cover_photo,name" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  [manager GET:strURL parameters:nil progress:nil success:^(NSURLSessionTask *task, id result) {
     NSLog(@"Albums Results : %@", result);
     // Handle the result
     
@@ -71,6 +72,11 @@
     
     weakSelf.collectionViewController.data = [weakSelf.albums copy];
     [weakSelf.collectionViewController.collectionView reloadData];
+    [SVProgressHUD dismiss];
+
+    [SVProgressHUD dismiss];
+  } failure:^(NSURLSessionTask *operation, NSError *error) {
+    NSLog(@"Error: %@", error);
     [SVProgressHUD dismiss];
   }];
 }

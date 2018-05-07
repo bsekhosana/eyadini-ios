@@ -12,14 +12,13 @@
 #import "UIViewController+ECSlidingViewController.h"
 #import "PLDynamicTransition.h"
 #import "PLTransitions.h"
-#import "PLLoginViewController.h"
 #import "PLSponsor.h"
 #import "PLConstants.h"
 #import "PLFacebookFeedPost.h"
 #import <UIImageView+AFNetworking.h>
+#import "AFHTTPSessionManager.h"
 
 @interface PLHomeViewController()
-@property (strong, nonatomic) PLLoginViewController *loginController;
 @property (weak, nonatomic) IBOutlet UILabel *noNewsToDisplayLable;
 @property (weak, nonatomic) IBOutlet UILabel *noEventsTODisplay;
 @property (nonatomic, strong) NSMutableArray *iCarouselItems;
@@ -62,38 +61,20 @@
   
   __weak typeof(self) weakSelf = self;
   
-  // For more complex open graph stories, use `FBSDKShareAPI`
-  // with `FBSDKShareOpenGraphContent`
-  /* make the API call */
-  FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/EyadiniLoungenuz/events?limit=1"
-                                parameters:@{@"fields":@"cover, name, place, start_time"}
-                                HTTPMethod:@"GET"];
-  [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
-                                        NSDictionary * result,
-                                        NSError *error) {
-    NSLog(@"Events Results : %@", result);
-    // Handle the result
-    if ([result[@"data"] count] > 0) {
-      [weakSelf.noEventsTODisplay setHidden:YES];
-      [weakSelf.eventLabel setHidden:NO];
-      [weakSelf.eventImageView setHidden:NO];
-      [weakSelf.eventLabel setText:result[@"data"][0][@"name"]];
-      [weakSelf.eventImageView setImageWithURL:[NSURL URLWithString:result[@"data"][0][@"cover"][@"source"]] placeholderImage:[UIImage imageNamed:@"eyadini_nav_logo"]];
-    }else{
-      [weakSelf.noEventsTODisplay setHidden:NO];
-      [weakSelf.eventLabel setHidden:YES];
-      [weakSelf.eventImageView setHidden:YES];
-    }
+  AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+  NSString *strURL = [@"https://graph.facebook.com/eyadiniloungenuz/events?access_token=564202827266707|a142d6093609903a733d60797255520f&fields=start_time,place,cover,name,description&limit=1" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  [manager GET:strURL parameters:nil progress:nil success:^(NSURLSessionTask *task, id result) {
+    NSLog(@"Single Event Result : %@", result);
     
+  } failure:^(NSURLSessionTask *operation, NSError *error) {
+    NSLog(@"Error: %@", error);
+    [SVProgressHUD dismiss];
   }];
   
   
-  FBSDKGraphRequest *newRequest = [[FBSDKGraphRequest alloc]
-                                initWithGraphPath:@"/EyadiniLoungenuz/feed?limit=1"
-                                parameters:@{@"fields": @"created_time, message, story, id, attachments{media}, full_picture"}
-                                HTTPMethod:@"GET"];
-  [newRequest startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+  NSString *strURL2 = [@"https://graph.facebook.com/eyadiniloungenuz/feed?access_token=564202827266707|a142d6093609903a733d60797255520f&fields=created_time, message,story,id,attachments{media},full_picture&limit=1" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  [manager GET:strURL2 parameters:nil progress:nil success:^(NSURLSessionTask *task, id result) {
+    NSLog(@"Single Event Result : %@", result);
     if (!error) {
       NSError *error;
       
@@ -112,7 +93,8 @@
         [weakSelf.latestNewsImage setHidden:YES];
       }
     }
-    
+  } failure:^(NSURLSessionTask *operation, NSError *error) {
+    NSLog(@"Error: %@", error);
   }];
 
 }
@@ -171,31 +153,6 @@
   // Dispose of any resources that can be recreated.
 }
   
-  /*
-   #pragma mark - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-   // Get the new view controller using [segue destinationViewController].
-   // Pass the selected object to the new view controller.
-   }
-   */
-  
-  
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  BOOL isLoggedIn = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedIn"];
-
-  if (!isLoggedIn) {
-    self.slidingViewController.panGesture.enabled = NO;
-    self.loginController = [self.storyboard instantiateViewControllerWithIdentifier:@"PLLoginViewController"];
-    [self.navigationController pushViewController:self.loginController animated:YES];
-  }else{
-    self.slidingViewController.panGesture.enabled = YES;
-  }
-}
-
-
 -(void)viewDidAppear:(BOOL)animated{
   [super viewDidAppear:animated];
   

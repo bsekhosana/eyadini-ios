@@ -15,6 +15,7 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "PLInstagramTableViewController.h"
 #import "PLTwitterViewController.h"
+#import "AFHTTPSessionManager.h"
 
 @interface PLSocialNetworksViewController ()
 @property (strong, nonatomic) NSMutableArray *facebookPosts;
@@ -132,44 +133,64 @@ static NSString * facebookIdentifier = @"PLFacebookFeedTableViewCell";
 
 -(void)facebookSetup{
   [[NSNotificationCenter defaultCenter] removeObserver:self];
+  __weak typeof(self) weakSelf = self;
   
-  if ([FBSDKAccessToken currentAccessToken]) {
-    NSLog(@"Token : %@", [FBSDKAccessToken currentAccessToken]);
-    [self.loginButton removeFromSuperview];
-    self.loginButton = nil;
-    [self.view setNeedsDisplay];
-    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                  initWithGraphPath:@"/EyadiniLoungenuz/feed"
-                                  parameters:@{@"fields": @"created_time, message, story, id, attachments{media}"}
-                                  HTTPMethod:@"GET"];
-    __weak typeof(self) weakSelf = self;
-    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-      if (!error) {
-        NSError *error;
-        self.facebookPosts = [NSMutableArray new];
-        for (NSDictionary *dic in result[@"data"]) {
-          PLFacebookFeedPost *post = [[PLFacebookFeedPost alloc]initWithDictionary:dic error:&error];
-          post.imageSource = dic[@"attachments"][@"data"][0][@"media"][@"image"][@"src"];
-          [weakSelf.facebookPosts addObject:post];
-        }
-        
-        [weakSelf.facebookTableView reloadData];
-        [SVProgressHUD dismiss];
+  AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+  NSString *strURL2 = [@"https://graph.facebook.com/eyadiniloungenuz/feed?access_token=564202827266707|a142d6093609903a733d60797255520f&fields=created_time, message,story,id,attachments{media},full_picture" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  [manager GET:strURL2 parameters:nil progress:nil success:^(NSURLSessionTask *task, id result) {
+    NSLog(@"Single Event Result : %@", result);
+      NSError *error;
+      self.facebookPosts = [NSMutableArray new];
+      for (NSDictionary *dic in result[@"data"]) {
+        PLFacebookFeedPost *post = [[PLFacebookFeedPost alloc]initWithDictionary:dic error:&error];
+        post.imageSource = dic[@"full_picture"];
+        [weakSelf.facebookPosts addObject:post];
       }
-      
-    }];
-  }else{
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(facebookSetup)
-                                                 name:FBSDKAccessTokenDidChangeNotification
-                                               object:nil];
-    
-    self.loginButton = [[FBSDKLoginButton alloc] init];
-    // Optional: Place the button in the center of your view.
-    [self.facebookContainer addSubview:self.loginButton];
-    self.loginButton.center =  CGPointMake(self.view.center.x, CGRectGetHeight(self.view.frame) * 0.15f);
-    [self.loginButton setHidden:NO];
-  }
+
+      [weakSelf.facebookTableView reloadData];
+      [SVProgressHUD dismiss];
+  } failure:^(NSURLSessionTask *operation, NSError *error) {
+    NSLog(@"Error: %@", error);
+    [SVProgressHUD dismiss];
+  }];
+  
+//  if ([FBSDKAccessToken currentAccessToken]) {
+//    NSLog(@"Token : %@", [FBSDKAccessToken currentAccessToken]);
+//    [self.loginButton removeFromSuperview];
+//    self.loginButton = nil;
+//    [self.view setNeedsDisplay];
+//    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
+//                                  initWithGraphPath:@"/EyadiniLoungenuz/feed"
+//                                  parameters:@{@"fields": @"created_time, message, story, id, attachments{media}"}
+//                                  HTTPMethod:@"GET"];
+//    __weak typeof(self) weakSelf = self;
+//    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+//      if (!error) {
+//        NSError *error;
+//        self.facebookPosts = [NSMutableArray new];
+//        for (NSDictionary *dic in result[@"data"]) {
+//          PLFacebookFeedPost *post = [[PLFacebookFeedPost alloc]initWithDictionary:dic error:&error];
+//          post.imageSource = dic[@"attachments"][@"data"][0][@"media"][@"image"][@"src"];
+//          [weakSelf.facebookPosts addObject:post];
+//        }
+//        
+//        [weakSelf.facebookTableView reloadData];
+//        [SVProgressHUD dismiss];
+//      }
+//      
+//    }];
+//  }else{
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(facebookSetup)
+//                                                 name:FBSDKAccessTokenDidChangeNotification
+//                                               object:nil];
+//    
+//    self.loginButton = [[FBSDKLoginButton alloc] init];
+//    // Optional: Place the button in the center of your view.
+//    [self.facebookContainer addSubview:self.loginButton];
+//    self.loginButton.center =  CGPointMake(self.view.center.x, CGRectGetHeight(self.view.frame) * 0.15f);
+//    [self.loginButton setHidden:NO];
+//  }
 }
 
 #pragma mark - Facebook Datasource & Delagate
